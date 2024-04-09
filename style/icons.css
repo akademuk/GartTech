@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'icon';
+    src:  url('../fonts/icon.eot?vbufec');
+    src:  url('../fonts/icon.eot?vbufec#iefix') format('embedded-opentype'),
+      url('../fonts/icons.ttf?vbufec') format('truetype'),
+      url('../fonts/icon.woff?vbufec') format('woff'),
+      url('../fonts/icons.svg?vbufec#icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-Arrow-right:before {
+    content: "\e899";
+  }
+  .icon-NameApple:before {
+    content: "\e900";
+  }
+  .icon-NameArrow-DOWN:before {
+    content: "\e901";
+  }
+  .icon-NameArrow-left:before {
+    content: "\e902";
+  }
+  .icon-NameArrow-right:before {
+    content: "\e903";
+  }
+  .icon-NameArrow-UP:before {
+    content: "\e904";
+  }
+  .icon-NameArrowSquareUpRight:before {
+    content: "\e905";
+  }
+  .icon-NameBurger:before {
+    content: "\e906";
+  }
+  .icon-NameCart-4:before {
+    content: "\e907";
+  }
+  .icon-NameCastleTurret:before {
+    content: "\e908";
+  }
+  .icon-NameChat-Round-Dots:before {
+    content: "\e909";
+  }
+  .icon-NameChat:before {
+    content: "\e90a";
+  }
+  .icon-Namecheck-double-line:before {
+    content: "\e90b";
+  }
+  .icon-Nameclose-line:before {
+    content: "\e90c";
+  }
+  .icon-NameCloudArrowUp:before {
+    content: "\e90d";
+  }
+  .icon-Namecommunity-line:before {
+    content: "\e90e";
+  }
+  .icon-NameCubeFocus:before {
+    content: "\e90f";
+  }
+  .icon-NameDiamond:before {
+    content: "\e910";
+  }
+  .icon-NameDiceThree-Fill:before {
+    content: "\e911";
+  }
+  .icon-NameDiceThree:before {
+    content: "\e912";
+  }
+  .icon-NameEnvelopeSimple:before {
+    content: "\e913";
+  }
+  .icon-Nameeye-slash:before {
+    content: "\e914";
+  }
+  .icon-NameFacebookLogo:before {
+    content: "\e915";
+  }
+  .icon-NameFire:before {
+    content: "\e916";
+  }
+  .icon-NameFireSimple:before {
+    content: "\e917";
+  }
+  .icon-NameFunnel:before {
+    content: "\e918";
+  }
+  .icon-NameGoogle .path1:before {
+    content: "\e919";
+    color: rgb(66, 133, 244);
+  }
+  .icon-NameGoogle .path2:before {
+    content: "\e91a";
+    margin-left: -1em;
+    color: rgb(52, 168, 83);
+  }
+  .icon-NameGoogle .path3:before {
+    content: "\e91b";
+    margin-left: -1em;
+    color: rgb(251, 188, 4);
+  }
+  .icon-NameGoogle .path4:before {
+    content: "\e91c";
+    margin-left: -1em;
+    color: rgb(234, 67, 53);
+  }
+  .icon-NameInstagramLogo:before {
+    content: "\e91d";
+  }
+  .icon-NameKey:before {
+    content: "\e91e";
+  }
+  .icon-NameLogin-2:before {
+    content: "\e91f";
+  }
+  .icon-Namelogout-box-line:before {
+    content: "\e920";
+  }
+  .icon-Namemail-send-line:before {
+    content: "\e921";
+  }
+  .icon-Namemap-pin-2-line:before {
+    content: "\e922";
+  }
+  .icon-NameMinus:before {
+    content: "\e923";
+  }
+  .icon-NamePaintBrushHousehold:before {
+    content: "\e924";
+  }
+  .icon-Namepaypal-line:before {
+    content: "\e925";
+  }
+  .icon-NamePlus:before {
+    content: "\e926";
+  }
+  .icon-NamePuzzlePiece:before {
+    content: "\e927";
+  }
+  .icon-Namerefresh-line:before {
+    content: "\e928";
+  }
+  .icon-NameSearch:before {
+    content: "\e929";
+  }
+  .icon-NameStar:before {
+    content: "\e92a";
+  }
+  .icon-NameStrategy:before {
+    content: "\e92b";
+  }
+  .icon-NameSword:before {
+    content: "\e92c";
+  }
+  .icon-NameTrash:before {
+    content: "\e92d";
+  }
+  .icon-NameUser:before {
+    content: "\e92e";
+  }
