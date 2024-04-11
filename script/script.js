@@ -255,3 +255,16 @@ var swiper = new Swiper(".promotion-banner__swiper", {
       clickable: true,
     },
 });
+
+var swiper = new Swiper(".gallery__swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    navigation: {
+      nextEl: ".gallery-next",
+      prevEl: ".gallery-prev",
+    },
+    pagination: {
+      el: ".gallery-pagination",
+      clickable: true,
+    },
+});
