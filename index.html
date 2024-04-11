@@ -2,9 +2,14 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      user-scalable="no"
+    />
     <link rel="icon" type="image/png" href="img/Favicon.png" />
     <link rel="stylesheet" href="style/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/icons.css" />
     <link rel="stylesheet" href="style/style.css" />
@@ -22,7 +27,7 @@
           </div>
           <div class="subheader__navigation">
             <div class="subheader__chat">
-              <button class="subheader__chat-btn link">
+              <button class="subheader__chat-btn link chat">
                 LIVE CHAT
                 <span class="icon-NameChat-Round-Dots"></span>
               </button>
@@ -34,7 +39,7 @@
               <div class="subheader__basket-quantity">02 ITEMS</div>
             </div>
             <div class="subheader__entrance">
-              <button class="subheader__entrance-btn link">
+              <button class="subheader__entrance-btn link authorization-open">
                 LOGIN / SIGN UP
                 <span class="icon-NameLogin-2"></span>
               </button>
@@ -44,8 +49,373 @@
       </div>
     </section>
 
+    <!-- LOGIN / SIGN UP -->
+    <section class="authorization">
+      <div class="authorization__container">
+        <button class="authorization__close icon-Nameclose-line"></button>
+
+        <!-- SIGN UP -->
+        <div class="authorization__sign-up authorization__content">
+          <p>Sign up</p>
+          <span>Enter your credentials to register on the site</span>
+          <form id="signUpForm" action="" class="authorization__form">
+            <div class="authorization__form-input">
+              <label for="email">Email address</label>
+              <div class="form-group input-style">
+                <span
+                  class="authorization__form-input-icon icon-NameEnvelopeSimple"
+                ></span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="name@mail.com"
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                  required
+                />
+              </div>
+              <div id="email-validation" class="validation-message"></div>
+            </div>
+
+            <div class="authorization__form-input">
+              <label for="password">Password:</label>
+              <div class="form-group input-style">
+                <span
+                  class="authorization__form-input-icon icon-NameKey"
+                ></span>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  pattern=".{8,}"
+                  placeholder="Enter your password"
+                  title="Password must be at least 8 characters long"
+                />
+                <span
+                  class="password-toggle"
+                  onclick="togglePasswordVisibility('password')"
+                >
+                  <img
+                    width="18"
+                    height="18"
+                    class="see-password"
+                    src="img/open-pasword.svg"
+                    alt="Toggle Password Visibility"
+                  />
+                  <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
+                </span>
+              </div>
+              <span class="validation-message" id="password-validation"></span>
+            </div>
+
+            <div class="authorization__form-input">
+              <label for="repeat-password">Repeat the password:</label>
+              <div class="form-group input-style">
+                <span
+                  class="authorization__form-input-icon icon-NameKey"
+                ></span>
+                <input
+                  type="password"
+                  id="repeat-password"
+                  name="repeat-password"
+                  pattern=".{8,}"
+                  placeholder="Please re-enter your password"
+                  title="Password must be at least 8 characters long"
+                />
+                <span
+                  class="password-toggle"
+                  onclick="togglePasswordVisibility('repeat-password')"
+                >
+                  <img
+                    width="18"
+                    height="18"
+                    class="see-password"
+                    src="img/open-pasword.svg"
+                    alt="Toggle Password Visibility"
+                  />
+                  <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
+                </span>
+              </div>
+              <span
+                class="validation-message"
+                id="repeat-password-validation"
+              ></span>
+            </div>
+            <button
+              type="button"
+              onclick="validateAndSubmit()"
+              class="submit btn"
+            >
+              SIGN UP <span class="icon-NameLogin-2"></span>
+            </button>
+          </form>
+          <div class="authorization__or">
+            <span></span>
+            <p>Or</p>
+            <span></span>
+          </div>
+          <div class="authorization__additional">
+            <a href="#"
+              >Sign up with Google
+              <span>
+                <img
+                  width="18"
+                  height="18"
+                  src="img/google-icon.svg"
+                  alt="Sign up with Google"
+                />
+              </span>
+            </a>
+            <a href="#"
+              >Sign up with Apple
+              <span>
+                <img
+                  width="16"
+                  height="18"
+                  src="img/apple.svg"
+                  alt="Sign up with Apple"
+                />
+              </span>
+            </a>
+          </div>
+          <div class="authorization__change">
+            <p>Already have an account?</p>
+            <button class="authorization__sign-up-btn">LOG IN</button>
+          </div>
+        </div>
+
+        <!-- LOGIN -->
+        <div class="authorization__login authorization__content">
+          <p>Log in</p>
+          <span>Enter your credentials to access your account</span>
+          <form id="loginForm" action="" class="authorization__form">
+            <div class="authorization__form-input">
+              <label for="email">Email address</label>
+              <div class="form-group input-style">
+                <span
+                  class="authorization__form-input-icon icon-NameEnvelopeSimple"
+                ></span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="name@mail.com"
+                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                  required
+                />
+              </div>
+              <div id="email-validation" class="validation-message"></div>
+            </div>
+
+            <div class="authorization__form-input">
+              <label for="password">Password:</label>
+              <div class="form-group input-style">
+                <span
+                  class="authorization__form-input-icon icon-NameKey"
+                ></span>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  pattern=".{8,}"
+                  placeholder="Enter your password"
+                  title="Password must be at least 8 characters long"
+                />
+                <span
+                  class="password-toggle"
+                  onclick="togglePasswordVisibility('password')"
+                >
+                  <img
+                    width="18"
+                    height="18"
+                    class="see-password"
+                    src="img/open-pasword.svg"
+                    alt="Toggle Password Visibility"
+                  />
+                  <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
+                </span>
+              </div>
+              <span class="validation-message" id="password-validation"></span>
+            </div>
+
+            <button
+              type="button"
+              onclick="validateAndSubmit()"
+              class="submit btn"
+            >
+              LOG IN <span class="icon-NameLogin-2"></span>
+            </button>
+
+            <div class="authorization__form-checkbox">
+              <label>
+                <input type="checkbox" name="сheckbox" value="checked" />
+                <span class="checkbox-custom"></span>
+                <span class="checkbox-value">Remember me</span>
+              </label>
+              <a href="#" class="fargot-password" target="_blank"
+                >FORGOT PASSWORD?</a
+              >
+            </div>
+          </form>
+          <div class="authorization__or">
+            <span></span>
+            <p>Or</p>
+            <span></span>
+          </div>
+          <div class="authorization__additional">
+            <a href="#"
+              >Sign up with Google
+              <span>
+                <img
+                  width="18"
+                  height="18"
+                  src="img/google-icon.svg"
+                  alt="Sign up with Google"
+                />
+              </span>
+            </a>
+            <a href="#"
+              >Sign up with Apple
+              <span>
+                <img
+                  width="16"
+                  height="18"
+                  src="img/apple.svg"
+                  alt="Sign up with Apple"
+                />
+              </span>
+            </a>
+          </div>
+          <div class="authorization__change">
+            <p>Are you new here?</p>
+            <button class="authorization__login-btn">CREATE ACCOUNT</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
     <div class="menu">
-      <button class="close-btn">CLOSE<span class="icon-Nameclose-line"></span></button>
+      <div class="menu__overflow">
+        <button class="close-btn">
+          CLOSE<span class="icon-Nameclose-line"></span>
+        </button>
+        <div class="menu__content">
+          <nav class="menu__navigation">
+            <ul>
+              <li>
+                <a href="index.html" class="link menu__link">HOME</a>
+              </li>
+              <li>
+                <a href="gallery.html" class="link menu__link">GALLERY</a>
+              </li>
+              <li>
+                <a href="reviews.html" class="link menu__link">REVIEWS</a>
+              </li>
+              <li>
+                <a href="about-us.html" class="link menu__link">ABOUT US</a>
+              </li>
+              <li>
+                <a href="faq.html" class="link menu__link">FAQ</a>
+              </li>
+              <li class="menu__navigation-none">
+                <button class="link authorization-open menu__link">
+                  LOGIN / SIGN UP
+                  <span class="icon-NameLogin-2"></span>
+                </button>
+              </li>
+              <li class="go-to-shop">
+                <a href="#" class="btn"
+                  >GO TO SHOP<span class="icon-NameSword"></span
+                ></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu__services">
+            <h2>SERVICES</h2>
+            <div class="menu__services-box">
+              <article
+                onclick="window.open('#', '_blank')"
+                class="card menu__link"
+              >
+                <div class="menu__services-box-img">
+                  <picture>
+                    <source
+                      srcset="img/menu-services-obj1.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="img/menu-services-obj1.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      src="img/menu-services-obj1.jpg"
+                      alt="COMMISSION IMAGE"
+                    />
+                  </picture>
+                </div>
+                <div class="menu__services-box-text">
+                  <h3>COMMISSION</h3>
+                </div>
+              </article>
+
+              <article
+                onclick="window.open('#', '_blank')"
+                class="card menu__link"
+              >
+                <div class="menu__services-box-img">
+                  <picture>
+                    <source
+                      srcset="img/menu-services-obj2.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="img/menu-services-obj2.jpg"
+                      type="image/jpeg"
+                    />
+                    <img src="img/menu-services-obj2.jpg" alt="BUY NOW" />
+                  </picture>
+                </div>
+                <div class="menu__services-box-text">
+                  <h3>BUY NOW</h3>
+                </div>
+              </article>
+
+              <article
+                onclick="window.open('#', '_blank')"
+                class="card menu__link"
+              >
+                <div class="menu__services-box-img">
+                  <picture>
+                    <source
+                      srcset="img/menu-services-obj3.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="img/menu-services-obj3.jpg"
+                      type="image/jpg"
+                    />
+                    <img
+                      src="img/menu-services-obj3.jpg"
+                      alt="CUSTOM SERVICES"
+                    />
+                  </picture>
+                </div>
+                <div class="menu__services-box-text">
+                  <h3>CUSTOM SERVICES</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="menu__chat">
+            <p>If you have any questions write us!</p>
+            <button class="chat menu__link">
+              LIVE CHAT
+              <span class="icon-NameChat-Round-Dots"></span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Header -->
@@ -100,7 +470,7 @@
     </header>
 
     <!-- Hero -->
-    <!-- <section class="hero">
+    <section class="hero">
       <div class="wrapper">
         <div class="hero__container">
           <div class="hero__swiper swiper-container">
@@ -108,26 +478,52 @@
               <div class="hero__slide swiper-slide hero__slide-item1">
                 <div class="hero__content">
                   <div class="hero__content-img">
-                    <img
-                      src="img/hero-slide-obj-01.jpg"
-                      alt="Forge Your Legendary Army Today!"
-                    />
+                    <picture>
+                      <source
+                        srcset="img/hero-slide-obj-01.webp"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/hero-slide-obj-01.jpg"
+                        type="image/jpg"
+                      />
+                      <img
+                        width="3552"
+                        height="1248"
+                        src="img/hero-slide-obj-01.jpg"
+                        alt="Forge Your Legendary Army Today!"
+                      />
+                    </picture>
                   </div>
                   <h2>Forge Your Legendary Army Today!</h2>
                   <p>
                     Unleash your creativity and command your customized forces
                     into epic battles.
                   </p>
-                  <a href="#" class="btn icon-NameArrow-right">GO TO SHOP</a>
+                  <a href="#" class="btn"
+                    >GO TO SHOP <span class="icon-NameArrow-right"></span
+                  ></a>
                 </div>
               </div>
               <div class="hero__slide swiper-slide hero__slide-item2">
                 <div class="hero__content">
                   <div class="hero__content-img">
-                    <img
-                      src="img/hero-slide-obj-02.jpg"
-                      alt="Head text slide 2"
-                    />
+                    <picture>
+                      <source
+                        srcset="img/hero-slide-obj-02.webp"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/hero-slide-obj-02.jpg"
+                        type="image/jpg"
+                      />
+                      <img
+                        width="3552"
+                        height="1248"
+                        src="img/hero-slide-obj-02.jpg"
+                        alt="Head text slide 2"
+                      />
+                    </picture>
                   </div>
                   <h2>Head text slide 2</h2>
                   <p>
@@ -135,16 +531,30 @@
                     text Sub text Sub text Sub text Sub text Sub text Sub text
                     Sub text Sub text Sub text
                   </p>
-                  <a href="#" class="btn icon-NameArrow-right">BUTTON</a>
+                  <a href="#" class="btn"
+                    >GO TO SHOP <span class="icon-NameArrow-right"></span
+                  ></a>
                 </div>
               </div>
               <div class="hero__slide swiper-slide hero__slide-item3">
                 <div class="hero__content">
                   <div class="hero__content-img">
-                    <img
-                      src="img/hero-slide-obj-03.jpg"
-                      alt="Head text slide 3"
-                    />
+                    <picture>
+                      <source
+                        srcset="img/hero-slide-obj-03.webp"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="img/hero-slide-obj-03.jpg"
+                        type="image/jpg"
+                      />
+                      <img
+                        width="3552"
+                        height="1248"
+                        src="img/hero-slide-obj-03.jpg"
+                        alt="Forge Your Legendary Army Today!"
+                      />
+                    </picture>
                   </div>
                   <h2>Head text slide 3</h2>
                   <p>
@@ -152,26 +562,188 @@
                     text Sub text Sub text Sub text Sub text Sub text Sub text
                     Sub text Sub text Sub text Sub text Sub text Sub text Sub
                     text Sub text Sub text Sub text Sub text Sub text Sub text
-                    Sub text Sub text Sub text Sub text Sub text Sub text
+                    Sub text Sub text Sub text Sub text Sub text Sub text Sub
+                    text Sub text Sub text Sub text Sub text Sub text
                   </p>
-                  <a href="#" class="btn icon-NameArrow-right">GO TO SHOP</a>
+                  <a href="#" class="btn"
+                    >GO TO SHOP <span class="icon-NameArrow-right"></span
+                  ></a>
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination slider-pagination"></div>
+            <div class="hero__navigation">
+              <div
+                class="swiper-button-prev hero__arrow icon-NameArrow-left"
+              ></div>
+              <div
+                class="swiper-button-next hero__arrow icon-NameArrow-left"
+              ></div>
+            </div>
           </div>
         </div>
       </div>
-    </section> -->
-
-    <section class="categories">
-      <div class="wrapper"></div>
     </section>
 
+    <!-- Categories -->
+    <section class="categories">
+      <div class="wrapper">
+        <div class="categories__container">
+          <article class="categories__card">
+            <a
+              href="img/categories-obj1.jpg"
+              data-fancybox
+              data-caption="COMMISSION"
+              class="categories__card-img"
+            >
+              <picture>
+                <source srcset="img/categories-obj1.webp" type="image/webp" />
+                <source srcset="img/categories-obj1.jpg" type="image/jpg" />
+                <img
+                  width="1776"
+                  height="1152"
+                  src="img/categories-obj1.jpg"
+                  alt="Forge Your Legendary Army Today!"
+                />
+              </picture>
+            </a>
+            <div class="categories__card-content">
+              <h3>COMMISSION</h3>
+              <p>
+                Order your custom army or squad: full-package includes model
+                purchase, assembly, painting, custom 3D parts, basing, and
+                magnetization/conversion options. Shipping made easy.
+              </p>
+              <a href="#" class="link"
+                >See more detalis<span class="icon-NameArrow-left"></span
+              ></a>
+            </div>
+          </article>
+
+          <article class="categories__card categories__card2">
+            <div class="categories__card-content">
+              <h3>BUY NOW</h3>
+              <p>
+                Our studio showcases and rewards with painted squads; frequently
+                updating sales for high-quality units ready in days— perfect
+                hobby gifts
+              </p>
+              <a href="#" class="link"
+                >See more detalis<span class="icon-NameArrow-left"></span
+              ></a>
+            </div>
+            <a
+              href="img/categories-obj2.jpg"
+              data-fancybox
+              data-caption="BUY NOW"
+              class="categories__card-img"
+            >
+              <picture>
+                <source srcset="img/categories-obj2.webp" type="image/webp" />
+                <source srcset="img/categories-obj2.jpg" type="image/jpg" />
+                <img
+                  width="1776"
+                  height="1152"
+                  src="img/categories-obj2.jpg"
+                  alt="BUY NOW"
+                />
+              </picture>
+            </a>
+          </article>
+
+          <article class="categories__card">
+            <a
+              href="img/categories-obj3.jpg"
+              data-fancybox
+              data-caption="CUSTOM SERVICES"
+              class="categories__card-img"
+            >
+              <picture>
+                <source srcset="img/categories-obj3.webp" type="image/webp" />
+                <source srcset="img/categories-obj3.jpg" type="image/jpg" />
+                <img
+                  width="1776"
+                  height="1152"
+                  src="img/categories-obj3.jpg"
+                  alt="CUSTOM SERVICES"
+                />
+              </picture>
+            </a>
+            <div class="categories__card-content">
+              <h3>CUSTOM SERVICES</h3>
+              <p>
+                Order your custom army or squad: full-package includes model
+                purchase, assembly, painting, custom 3D parts, basing, and
+                magnetization/conversion options. Shipping made easy.
+              </p>
+              <a href="#" class="link"
+                >See more detalis<span class="icon-NameArrow-left"></span
+              ></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+     <!-- Promotion Banner -->
     <section class="promotion-banner">
-      <div class="wrapper"></div>
+      <div class="promotion-banner__swiper swiper-container">
+        <div class="promotion-banner__wrapper swiper-wrapper">
+          <div class="promotion-banner__slide swiper-slide">
+            <div class="promotion-banner__content">
+              <div class="promotion-banner__content-img">
+                <picture>
+                  <source srcset="img/promotion-banner-obj1.webp" type="image/webp"/>
+                  <source srcset="img/promotion-banner-obj1.jpg" type="image/jpg" />
+                  <img width="3840" height="752" src="img/promotion-banner-obj1.jpg" alt="INTRODUCING DAWN OF VALHALLA!"/>
+                </picture>
+              </div>
+              <h2>INTRODUCING DAWN OF VALHALLA!</h2>
+              <p>
+                Our Latest Exclusive Miniature Collection!
+              </p>
+              <a href="#" class="btn">EXPLORE<span class="icon-NameArrow-right"></span></a>
+            </div>
+          </div>
+          <div class="promotion-banner__slide swiper-slide">
+            <div class="promotion-banner__content">
+              <div class="promotion-banner__content-img">
+                <picture>
+                  <source srcset="img/promotion-banner-obj2.webp" type="image/webp"/>
+                  <source srcset="img/promotion-banner-obj2.jpg" type="image/jpg" />
+                  <img width="3840" height="752" src="img/promotion-banner-obj2.jpg" alt="Head text slide 2"/>
+                </picture>
+              </div>
+              <h2>Head text slide 2</h2>
+              <p>
+                Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext 
+              </p>
+              <a href="#" class="btn">EXPLORE<span class="icon-NameArrow-right"></span></a>
+            </div>
+          </div>
+          <div class="promotion-banner__slide swiper-slide">
+            <div class="promotion-banner__content">
+              <div class="promotion-banner__content-img">
+                <picture>
+                  <source srcset="img/promotion-banner-obj3.webp" type="image/webp"/>
+                  <source srcset="img/promotion-banner-obj3.jpg" type="image/jpg" />
+                  <img width="3840" height="752" src="img/promotion-banner-obj3.jpg" alt="Head text slide 3"/>
+                </picture>
+              </div>
+              <h2>Head text slide 3</h2>
+              <p>
+                Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext Subtext 
+              </p>
+              <a href="#" class="btn">EXPLORE<span class="icon-NameArrow-right"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="promotion-banner-pagination slider-pagination"></div>
+        <div class="hero__navigation">
+          <div class="promotion-banner-prev hero__arrow icon-NameArrow-left"></div>
+          <div class="promotion-banner-next hero__arrow icon-NameArrow-left"></div>
+        </div>
+      </div>
     </section>
 
     <section class="gallery">
@@ -200,6 +772,7 @@
 
     <script src="script/jquery-3.7.0.min.js"></script>
     <script src="script/swiper-bundle.min.js"></script>
+    <script src="script/jquery.fancybox.min.js"></script>
     <script src="script/script.js"></script>
 
     <script>
