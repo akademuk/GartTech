@@ -267,21 +267,12 @@ var swiper = new Swiper(".gallery__swiper", {
       el: ".gallery-pagination",
       clickable: true,
     },
+    breakpoints: {
+        1279: {
+            spaceBetween: 16,
+        }
+    }
 });
-
-var swiper = new Swiper(".hot-offers__swiper", {
-    slidesPerView: "auto",
-    spaceBetween: 24,
-    navigation: {
-      nextEl: ".hot-offers-next",
-      prevEl: ".hot-offers-prev",
-    },
-    pagination: {
-      el: ".hot-offers-pagination",
-      clickable: true,
-    },
-});
-
 
 
 // Открыть вкладку и скрыть остальные
@@ -314,6 +305,11 @@ var swiper = new Swiper(".category1", {
       el: ".hot-offers-pagination1",
       clickable: true,
     },
+    breakpoints: {
+        1279: {
+            spaceBetween: 16,
+        }
+    }
 });
 
 var swiper = new Swiper(".category2", {
@@ -327,6 +323,11 @@ var swiper = new Swiper(".category2", {
       el: ".hot-offers-pagination2",
       clickable: true,
     },
+    breakpoints: {
+        1279: {
+            spaceBetween: 16,
+        }
+    }
 });
 
 var swiper = new Swiper(".category3", {
@@ -340,6 +341,11 @@ var swiper = new Swiper(".category3", {
       el: ".hot-offers-pagination3",
       clickable: true,
     },
+    breakpoints: {
+        1279: {
+            spaceBetween: 16,
+        }
+    }
 });
 
 
