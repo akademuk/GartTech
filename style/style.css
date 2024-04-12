@@ -3402,7 +3402,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     }
 
 
-    /* About Us ----------------------------*/
+    /* About Us ----------------------------*/  
     .about-us {
         min-width: 320px;
         max-width: 1279px;
