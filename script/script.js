@@ -341,3 +341,32 @@ var swiper = new Swiper(".category3", {
       clickable: true,
     },
 });
+
+
+var swiper = new Swiper(".feedback__slider", {
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".feedback-next",
+      prevEl: ".feedback-prev",
+    },
+    pagination: {
+      el: ".feedback-pagination",
+      clickable: true,
+    },
+});
+
+var swiper = new Swiper(".feedback__slider2", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".feedback-next",
+        prevEl: ".feedback-prev",
+      },
+      pagination: {
+        el: ".feedback-pagination2",
+        clickable: true,
+      },
+    thumbs: {
+      swiper: swiper,
+    },
+});
+
