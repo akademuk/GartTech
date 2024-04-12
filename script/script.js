@@ -268,3 +268,76 @@ var swiper = new Swiper(".gallery__swiper", {
       clickable: true,
     },
 });
+
+var swiper = new Swiper(".hot-offers__swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    navigation: {
+      nextEl: ".hot-offers-next",
+      prevEl: ".hot-offers-prev",
+    },
+    pagination: {
+      el: ".hot-offers-pagination",
+      clickable: true,
+    },
+});
+
+
+
+// Открыть вкладку и скрыть остальные
+function openTab(tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active"); // Убираем класс "active" у всех вкладок
+    }
+    document.getElementById(tabName).style.display = "block";
+    document.querySelector('[onclick="openTab(\'' + tabName + '\')"]').classList.add("active"); // Добавляем класс "active" текущей вкладке
+}
+document.addEventListener("DOMContentLoaded", function() {
+    openTab('category1');
+});
+
+
+var swiper = new Swiper(".category1", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    navigation: {
+      nextEl: ".hot-offers-next1",
+      prevEl: ".hot-offers-prev1",
+    },
+    pagination: {
+      el: ".hot-offers-pagination1",
+      clickable: true,
+    },
+});
+
+var swiper = new Swiper(".category2", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    navigation: {
+      nextEl: ".hot-offers-next2",
+      prevEl: ".hot-offers-prev2",
+    },
+    pagination: {
+      el: ".hot-offers-pagination2",
+      clickable: true,
+    },
+});
+
+var swiper = new Swiper(".category3", {
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    navigation: {
+      nextEl: ".hot-offers-next3",
+      prevEl: ".hot-offers-prev3",
+    },
+    pagination: {
+      el: ".hot-offers-pagination3",
+      clickable: true,
+    },
+});
