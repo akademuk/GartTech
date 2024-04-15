@@ -1,58 +1,43 @@
-setupMenu();
+
 setupSearch();
 initializeModal();
 
 
 
-
 // BURGER MENU
-function setupMenu() {
+document.addEventListener('DOMContentLoaded', function () {
     let menuBtn = document.querySelector('.header__navigation-menu');
     let menu = document.querySelector('.menu');
     let closeButton = document.querySelector('.close-btn');
-    let body = document.querySelector('body');
 
-    // При клике на кнопку меню открывается или закрывается меню
     menuBtn.addEventListener('click', function(){
-        menuBtn.classList.toggle('active');
-        menu.classList.toggle('active');
-        body.classList.toggle('active');
+        menuBtn.classList.toggle('active-menu');
+        menu.classList.toggle('active-menu');
+        document.body.classList.toggle('active-menu');
     });
 
-    // Закрытие меню при клике вне его области
     document.addEventListener('click', function(event) {
         if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
-            menuBtn.classList.remove('active');
-            menu.classList.remove('active');
-            body.classList.remove('active');
+            menuBtn.classList.remove('active-menu');
+            menu.classList.remove('active-menu');
+            document.body.classList.remove('active-menu');
         }
     });
 
-    // Закрытие меню по нажатию на кнопку "Esc"
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
-            menuBtn.classList.remove('active');
-            menu.classList.remove('active');
-            body.classList.remove('active');
+            menuBtn.classList.remove('active-menu');
+            menu.classList.remove('active-menu');
+            document.body.classList.remove('active-menu');
         }
     });
 
-    // Закрытие меню при клике на кнопку "Close"
     closeButton.addEventListener('click', function(){
-        menuBtn.classList.remove('active');
-        menu.classList.remove('active');
-        body.classList.remove('active');
+        menuBtn.classList.remove('active-menu');
+        menu.classList.remove('active-menu');
+        document.body.classList.remove('active-menu');
     });
-
-    menu.addEventListener('click', function(event) {
-        if (event.target.classList.contains('menu__link')) {
-            menuBtn.classList.remove('active');
-            menu.classList.remove('active');
-            body.classList.remove('active');
-        }
-    });
-    
-}
+});
 
 // SEARCH
 function setupSearch() {
@@ -96,6 +81,7 @@ function initializeModal() {
     const signUpBtn = document.querySelector('.authorization__sign-up-btn');
     const loginModal = document.querySelector('.authorization__login');
     const signUpModal = document.querySelector('.authorization__sign-up');
+    let body = document.querySelector('body');
     let lastOpenModal = '.authorization__sign-up'; // Устанавливаем первоначальное значение
 
     function closeModal() {
@@ -268,6 +254,9 @@ var swiper = new Swiper(".gallery__swiper", {
       clickable: true,
     },
     breakpoints: {
+        1280: {
+            spaceBetween: 24,
+        },
         1279: {
             spaceBetween: 16,
         }
@@ -306,6 +295,9 @@ var swiper = new Swiper(".category1", {
       clickable: true,
     },
     breakpoints: {
+        1280: {
+            spaceBetween: 24,
+        },
         1279: {
             spaceBetween: 16,
         }
@@ -324,6 +316,9 @@ var swiper = new Swiper(".category2", {
       clickable: true,
     },
     breakpoints: {
+        1280: {
+            spaceBetween: 24,
+        },
         1279: {
             spaceBetween: 16,
         }
@@ -342,6 +337,9 @@ var swiper = new Swiper(".category3", {
       clickable: true,
     },
     breakpoints: {
+        1280: {
+            spaceBetween: 24,
+        },
         1279: {
             spaceBetween: 16,
         }
@@ -376,3 +374,100 @@ var swiper = new Swiper(".feedback__slider2", {
     },
 });
 
+
+
+// Basket modal
+document.addEventListener('DOMContentLoaded', function () {
+    const openBasketBtn = document.querySelector('.open-basket');
+    const basketCloseBtn = document.querySelector('.basket__close');
+
+    openBasketBtn.addEventListener('click', function () {
+        const basket = document.querySelector('.basket');
+        basket.classList.add('open');
+        document.body.classList.add('active-basket');
+    });
+
+    basketCloseBtn.addEventListener('click', function () {
+        const basket = document.querySelector('.basket');
+        basket.classList.remove('open');
+        document.body.classList.remove('active-basket');
+    });
+});
+
+
+// Basket calculator
+document.addEventListener('DOMContentLoaded', function () {
+    const deleteBtns = document.querySelectorAll('.card-delate');
+    const minusBtns = document.querySelectorAll('.minus-btn');
+    const plusBtns = document.querySelectorAll('.plus-btn');
+
+    deleteBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const card = btn.closest('.basket__card');
+            card.remove();
+            updateTotal();
+            updateCardCount();
+            updateTotalSum();
+        });
+    });
+
+    const cards = document.querySelectorAll('.basket__card');
+
+    cards.forEach(card => {
+        let initialTotal = parseFloat(card.querySelector('.basket__content-value').textContent.replace(/\$/, ''));
+        let currentTotal = initialTotal;
+
+        const quantityInput = card.querySelector('.quantity-input');
+        const minusBtn = card.querySelector('.minus-btn');
+        const plusBtn = card.querySelector('.plus-btn');
+
+        minusBtn.addEventListener('click', function () {
+            let currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+                quantityInput.value = currentValue - 1;
+                updateTotal(-initialTotal, card);
+                updateTotalSum();
+            }
+        });
+
+        plusBtn.addEventListener('click', function () {
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+            updateTotal(initialTotal, card);
+            updateTotalSum();
+        });
+    });
+
+    function updateTotal(change = 0, card) {
+        if (card) {
+            const contentValue = card.querySelector('.basket__content-value');
+            if (contentValue) {
+                let currentTotal = parseFloat(contentValue.textContent.replace(/\$/, ''));
+                currentTotal += change;
+                contentValue.textContent = `$${currentTotal.toFixed(2)}`;
+            }
+        }
+    }
+
+    function updateCardCount() {
+        const basketValue = document.querySelector('.basket__value');
+        if (basketValue) {
+            const cardCount = document.querySelectorAll('.basket__card').length;
+            basketValue.textContent = cardCount;
+        }
+    }
+    
+    function updateTotalSum() {
+        const sumElement = document.getElementById('sum');
+        if (sumElement) {
+            let totalSum = 0;
+            const cardValues = document.querySelectorAll('.basket__content-value');
+            cardValues.forEach(value => {
+                totalSum += parseFloat(value.textContent.replace(/\$/, ''));
+            });
+            sumElement.textContent = `$${totalSum.toFixed(2)}`;
+        }
+    }
+    
+    // Вызов функции updateTotalSum при загрузке страницы
+    updateTotalSum();
+});

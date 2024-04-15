@@ -16,7 +16,7 @@
     <title>Gart Tech</title>
   </head>
 
-  <body>
+  <body class="body">
     <!-- Sub Header -->
     <section class="subheader">
       <div class="wrapper">
@@ -36,7 +36,7 @@
               <div class="subheader__basket-btn link">
                 CART<span class="icon-NameCart-4"></span>
               </div>
-              <div class="subheader__basket-quantity">02 ITEMS</div>
+              <div class="subheader__basket-quantity open-basket">02 ITEMS</div>
             </div>
             <div class="subheader__entrance">
               <button class="subheader__entrance-btn link authorization-open">
@@ -294,6 +294,122 @@
       </div>
     </section>
 
+     <!-- Basket -->
+     <section class="basket">
+       <div class="basket_wrapper">
+        <button class="basket__close">CLOSE <span class="icon-Nameclose-line"></span></button>
+        <div class="basket__content">
+            <h2>My Cart <span class="basket__value btn">3</span></h2>
+            <div class="basket__container">
+                <article class="basket__card">
+                    <div class="basket__card-box">
+                      <div class="basket__card-img">
+                        <picture>
+                          <source srcset="img/gallery-obj1.webp" type="image/webp"/>
+                          <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
+                          <img width="640" height="552" src="img/gallery-obj1.jpg" alt="Forge Your Legendary Army Today!"/>
+                        </picture>
+                      </div>
+                      <div class="basket__card-description">
+                          <div class="basket__card-description-title">
+                            <p>Adepta Sororitas - Battle Sister Squad</p>
+                            <span class="card-delate icon-NameTrash"></span>
+                          </div>
+                          <div class="basket__card-description-price">
+                            <p class="basket__content-value">10$</p>
+                            <div class="quantity">
+                              <button class="btn minus-btn icon-NameMinus"></button>
+                              <input type="text" class="quantity-input" value="1" readonly>
+                              <button class="btn plus-btn icon-NamePlus"></button>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="basket__textarea  additional-class">
+                      <div class="toggle">Add a comment <span class="icon-NameArrow-DOWN"></span></div>
+                      <form action="" class="hidden">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                      </form>
+                    </div>          
+                </article>
+
+                <article class="basket__card">
+                  <div class="basket__card-box">
+                    <div class="basket__card-img">
+                      <picture>
+                        <source srcset="img/hot-offers-img.webp" type="image/webp"/>
+                        <source srcset="img/hot-offers-img.jpg" type="image/jpg"/>
+                        <img width="736" height="752" src="img/hot-offers-img.jpg" alt="Forge Your Legendary Army Today!"/>
+                      </picture>
+                    </div>
+                    <div class="basket__card-description">
+                        <div class="basket__card-description-title">
+                          <p>Adepta Sororitas - Battle Sister Squad</p>
+                          <span class="card-delate icon-NameTrash"></span>
+                        </div>
+                        <div class="basket__card-description-price">
+                          <p class="basket__content-value">10$</p>
+                          <div class="quantity">
+                            <button class="btn minus-btn">-</button>
+                            <input type="text" class="quantity-input" value="1">
+                            <button class="btn plus-btn">+</button>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="basket__textarea">
+                    <div class="toggle">Add a comment <span class="icon-NameArrow-DOWN"></span></div>
+                    <form action="" class="hidden">
+                      <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </form>
+                  </div>      
+                </article>
+
+              <article class="basket__card">
+                <div class="basket__card-box">
+                  <div class="basket__card-img">
+                    <picture>
+                      <source srcset="img/hot-offers-img2.webp" type="image/webp"/>
+                      <source srcset="img/hot-offers-img2.jpg" type="image/jpg"/>
+                      <img width="736" height="752" src="img/hot-offers-img2.jpg" alt="Forge Your Legendary Army Today!"/>
+                    </picture>
+                  </div>
+                  <div class="basket__card-description">
+                      <div class="basket__card-description-title">
+                        <p>Adepta Sororitas - Battle Sister Squad</p>
+                        <span class="card-delate icon-NameTrash"></span>
+                      </div>
+                      <div class="basket__card-description-price">
+                        <p class="basket__content-value">10$</p>
+                        <div class="quantity">
+                          <button class="btn minus-btn">-</button>
+                          <input type="text" class="quantity-input" value="1">
+                          <button class="btn plus-btn">+</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="basket__textarea">
+                  <div class="toggle">Add a comment <span class="icon-NameArrow-DOWN"></span></div>
+                  <form action="" class="hidden">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                  </form>
+                </div>      
+              </article>
+            </div>
+            <div class="basket__footer">
+              <div class="basket__sumbal">
+                <p>SUBTOTAL:<span id="sum"></span></p>
+              </div>
+              <div class="basket__navigation">
+                  <a href="#" class="continue__shopping"><span class="icon-NameArrow-left"></span>CONTINUE SHOPPING</a>
+                  <a href="#" class="continue__checkout btn">CHECKOUT<span class="icon-myArrowright"></span></a>
+              </div>
+            </div>
+        </div>
+       </div>
+     </section>
+
     <!-- Menu -->
     <div class="menu">
       <div class="menu__overflow">
@@ -319,7 +435,7 @@
                 <a href="faq.html" class="link menu__link">FAQ</a>
               </li>
               <li class="menu__navigation-none">
-                <button class="link authorization-open menu__link">
+                <button class="link authorization-open" onclick="initializeModal()">
                   LOGIN / SIGN UP
                   <span class="icon-NameLogin-2"></span>
                 </button>
@@ -576,9 +692,9 @@
               <div
                 class="swiper-button-prev hero__arrow icon-NameArrow-left"
               ></div>
-              <div
-                class="swiper-button-next hero__arrow icon-NameArrow-left"
-              ></div>
+              <div class="swiper-button-next hero__arrow icon-myArrowright">
+             
+            </div>
             </div>
           </div>
         </div>
@@ -784,7 +900,7 @@
             class="promotion-banner-prev hero__arrow icon-NameArrow-left"
           ></div>
           <div
-            class="promotion-banner-next hero__arrow icon-NameArrow-left"
+            class="promotion-banner-next hero__arrow icon-myArrowright"
           ></div>
         </div>
       </div>
@@ -797,7 +913,7 @@
           <div class="gallery__container-header">
             <div class="gallery__container-header-title">
               <h2>
-                FIVE YEARS OF CRAFTSMANSHIP: SHOWCASING OUR FINEST CREATIONS IN
+                FIVE YEARS OF CRAFTSMANSHIP: <br> SHOWCASING OUR FINEST CREATIONS IN
                 THE CASES SECTION
               </h2>
               <a href="#" class="btn"
@@ -838,8 +954,60 @@
                         </picture>
                         <span class="chat-status"></span>
                       </div>
+                      <a href="#" class="link">Ask in the chat <span class="icon-myArrowright"></span></a>
+                    </div>
+                    <a
+                      href="img/gallery-obj1.jpg"
+                      data-fancybox="gallery"
+                      class="gallery__content-img"
+                    >
+                      <picture>
+                        <source
+                          srcset="img/gallery-obj1.webp"
+                          type="image/webp"
+                        />
+                        <source
+                          srcset="img/gallery-obj1.jpg"
+                          type="image/jpg"
+                        />
+                        <img
+                          width="640"
+                          height="552"
+                          src="img/gallery-obj1.jpg"
+                          alt="Adepta Sororitas - Battle Sister Squad"
+                        />
+                      </picture>
+                    </a>
+                    <div class="gallery__content-description">
+                      <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      <div class="gallery__content-description-box">
+                        <a href="#" class="btn">READ MORE</a>
+                        <div class="gallery__content-box-price">
+                          <span>Price from</span>
+                          <div class="gallery__content-price">$ 24</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="gallery__slide swiper-slide">
+                  <div class="gallery__content">
+                    <div class="gallery__content-chat">
+                      <div class="gallery__content-chat-avatar">
+                        <picture>
+                          <source srcset="img/avatar.webp" type="image/webp" />
+                          <source srcset="img/avatar.png" type="image/png" />
+                          <img
+                            width="80"
+                            height="80"
+                            src="img/avatar.png"
+                            alt="INTRODUCING DAWN OF VALHALLA!"
+                          />
+                        </picture>
+                        <span class="chat-status"></span>
+                      </div>
                       <a href="#" class="link"
-                        >Ask in the chat<span class="icon-NameArrow-left"></span
+                        >Ask in the chat<span class="icon-myArrowright"></span
                       ></a>
                     </div>
                     <a
@@ -893,61 +1061,7 @@
                         <span class="chat-status"></span>
                       </div>
                       <a href="#" class="link"
-                        >Ask in the chat<span class="icon-NameArrow-left"></span
-                      ></a>
-                    </div>
-                    <a
-                      href="img/gallery-obj1.jpg"
-                      data-fancybox="gallery"
-                      class="gallery__content-img"
-                    >
-                      <picture>
-                        <source
-                          srcset="img/gallery-obj1.webp"
-                          type="image/webp"
-                        />
-                        <source
-                          srcset="img/gallery-obj1.jpg"
-                          type="image/jpg"
-                        />
-                        <img
-                          width="640"
-                          height="552"
-                          src="img/gallery-obj1.jpg"
-                          alt="Adepta Sororitas - Battle Sister Squad"
-                        />
-                      </picture>
-                    </a>
-                    <div class="gallery__content-description">
-                      <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                      <div class="gallery__content-description-box">
-                        <a href="#" class="btn">READ MORE</a>
-                        <div class="gallery__content-box-price">
-                          <span>Price from</span>
-                          <div class="gallery__content-price">$ 24</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article class="gallery__slide swiper-slide">
-                  <div class="gallery__content">
-                    <div class="gallery__content-chat">
-                      <div class="gallery__content-chat-avatar">
-                        <picture>
-                          <source srcset="img/avatar.webp" type="image/webp" />
-                          <source srcset="img/avatar.png" type="image/png" />
-                          <img
-                            width="80"
-                            height="80"
-                            src="img/avatar.png"
-                            alt="INTRODUCING DAWN OF VALHALLA!"
-                          />
-                        </picture>
-                        <span class="chat-status"></span>
-                      </div>
-                      <a href="#" class="link"
-                        >Ask in the chat<span class="icon-NameArrow-left"></span
+                        >Ask in the chat<span class="icon-myArrowright"></span
                       ></a>
                     </div>
                     <a
@@ -1001,7 +1115,7 @@
                         <span class="chat-status"></span>
                       </div>
                       <a href="#" class="link"
-                        >Ask in the chat<span class="icon-NameArrow-left"></span
+                        >Ask in the chat<span class="icon-myArrowright"></span
                       ></a>
                     </div>
                     <a
@@ -1055,7 +1169,7 @@
                         <span class="chat-status"></span>
                       </div>
                       <a href="#" class="link"
-                        >Ask in the chat<span class="icon-NameArrow-left"></span
+                        >Ask in the chat<span class="icon-myArrowright"></span
                       ></a>
                     </div>
                     <a
@@ -1109,7 +1223,7 @@
                         <span class="chat-status"></span>
                       </div>
                       <a href="#" class="link"
-                        >Ask in the chat<span class="icon-NameArrow-left"></span
+                        >Ask in the chat<span class="icon-myArrowright"></span
                       ></a>
                     </div>
                     <a
@@ -1150,7 +1264,7 @@
               <div class="gallery__navigation">
                 <div class="gallery-prev hero__arrow icon-NameArrow-left"></div>
                 <div class="gallery-pagination slider-pagination"></div>
-                <div class="gallery-next hero__arrow icon-NameArrow-left"></div>
+                <div class="gallery-next hero__arrow icon-myArrowright"></div>
               </div>
             </div>
           </div>
@@ -1285,7 +1399,7 @@
         <div class="gallery__container">
           <div class="gallery__container-header">
             <div class="gallery__container-header-title">
-              <h2>🔥 HOT OFFERS</h2>
+              <h2>🔥 HOT <br> OFFERS</h2>
             </div>
             <div class="gallery__container-header-text">
               <p>
@@ -1559,7 +1673,7 @@
                   ></div>
                   <div class="hot-offers-pagination1 slider-pagination"></div>
                   <div
-                    class="hot-offers-next1 hero__arrow icon-NameArrow-left"
+                    class="hot-offers-next1 hero__arrow icon-myArrowright"
                   ></div>
                 </div>
               </div>
@@ -1814,7 +1928,7 @@
                   ></div>
                   <div class="hot-offers-pagination2 slider-pagination"></div>
                   <div
-                    class="hot-offers-next2 hero__arrow icon-NameArrow-left"
+                    class="hot-offers-next2 hero__arrow icon-myArrowright"
                   ></div>
                 </div>
               </div>
@@ -2070,7 +2184,7 @@
                 ></div>
                 <div class="hot-offers-pagination3 slider-pagination"></div>
                 <div
-                  class="hot-offers-next3 hero__arrow icon-NameArrow-left"
+                  class="hot-offers-next3 hero__arrow icon-myArrowright"
                 ></div>
               </div>
             </div>
@@ -2170,7 +2284,7 @@
       <div class="feedback__navigation">
         <div class="feedback-prev hero__arrow icon-NameArrow-left"></div>
         <div class="feedback-pagination slider-pagination"></div>
-        <div class="feedback-next hero__arrow icon-NameArrow-left"></div>
+        <div class="feedback-next hero__arrow icon-myArrowright"></div>
       </div>
     </section>
 
@@ -2180,7 +2294,7 @@
         <div class="seo__container">
           <div class="seo__container-title">
             <h2>
-              UNLOCKING THE ART OF MINIATURE PAINTING: <br> ELEVATE YOUR GAMING
+              UNLOCKING THE ART OF MINIATURE PAINTING: <br> ELEVATE <br> YOUR <br> GAMING
               EXPERIENCE
             </h2>
           </div>
@@ -2489,6 +2603,23 @@
           }
         });
       });
+    </script>
+
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const toggles = document.querySelectorAll('.basket__textarea .toggle');
+    const textarea = document.querySelector('.basket__textarea.additional-class');
+    toggles.forEach(function(toggle) {
+        const form = toggle.nextElementSibling;
+
+        toggle.addEventListener('click', function() {
+            form.classList.toggle('hidden');
+        });
+        });
+    });
+
     </script>
   </body>
 </html>
