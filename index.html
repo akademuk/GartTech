@@ -1413,7 +1413,7 @@
           </div>
           <div class="gallery__container-main tabs">
             <div class="hot-offers__tabs">
-              <button class="tablink" onclick="openTab('category1')">
+              <button class="tablink active" onclick="openTab('category1')">
                 Name Category
               </button>
               <button class="tablink" onclick="openTab('category2')">
@@ -1424,7 +1424,7 @@
               </button>
             </div>
 
-            <div id="category1" class="tabcontent">
+            <div id="category1" class="tabcontent" style="display: block;">
               <div class="hot-offers__swiper category1 swiper-container">
                 <div class="gallery__wrapper swiper-wrapper">
                   <article class="gallery__slide swiper-slide">
@@ -2581,45 +2581,5 @@
     <script src="script/swiper-bundle.min.js"></script>
     <script src="script/jquery.fancybox.min.js"></script>
     <script src="script/script.js"></script>
-
-    <script>
-      // JavaScript
-      document.addEventListener("DOMContentLoaded", function () {
-        const searchInput = document.getElementById("searchInput");
-
-        // Функция для выполнения поиска
-        function performSearch() {
-          const searchText = searchInput.value.trim(); // Получаем текст из поля ввода, удаляя пробелы в начале и в конце
-
-          // Здесь можно выполнить логику поиска, например, отправить запрос на сервер или обработать результаты поиска локально
-
-          console.log("Выполняем поиск для текста:", searchText);
-        }
-
-        // Обработчик события для нажатия клавиши Enter
-        searchInput.addEventListener("keypress", function (event) {
-          if (event.key === "Enter") {
-            performSearch();
-          }
-        });
-      });
-    </script>
-
-
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const toggles = document.querySelectorAll('.basket__textarea .toggle');
-    const textarea = document.querySelector('.basket__textarea.additional-class');
-    toggles.forEach(function(toggle) {
-        const form = toggle.nextElementSibling;
-
-        toggle.addEventListener('click', function() {
-            form.classList.toggle('hidden');
-        });
-        });
-    });
-
-    </script>
   </body>
 </html>
