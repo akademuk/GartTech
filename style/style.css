@@ -1876,6 +1876,10 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     line-height: 120%;
 }
 
+.gallery__container-header-title h2 br {
+    display: none;
+}
+
 .gallery__container-header-title a {
     display: flex;
     height: 56px;
@@ -3088,6 +3092,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     width: 100%;
     height: 100%;
     z-index: -1;
+    top: 0;
 }
 
 .sihn-up__hero-img img {
@@ -3312,21 +3317,21 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
 
 /* Модальное окно */
 .modalMessage {
-    display: none; 
-    position: fixed; 
-    z-index: 5; 
+    display: none;
+    position: fixed;
+    z-index: 5;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .modalMessage_content {
+.modalMessage_content {
     width: 444px;
     box-sizing: border-box;
     padding: 32px 48px 32px 24px;
@@ -3337,17 +3342,17 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     align-items: flex-start;
     gap: 24px;
     position: relative;
-  }
-  
-  /* Стили для кнопки закрытия */
-  .close {
+}
+
+/* Стили для кнопки закрытия */
+.close {
     position: absolute;
     top: 24px;
     right: 16px;
     cursor: pointer;
-  }
- 
-  .modalMessage_content-box-left {
+}
+
+.modalMessage_content-box-left {
     display: flex;
     width: 48px;
     height: 48px;
@@ -3360,33 +3365,35 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     border-radius: 84.857px;
     background: #FCF2E7;
     box-shadow: 0px 0px 3.429px 0px #F3B95F;
-  }
+}
 
-  .modalMessage_content-box-left span::before {
+.modalMessage_content-box-left span::before {
     font-size: 27px;
     color: #F3B95F;
-  }
+}
 
-  .modalMessage_content-box-rigth {
+.modalMessage_content-box-rigth {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-  }
+}
 
-  .modalMessage_content-box-rigth h3 {
+.modalMessage_content-box-rigth h3 {
     color: #010101;
     font-size: 18px;
     font-weight: 600;
     line-height: 145%;
-  }
-  .modalMessage_content-box-rigth p {
+}
+
+.modalMessage_content-box-rigth p {
     color: #252729;
     font-size: 14px;
     font-weight: 400;
-    line-height: 140%; 
-  }
-  .modalMessage_content-box-rigth button {
+    line-height: 140%;
+}
+
+.modalMessage_content-box-rigth button {
     display: flex;
     height: 56px;
     padding: 16px 32px;
@@ -3396,14 +3403,14 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     box-sizing: border-box;
     border-radius: 4px;
     background: #F3B95F;
-  }
+}
 
-  .modalMessage_content-box {
+.modalMessage_content-box {
     display: flex;
     align-items: flex-start;
     gap: 24px;
     flex: 1 0 0;
-  }
+}
 
 .sihn-up__hero-main-group2 {
     display: flex;
@@ -3464,7 +3471,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
-    color:#252729;
+    color: #252729;
     text-align: center;
     text-overflow: ellipsis;
     font-size: 22px;
@@ -3511,9 +3518,10 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     text-align: center;
     font-size: 24px;
     font-weight: 700;
-    line-height: 120%; 
+    line-height: 120%;
     letter-spacing: -0.96px;
 }
+
 .accordion-btn span {
     position: absolute;
     right: 24px;
@@ -3531,7 +3539,8 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     height: 32px;
     display: block;
 }
-.accordion-btn span::before{
+
+.accordion-btn span::before {
     font-size: 32px;
     transition: transform 0.4s ease-in-out;
 }
@@ -3575,7 +3584,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     text-overflow: ellipsis;
     font-size: 24px;
     font-weight: 600;
-    line-height: 120%; 
+    line-height: 120%;
 }
 
 .accordion-content-card-top-description-value {
@@ -3583,7 +3592,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     text-overflow: ellipsis;
     font-size: 22px;
     font-weight: 400;
-    line-height: 140%; 
+    line-height: 140%;
     letter-spacing: 0.44px;
 }
 
@@ -3604,8 +3613,8 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     width: 146px;
 }
 
-.accordion-content-card-main p{
-    color:#252729;
+.accordion-content-card-main p {
+    color: #252729;
     font-size: 14px;
     font-weight: 500;
     line-height: 145%;
@@ -3613,7 +3622,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     margin-bottom: 16px;
 }
 
-.accordion-content-card-main-text{
+.accordion-content-card-main-text {
     padding: 16px;
     border-radius: 4px;
     background: #F3F4F4;
@@ -3623,7 +3632,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     font-size: 14px;
     width: 100%;
     font-weight: 400;
-    line-height: 140%; 
+    line-height: 140%;
     box-sizing: border-box;
     height: auto;
     border: none;
@@ -3652,7 +3661,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     width: 100%;
 }
 
-.sihn-up__hero-bonus-header span{
+.sihn-up__hero-bonus-header span {
     color: #010101;
     text-align: right;
     font-size: 18px;
@@ -3665,7 +3674,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     text-align: right;
     font-size: 48px;
     font-weight: 600;
-    line-height: 120%; 
+    line-height: 120%;
 }
 
 .sihn-up__hero-bonus-header-value span {
@@ -3673,14 +3682,14 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     text-align: right;
     font-size: 48px;
     font-weight: 600;
-    line-height: 120%; 
+    line-height: 120%;
 }
 
 .sihn-up__hero-bonus-header p {
     color: #252729;
     font-size: 14px;
     font-weight: 400;
-    line-height: 140%; 
+    line-height: 140%;
     text-align: left;
 }
 
@@ -3690,7 +3699,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     box-sizing: border-box;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out; 
+    transition: max-height 0.3s ease-out;
 }
 
 .bonus-accordion-btn {
@@ -3713,7 +3722,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     color: #5E5E5E;
     font-size: 14px;
     font-weight: 400;
-    line-height: 140%; 
+    line-height: 140%;
     position: relative;
 }
 
@@ -3745,7 +3754,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     text-align: center;
     font-size: 22px;
     font-weight: 400;
-    line-height: 140%; 
+    line-height: 140%;
     letter-spacing: 0.44px;
 }
 
@@ -3760,10 +3769,10 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     box-sizing: border-box;
     border-radius: 99px;
     background: #F3B95F;
-    color:#010101;
+    color: #010101;
     font-size: 14px;
     font-weight: 500;
-    line-height: 145%; 
+    line-height: 145%;
     letter-spacing: 0.28px;
 }
 
@@ -3775,30 +3784,229 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     background: #F3F4F4;
 }
 
-.sihn-up__hero-bonus {
-    gap: 32px;
+
+
+.banner-title h2 {
+    color: #F3F4F4;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 130%;
 }
 
-.sihn-up__hero-bonus-header {
+
+.faq-accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.faq-accordion {
+    padding: 128px 0;
+    background: #FFF;
+}
+
+.faq-accordion-box {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 0px 124px;
+    flex-wrap: wrap;
+}
+
+.faq-accordion__column {
+    display: flex;
+    min-width: 676px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
     gap: 16px;
 }
 
-.sihn-up__hero-bonus-header span {
-    font-size: 18px;
+.faq-accordion__item {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    cursor: pointer;
+}
+.faq-accordion__btn {
+    color: #010101;
+    font-size: 26px;
+    padding: 24px;
+    box-sizing: border-box;
+    width: 100%;
     font-weight: 600;
+    line-height: 130%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.faq-accordion__btn:hover {
+    background: #F3F4F4;
+    transition: all 0.4s;
+}
+
+.faq-accordion__btn::before {
+    content: "";
+    background: url(../img/plus.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    transition: all 0.4s;
+}
+
+.faq-accordion__btn.open::before{
+    background: url(../img/minus.svg);
+}
+
+.faq-accordion__content {
+    display: flex;
+    padding: 16px 24px 0 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 32px;
+}
+
+.faq-accordion__content-content {
+    display: flex;
+    padding-left: 48px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-left: 2px solid #F3B95F;
+}
+
+.faq-accordion__content-content {
+    color: #252729;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 140%; 
+    letter-spacing: 0.44px;
+}
+
+.faq-accordion__content-box-btn {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 24px 48px;
+    flex-wrap: wrap;
+}
+
+.faq-accordion__content-box-btn button {
+    display: flex;
+    height: 56px;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #010101;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 145%;
+    letter-spacing: 0.28px;
 }
 
-.sihn-up__hero-bonus-header-value {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 120%; 
-    letter-spacing: 1.28px;
-}
-
-.modalMessage_content button span::before {
+.faq-accordion__content-box-btn button span::before {
     font-size: 24px;
 }
+
+.faq-accordion__content-box-btn a {
+    color: #010101;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 145%;
+    letter-spacing: 0.28px;
+    height: 56px;
+    padding: 16px 32px 16px 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.faq-accordion__content-box-btn a span::before {
+    font-size: 24px; 
+}
+
+.faq-accordion__btn.open {
+    background: #F3F4F4;
+}
+
+
+.hero__smoll .tab-pane {
+    padding: 64px 0 96px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5405,26 +5613,31 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     .sihn-up__hero-main-nav button span::before {
         font-size: 14px;
     }
+
     .modalMessage_content {
         padding: 32px 32px 24px 24px;
         max-width: 288px;
         box-sizing: border-box;
     }
+
     .modalMessage_content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         flex: 1 0 0;
     }
+
     .modalMessage_content-box-left {
         width: 32px;
         height: 32px;
         min-width: 32px;
         padding: 9.143px;
     }
+
     .modalMessage_content-box-left span::before {
         font-size: 18px;
     }
+
     .modalMessage_content-box-rigth h3 {
         font-size: 14px;
         font-weight: 500;
@@ -5432,13 +5645,16 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
         letter-spacing: 0.28px;
         margin-bottom: 8px;
     }
+
     .modalMessage_content-box-rigth {
         gap: 0;
     }
+
     .modalMessage_content-box-rigth button {
         padding: 12px;
         margin-top: 8px;
     }
+
     .modalMessage_content-box {
         display: flex;
         flex-direction: column;
@@ -5446,6 +5662,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
         gap: 16px;
         flex: 1 0 0;
     }
+
     .sihn-up__hero-main-group-col {
         width: 100%;
         align-items: flex-start;
@@ -5453,10 +5670,12 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
         min-width: 246px;
         flex: 1;
     }
+
     .sihn-up__hero-main-group-col .authorization__form-checkbox {
         margin-right: auto;
         width: max-content;
     }
+
     .accordion-btn {
         display: flex;
         align-items: center;
@@ -5465,81 +5684,97 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
         flex-wrap: wrap;
         padding: 16px 60px 16px 16px;
     }
+
     .accordion-btn span::before {
         font-size: 24px;
     }
+
     .accordion-btn span {
         width: 24px;
         height: 24px;
     }
+
     .accordion-btn-number {
         font-size: 18px;
         font-weight: 600;
-        line-height: 145%; 
+        line-height: 145%;
         width: auto;
     }
+
     .accordion-btn-date {
         font-size: 14px;
         font-weight: 400;
         line-height: 140%;
     }
+
     .accordion-btn-status {
         padding: 4px 12px;
         font-size: 14px;
         font-weight: 500;
-        line-height: 145%; 
+        line-height: 145%;
         letter-spacing: 0.28px;
         width: auto;
         height: auto;
     }
+
     .accordion-btn-price {
         font-size: 18px;
         font-weight: 600;
-        line-height: 145%; 
+        line-height: 145%;
         width: auto;
     }
+
     .accordion-content {
         padding: 0 0px 16px 0;
     }
+
     .accordion-content-card-top-img {
         width: 32px;
         height: 32px;
         border-radius: 0.8px;
         margin-right: 12px;
     }
+
     .accordion-content-card-top-description {
         gap: 2px;
     }
+
     .accordion-content-card-top-description-name {
         font-size: 14px;
         font-weight: 500;
         line-height: 145%;
         letter-spacing: 0.28px;
     }
+
     .accordion-content-card-top-description-value {
         font-size: 14px;
         font-weight: 400;
         line-height: 140%;
     }
+
     .accordion-content-card-top-value {
         font-size: 14px;
         font-weight: 400;
         line-height: 140%;
         width: 72px;
     }
+
     .accordion-content-card-top {
         margin-bottom: 8px;
     }
+
     .accordion-content-card-main p {
         font-size: 14px;
         font-weight: 500;
-        line-height: 145%; 
+        line-height: 145%;
         letter-spacing: 0.28px;
     }
+
     .accordion-btn.open span::before {
         width: 24px;
         height: 24px;
     }
+
     .bonus-accordion-btn {
         padding: 16px 0;
         display: flex;
@@ -5550,21 +5785,21 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
         flex-wrap: wrap;
         width: 100%;
     }
-    
+
     .bonus-accordion-btn-message-number {
         font-size: 18px;
         font-weight: 600;
         line-height: 145%;
         width: auto;
     }
-    
+
     .bonus-accordion-btn-message-date {
         font-size: 14px;
         font-weight: 400;
         line-height: 140%;
     }
-    
-    .bonus-accordion-btn-message-value{
+
+    .bonus-accordion-btn-message-value {
         width: 44px;
         height: 44px;
         padding: 12px;
@@ -5573,6 +5808,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
         line-height: 145%;
         letter-spacing: 0.28px;
     }
+
     .bonus-accordion-content {
         padding: 0;
     }
@@ -5583,7 +5819,103 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
         padding: 16px 24px;
         box-sizing: border-box;
     }
+
+    .sihn-up__hero-bonus {
+        gap: 32px;
+    }
+
+    .sihn-up__hero-bonus-header {
+        gap: 16px;
+    }
+
+    .sihn-up__hero-bonus-header span {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 145%;
+    }
+
+    .sihn-up__hero-bonus-header-value {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: 1.28px;
+    }
+
+    .modalMessage_content button span::before {
+        font-size: 24px;
+    }
+
+    .faq-accordion {
+        padding: 48px 0;
+    }
     
+    .faq-accordion-box {
+        display: flex;
+        max-width: 800px;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: 0px 48px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .faq-accordion__column {
+        display: flex;
+        min-width: 256px;
+        align-items: flex-start;
+        flex: 1 0 0;
+    }
+
+    .faq-accordion__btn {
+        padding: 16px 64px 16px 16px;
+    }
+    .faq-accordion__btn::before {
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        top: 16px;
+        right: 16px;
+    }
+
+    .faq-accordion__btn {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.96px;
+    }
+    .faq-accordion__content {
+        padding: 16px 0 0 0;
+    }
+    .faq-accordion__content-content {
+        padding-left: 16px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    .faq-accordion__content {
+        gap: 10px;
+    }
+    .faq-accordion__content-box-btn button {
+        height: 44px;
+        padding: 12px;
+        gap: 4px;
+        box-sizing: border-box;
+    }
+    .faq-accordion__content-box-btn a {
+        height: 44px;
+        padding: 12px;
+        gap: 4px;
+        box-sizing: border-box;
+    }
+    .faq-accordion__content-box-btn {
+        gap: 16px;
+    }
+    .faq-accordion__content-box-btn button span::before {
+        font-size: 14px;
+    }
+    .faq-accordion__content-box-btn a span::before {
+        font-size: 14px;
+    }
 }
 
 

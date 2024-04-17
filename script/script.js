@@ -659,4 +659,41 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// FAQ PAGE аккардион
+document.addEventListener('DOMContentLoaded', function () {
+    const accordionItems = document.querySelectorAll('.faq-accordion__item');
 
+    accordionItems.forEach(item => {
+        const btn = item.querySelector('.faq-accordion__btn');
+        const content = item.querySelector('.faq-accordion__content');
+
+        btn.addEventListener('click', function () {
+            const isOpen = content.classList.contains('show');
+
+            // Закрываем все другие элементы аккордеона
+            accordionItems.forEach(otherItem => {
+                const otherContent = otherItem.querySelector('.faq-accordion__content');
+                const otherBtn = otherItem.querySelector('.faq-accordion__btn');
+                
+                if (otherContent !== content && otherContent.classList.contains('show')) {
+                    otherContent.style.maxHeight = '0';
+                    otherContent.classList.remove('show');
+                    otherBtn.classList.remove('open');
+                }
+            });
+
+            // Открываем или закрываем текущий элемент аккордеона
+            if (isOpen) {
+                content.style.maxHeight = '0';
+                setTimeout(() => {
+                    content.classList.remove('show');
+                }, 300);
+                btn.classList.remove('open');
+            } else {
+                content.classList.add('show');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                btn.classList.add('open');
+            }
+        });
+    });
+});
