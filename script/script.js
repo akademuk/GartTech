@@ -583,6 +583,8 @@ closeButtons.forEach(function(btn) {
 });
 
 
+
+// Order history аккардион в кабинете пользователя
 document.addEventListener('DOMContentLoaded', function () {
     const accordionItems = document.querySelectorAll('.accordion-item');
 
@@ -591,10 +593,54 @@ document.addEventListener('DOMContentLoaded', function () {
         const content = item.querySelector('.accordion-content');
 
         btn.addEventListener('click', function () {
+            if (content.classList.contains('show')) {
+                // Если текущий элемент уже открыт, закрываем его
+                content.style.maxHeight = '0';
+                setTimeout(() => {
+                    content.classList.remove('show');
+                }, 300);
+                btn.classList.remove('open');
+            } else {
+                // Закрываем все другие элементы и открываем текущий
+                accordionItems.forEach(otherItem => {
+                    const otherContent = otherItem.querySelector('.accordion-content');
+                    const otherBtn = otherItem.querySelector('.accordion-btn');
+                    if (otherContent !== content && otherContent.classList.contains('show')) {
+                        otherContent.style.maxHeight = '0';
+                        setTimeout(() => {
+                            otherContent.classList.remove('show');
+                        }, 300);
+                        otherBtn.classList.remove('open');
+                    }
+                });
+
+                // Открываем текущий элемент
+                content.classList.add('show');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                btn.classList.add('open');
+            }
+        });
+    });
+});
+
+
+// Bonus account аккардион в кабинете пользователя
+document.addEventListener('DOMContentLoaded', function () {
+    const accordionItems = document.querySelectorAll('.bonus-item');
+
+    accordionItems.forEach(item => {
+        const btn = item.querySelector('.bonus-accordion-btn');
+        const content = item.querySelector('.bonus-accordion-content');
+
+        btn.addEventListener('click', function () {
             accordionItems.forEach(otherItem => {
                 if (otherItem !== item) {
-                    otherItem.querySelector('.accordion-content').classList.remove('show');
-                    otherItem.querySelector('.accordion-btn').classList.remove('open');
+                    const otherContent = otherItem.querySelector('.bonus-accordion-content');
+                    const otherBtn = otherItem.querySelector('.bonus-accordion-btn');
+
+                    otherContent.style.maxHeight = '0';
+                    otherContent.classList.remove('show');
+                    otherBtn.classList.remove('open');
                 }
             });
 
@@ -602,7 +648,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 content.style.maxHeight = '0';
                 setTimeout(() => {
                     content.classList.remove('show');
-                }, 300); // Задержка в миллисекундах, должна соответствовать времени анимации в CSS
+                }, 300);
             } else {
                 content.classList.add('show');
                 content.style.maxHeight = content.scrollHeight + 'px';
@@ -612,6 +658,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
 
 

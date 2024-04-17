@@ -3481,6 +3481,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     position: relative;
     padding: 24px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .accordion-btn-status {
@@ -3506,13 +3507,8 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
 
 .accordion-btn-price {
     width: 146px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
     color: #252729;
     text-align: center;
-    text-overflow: ellipsis;
     font-size: 24px;
     font-weight: 700;
     line-height: 120%; 
@@ -3570,6 +3566,10 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     gap: 8px;
 }
 
+.accordion-content-card {
+    padding-top: 16px;
+}
+
 .accordion-content-card-top-description-name {
     color: #252729;
     text-overflow: ellipsis;
@@ -3613,7 +3613,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     margin-bottom: 16px;
 }
 
-.accordion-content-card-main textarea{
+.accordion-content-card-main-text{
     padding: 16px;
     border-radius: 4px;
     background: #F3F4F4;
@@ -3631,14 +3631,174 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     text-align: left;
 }
 
+.accordion-content-card-main {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #DDD;
+}
 
+.sihn-up__hero-bonus {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 24px;
+    width: 100%;
+}
 
+.sihn-up__hero-bonus-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    width: 100%;
+}
 
+.sihn-up__hero-bonus-header span{
+    color: #010101;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 145%;
+}
 
+.sihn-up__hero-bonus-header-value {
+    color: #010101;
+    text-align: right;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 120%; 
+}
 
+.sihn-up__hero-bonus-header-value span {
+    color: #010101;
+    text-align: right;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 120%; 
+}
 
+.sihn-up__hero-bonus-header p {
+    color: #252729;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; 
+    text-align: left;
+}
 
+.bonus-accordion-content {
+    width: 100%;
+    padding: 0px 24px;
+    box-sizing: border-box;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; 
+}
 
+.bonus-accordion-btn {
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    cursor: pointer;
+}
+
+.bonus-accordion-btn-message {
+    display: flex;
+    width: 264px;
+    padding: 16px 24px;
+    gap: 16px;
+    box-sizing: border-box;
+    background: #DCDDDE;
+    color: #5E5E5E;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; 
+    position: relative;
+}
+
+.bonus-accordion-btn-message::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 20px;
+    bottom: -3px;
+    background: #DCDDDE;
+    z-index: 0;
+}
+
+.bonus-accordion-btn-message-number {
+    color: #252729;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.44px;
+    width: 146px;
+}
+
+.bonus-accordion-btn-message-date {
+    overflow: hidden;
+    color: #252729;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 140%; 
+    letter-spacing: 0.44px;
+}
+
+.bonus-accordion-btn-message-value {
+    display: flex;
+    width: 56px;
+    height: 56px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+    border-radius: 99px;
+    background: #F3B95F;
+    color:#010101;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 145%; 
+    letter-spacing: 0.28px;
+}
+
+.sihn-up__hero-bonus-main-accardion {
+    width: 100%;
+}
+
+.bonus-accordion-btn.open {
+    background: #F3F4F4;
+}
+
+.sihn-up__hero-bonus {
+    gap: 32px;
+}
+
+.sihn-up__hero-bonus-header {
+    gap: 16px;
+}
+
+.sihn-up__hero-bonus-header span {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 145%;
+}
+
+.sihn-up__hero-bonus-header-value {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 120%; 
+    letter-spacing: 1.28px;
+}
+
+.modalMessage_content button span::before {
+    font-size: 24px;
+}
 
 
 
@@ -5297,6 +5457,133 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
         margin-right: auto;
         width: max-content;
     }
+    .accordion-btn {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        gap: 8px 16px;
+        flex-wrap: wrap;
+        padding: 16px 60px 16px 16px;
+    }
+    .accordion-btn span::before {
+        font-size: 24px;
+    }
+    .accordion-btn span {
+        width: 24px;
+        height: 24px;
+    }
+    .accordion-btn-number {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 145%; 
+        width: auto;
+    }
+    .accordion-btn-date {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    .accordion-btn-status {
+        padding: 4px 12px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 145%; 
+        letter-spacing: 0.28px;
+        width: auto;
+        height: auto;
+    }
+    .accordion-btn-price {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 145%; 
+        width: auto;
+    }
+    .accordion-content {
+        padding: 0 0px 16px 0;
+    }
+    .accordion-content-card-top-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 0.8px;
+        margin-right: 12px;
+    }
+    .accordion-content-card-top-description {
+        gap: 2px;
+    }
+    .accordion-content-card-top-description-name {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 145%;
+        letter-spacing: 0.28px;
+    }
+    .accordion-content-card-top-description-value {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    .accordion-content-card-top-value {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        width: 72px;
+    }
+    .accordion-content-card-top {
+        margin-bottom: 8px;
+    }
+    .accordion-content-card-main p {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 145%; 
+        letter-spacing: 0.28px;
+    }
+    .accordion-btn.open span::before {
+        width: 24px;
+        height: 24px;
+    }
+    .bonus-accordion-btn {
+        padding: 16px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 8px 16px;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .bonus-accordion-btn-message-number {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 145%;
+        width: auto;
+    }
+    
+    .bonus-accordion-btn-message-date {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+    }
+    
+    .bonus-accordion-btn-message-value{
+        width: 44px;
+        height: 44px;
+        padding: 12px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 145%;
+        letter-spacing: 0.28px;
+    }
+    .bonus-accordion-content {
+        padding: 0;
+    }
+
+    .bonus-accordion-btn-message {
+        width: 226px;
+        min-width: 176px;
+        padding: 16px 24px;
+        box-sizing: border-box;
+    }
+    
 }
 
 
