@@ -1,4 +1,4 @@
-
+filterCategory();
 setupSearch();
 initializeModal();
 
@@ -566,8 +566,10 @@ tabButtons.forEach(button => {
 // Модальные окна
 function openModal(modalId) {
     var modal = document.getElementById(modalId);
+    var body = document.querySelector('body');
     if (modal) {
         modal.style.display = 'flex';
+        body.classList.add('active');
     }
 }
 
@@ -578,9 +580,11 @@ closeButtons.forEach(function(btn) {
         var modal = btn.closest('.modalMessage');
         if (modal) {
             modal.style.display = 'none';
+            document.body.classList.remove('active');
         }
     });
 });
+
 
 
 
@@ -697,3 +701,114 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// Services main filter
+function filterCategory() {
+    const buttons = $(".button");
+    const cards = $(".card");
+    const heroBlocks = $(".sihn-up__hero .services-page__hero");
+
+    function filter(category) {
+        let count = 0;
+        cards.each(function(index, card) {
+            const isItemFiltered = !$(card).hasClass(category);
+            const isShowAll = category.toLowerCase() === "all";
+            if ((isItemFiltered && !isShowAll) || count >= 9) {
+                $(card).addClass("hide");
+            } else {
+                $(card).removeClass("hide");
+                count++;
+            }
+        });
+
+        // Переключаем блоки hero в зависимости от выбранной категории
+        const isShowAll = category.toLowerCase() === "all";
+        heroBlocks.each(function(index, heroBlock) {
+            const isBlockFiltered = !$(heroBlock).hasClass(category);
+            if (isBlockFiltered && !isShowAll) {
+                $(heroBlock).addClass("hide");
+            } else {
+                $(heroBlock).removeClass("hide");
+            }
+        });
+    }
+
+    buttons.on("click", function() {
+        const currentCategory = $(this).data("filter");
+
+        // Удаляем класс "active" у всех кнопок
+        buttons.removeClass("active");
+
+        // Добавляем класс "active" к текущей кнопке
+        $(this).addClass("active");
+
+        // Показываем только блоки с классом "all" и скрываем остальные
+        heroBlocks.each(function(index, heroBlock) {
+            if (currentCategory === "all") {
+                $(heroBlock).toggleClass("hide", !$(heroBlock).hasClass("all"));
+            } else {
+                $(heroBlock).toggleClass("hide", !$(heroBlock).hasClass(currentCategory));
+            }
+        });
+
+        // Показываем только блоки с классом "all" и скрываем остальные
+        $(".gallery__content").each(function(index, card) {
+            if (currentCategory === "all") {
+                $(card).toggleClass("hide", !$(card).hasClass("all"));
+            } else {
+                $(card).toggleClass("hide", !$(card).hasClass(currentCategory));
+            }
+        });
+    });
+}
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll('.button');
+    const cards = document.querySelectorAll('.card.menu__link');
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const currentCategory = button.dataset.filter;
+
+            buttons.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+
+            button.classList.add("active");
+
+            cards.forEach((card) => {
+                const isItemFiltered = !card.classList.contains(currentCategory);
+                const isShowAll = currentCategory.toLowerCase() === "all";
+                if (isItemFiltered && !isShowAll) {
+                    card.classList.add("hide");
+                } else {
+                    card.classList.remove("hide");
+                }
+            });
+
+            document.querySelectorAll('.gallery__content').forEach((card) => {
+                if (currentCategory === "all") {
+                    card.classList.remove("hide");
+                } else {
+                    if (!card.classList.contains(currentCategory)) {
+                        card.classList.add("hide");
+                    } else {
+                        card.classList.remove("hide");
+                    }
+                }
+            });
+        });
+    });
+
+    // Устанавливаем класс 'active' для первой кнопки после полной загрузки DOM
+    const firstButton = document.querySelector('.button_all');
+    firstButton.classList.add('active');
+});
+
+  
+
+ 
+
+
