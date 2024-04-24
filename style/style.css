@@ -3125,7 +3125,7 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
 
 .sihn-up__hero-main {
     display: flex;
-    padding: 64px 0 128px 0;
+    padding: 69px 0 128px 0;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -3145,6 +3145,21 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
     line-height: 145%;
     padding-bottom: 12px;
     border: none;
+    border-bottom: 4px solid transparent;
+    background: transparent;
+}
+
+.sihn-up__hero-main-box .tabs a {
+    color: #EA4335;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 145%;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    border: none;
+    text-decoration: none;
     border-bottom: 4px solid transparent;
     background: transparent;
 }
@@ -3398,12 +3413,19 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
 .sihn-up__hero-main-group-col {
     width: 50%;
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
 }
 
+.sihn-up__hero-main-group-col .authorization__form-checkbox {
+    margin-top: auto;
+}
 
+.submit2 {
+    padding: 16px 53px;
+}
 
 .accordion-content {
     max-height: 0;
@@ -3496,7 +3518,6 @@ input[type="checkbox"]:checked+.checkbox-custom::after {
 .accordion-btn span {
     position: absolute;
     right: 24px;
-    top: 36px;
     width: 32px;
     height: 32px;
 }
@@ -6063,7 +6084,13 @@ textarea {
     font-weight: 400;
     line-height: 140%; 
 }
-
+.bonus-accordion-btn-message-number-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 135px;
+}
 
 
 
@@ -8905,6 +8932,21 @@ textarea {
     }
     .success__box-right-coment {
         padding: 0;
+    }
+    .bonus-accordion-btn {
+        width: 100%;
+    }
+    .bonus-accordion-btn-message {
+        margin-right: auto;
+    }
+    .bonus-accordion-btn-message-number-box {
+        display: flex;
+        min-width: 226px;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+        flex: 1 0 0;
+        padding-left: 0;
     }
 }
 
