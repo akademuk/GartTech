@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" />
-  <link rel="icon" type="image/png" href="img/Favicon.png" />
-  <link rel="stylesheet" href="style/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="style/jquery.fancybox.min.css" />
-  <link rel="stylesheet" href="style/reset.css" />
-  <link rel="stylesheet" href="style/icons.css" />
-  <link rel="stylesheet" href="style/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/Favicon.png">
+  <link rel="stylesheet" href="style/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/icons.css">
+  <link rel="stylesheet" href="style/style.css">
   <title>Gart Tech</title>
 </head>
 
 <body class="body">
   <!-- Sub Header -->
-  <section class="subheader">
+  <div class="subheader">
     <div class="wrapper">
       <div class="subheader__container">
         <div class="subheader__promotion">
@@ -44,10 +44,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- LOGIN / SIGN UP -->
-  <section class="authorization">
+  <div class="authorization">
     <div class="authorization__container">
       <button class="authorization__close icon-Nameclose-line"></button>
 
@@ -61,7 +61,7 @@
             <div class="form-group input-style">
               <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
               <input type="email" id="email" name="email" placeholder="name@mail.com"
-                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required />
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
             </div>
             <div class="validation-message"></div>
           </div>
@@ -71,10 +71,10 @@
             <div class="form-group input-style">
               <span class="authorization__form-input-icon icon-NameKey"></span>
               <input type="password" id="password" name="password" pattern=".{8,}" placeholder="Enter your password"
-                title="Password must be at least 8 characters long" />
+                title="Password must be at least 8 characters long">
               <span class="password-toggle" onclick="togglePasswordVisibility('password')">
                 <img width="18" height="18" class="see-password" src="img/open-pasword.svg"
-                  alt="Toggle Password Visibility" />
+                  alt="Toggle Password Visibility">
                 <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
               </span>
             </div>
@@ -86,10 +86,10 @@
             <div class="form-group input-style">
               <span class="authorization__form-input-icon icon-NameKey"></span>
               <input type="password" id="repeat-password" name="repeat-password" pattern=".{8,}"
-                placeholder="Please re-enter your password" title="Password must be at least 8 characters long" />
+                placeholder="Please re-enter your password" title="Password must be at least 8 characters long">
               <span class="password-toggle" onclick="togglePasswordVisibility('repeat-password')">
                 <img width="18" height="18" class="see-password" src="img/open-pasword.svg"
-                  alt="Toggle Password Visibility" />
+                  alt="Toggle Password Visibility">
                 <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
               </span>
             </div>
@@ -107,12 +107,12 @@
         <div class="authorization__additional">
           <a href="#">Sign up with Google
             <span>
-              <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google" />
+              <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google">
             </span>
           </a>
           <!-- <a href="#">Sign up with Apple
             <span>
-              <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple" />
+              <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple">
             </span>
           </a> -->
         </div>
@@ -132,7 +132,7 @@
             <div class="form-group input-style">
               <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
               <input type="email" id="email2" name="email" placeholder="name@mail.com"
-                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required />
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
             </div>
             <div class="validation-message"></div>
           </div>
@@ -142,10 +142,10 @@
             <div class="form-group input-style">
               <span class="authorization__form-input-icon icon-NameKey"></span>
               <input type="password" id="password2" name="password" pattern=".{8,}" placeholder="Enter your password"
-                title="Password must be at least 8 characters long" />
+                title="Password must be at least 8 characters long">
               <span class="password-toggle" onclick="togglePasswordVisibility('password')">
                 <img width="18" height="18" class="see-password" src="img/open-pasword.svg"
-                  alt="Toggle Password Visibility" />
+                  alt="Toggle Password Visibility">
                 <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
               </span>
             </div>
@@ -158,7 +158,7 @@
 
           <div class="authorization__form-checkbox">
             <label>
-              <input type="checkbox" name="сheckbox" value="checked" />
+              <input type="checkbox" name="сheckbox" value="checked">
               <span class="checkbox-custom"></span>
               <span class="checkbox-value">Remember me</span>
             </label>
@@ -173,22 +173,22 @@
         <div class="authorization__additional">
           <a href="#">Sign up with Google
             <span>
-              <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google" />
+              <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google">
             </span>
           </a>
           <!-- <a href="#">Sign up with Apple
             <span>
-              <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple" />
+              <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple">
             </span>
           </a> -->
         </div>
         <div class="authorization__change">
           <p>Are you new here?</p>
-          <a href="sign-up.html" class="authorization__login-btn " >CREATE ACCOUNT</a>
+          <a href="sign-up.html" class="authorization__login-btn ">CREATE ACCOUNT</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Basket -->
   <section class="basket">
@@ -199,13 +199,13 @@
       <div class="basket__content">
         <h2>My Cart <span class="basket__value btn">3</span></h2>
         <div class="basket__container">
-          <article class="basket__card">
+          <div class="basket__card">
             <div class="basket__card-box">
               <div class="basket__card-img">
                 <picture>
-                  <source srcset="img/gallery-obj1.webp" type="image/webp" />
-                  <source srcset="img/gallery-obj1.jpg" type="image/jpg" />
-                  <img width="640" height="552" src="img/gallery-obj1.jpg" alt="Forge Your Legendary Army Today!" />
+                  <source srcset="img/gallery-obj1.webp" type="image/webp">
+                  <source srcset="img/gallery-obj1.jpg" type="image/jpg">
+                  <img width="640" height="552" src="img/gallery-obj1.jpg" alt="Forge Your Legendary Army Today!">
                 </picture>
               </div>
               <div class="basket__card-description">
@@ -217,7 +217,7 @@
                   <p class="basket__content-value">10$</p>
                   <div class="quantity">
                     <button class="btn minus-btn icon-NameMinus"></button>
-                    <input type="text" class="quantity-input" value="1" readonly />
+                    <input type="text" class="quantity-input" value="1" readonly>
                     <button class="btn plus-btn icon-NamePlus"></button>
                   </div>
                 </div>
@@ -231,15 +231,15 @@
                 <textarea></textarea>
               </form>
             </div>
-          </article>
+          </div>
 
-          <article class="basket__card">
+          <div class="basket__card">
             <div class="basket__card-box">
               <div class="basket__card-img">
                 <picture>
-                  <source srcset="img/hot-offers-img.webp" type="image/webp" />
-                  <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
-                  <img width="736" height="752" src="img/hot-offers-img.jpg" alt="Forge Your Legendary Army Today!" />
+                  <source srcset="img/hot-offers-img.webp" type="image/webp">
+                  <source srcset="img/hot-offers-img.jpg" type="image/jpg">
+                  <img width="736" height="752" src="img/hot-offers-img.jpg" alt="Forge Your Legendary Army Today!">
                 </picture>
               </div>
               <div class="basket__card-description">
@@ -251,7 +251,7 @@
                   <p class="basket__content-value">10$</p>
                   <div class="quantity">
                     <button class="btn minus-btn">-</button>
-                    <input type="text" class="quantity-input" value="1" />
+                    <input type="text" class="quantity-input" value="1">
                     <button class="btn plus-btn">+</button>
                   </div>
                 </div>
@@ -265,15 +265,15 @@
                 <textarea></textarea>
               </form>
             </div>
-          </article>
+          </div>
 
-          <article class="basket__card">
+          <div class="basket__card">
             <div class="basket__card-box">
               <div class="basket__card-img">
                 <picture>
-                  <source srcset="img/hot-offers-img2.webp" type="image/webp" />
-                  <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
-                  <img width="736" height="752" src="img/hot-offers-img2.jpg" alt="Forge Your Legendary Army Today!" />
+                  <source srcset="img/hot-offers-img2.webp" type="image/webp">
+                  <source srcset="img/hot-offers-img2.jpg" type="image/jpg">
+                  <img width="736" height="752" src="img/hot-offers-img2.jpg" alt="Forge Your Legendary Army Today!">
                 </picture>
               </div>
               <div class="basket__card-description">
@@ -285,7 +285,7 @@
                   <p class="basket__content-value">10$</p>
                   <div class="quantity">
                     <button class="btn minus-btn">-</button>
-                    <input type="text" class="quantity-input" value="1" />
+                    <input type="text" class="quantity-input" value="1">
                     <button class="btn plus-btn">+</button>
                   </div>
                 </div>
@@ -299,7 +299,7 @@
                 <textarea></textarea>
               </form>
             </div>
-          </article>
+          </div>
         </div>
         <div class="basket__footer">
           <div class="basket__sumbal">
@@ -355,9 +355,9 @@
             <article onclick="window.open('services.html', '_blank')" class="card menu__link">
               <div class="menu__services-box-img">
                 <picture>
-                  <source srcset="img/menu-services-obj1.webp" type="image/webp" />
-                  <source srcset="img/menu-services-obj1.jpg" type="image/jpeg" />
-                  <img src="img/menu-services-obj1.jpg" alt="COMMISSION IMAGE" />
+                  <source srcset="img/menu-services-obj1.webp" type="image/webp">
+                  <source srcset="img/menu-services-obj1.jpg" type="image/jpeg">
+                  <img src="img/menu-services-obj1.jpg" alt="COMMISSION IMAGE">
                 </picture>
               </div>
               <div class="menu__services-box-text">
@@ -368,9 +368,9 @@
             <article onclick="window.open('services.html', '_blank')" class="card menu__link">
               <div class="menu__services-box-img">
                 <picture>
-                  <source srcset="img/menu-services-obj2.webp" type="image/webp" />
-                  <source srcset="img/menu-services-obj2.jpg" type="image/jpeg" />
-                  <img src="img/menu-services-obj2.jpg" alt="BUY NOW" />
+                  <source srcset="img/menu-services-obj2.webp" type="image/webp">
+                  <source srcset="img/menu-services-obj2.jpg" type="image/jpeg">
+                  <img src="img/menu-services-obj2.jpg" alt="BUY NOW">
                 </picture>
               </div>
               <div class="menu__services-box-text">
@@ -381,9 +381,9 @@
             <article onclick="window.open('services.html', '_blank')" class="card menu__link">
               <div class="menu__services-box-img">
                 <picture>
-                  <source srcset="img/menu-services-obj3.webp" type="image/webp" />
-                  <source srcset="img/menu-services-obj3.jpg" type="image/jpg" />
-                  <img src="img/menu-services-obj3.jpg" alt="CUSTOM SERVICES" />
+                  <source srcset="img/menu-services-obj3.webp" type="image/webp">
+                  <source srcset="img/menu-services-obj3.jpg" type="image/jpg">
+                  <img src="img/menu-services-obj3.jpg" alt="CUSTOM SERVICES">
                 </picture>
               </div>
               <div class="menu__services-box-text">
@@ -409,13 +409,13 @@
       <div class="header__container">
         <div class="header__logo">
           <a href="index.html">
-            <img width="200" height="71" src="img/logo.svg" alt="Gart Tech logotype" />
+            <img width="200" height="71" src="img/logo.svg" alt="Gart Tech logotype">
           </a>
         </div>
         <div class="header__navigation">
           <div class="header__navigation-search">
             <div class="header__navigation-search-box icon-NameSearch">
-              <input type="text" id="searchInput" placeholder="Search here..." />
+              <input type="text" id="searchInput" placeholder="Search here...">
               <span class="icon-NameArrow-left header__submit"><input type="submit" value=""
                   class="header__submit-btn" /></span>
             </div>
@@ -454,10 +454,10 @@
               <div class="hero__content">
                 <div class="hero__content-img">
                   <picture>
-                    <source srcset="img/hero-slide-obj-01.webp" type="image/webp" />
-                    <source srcset="img/hero-slide-obj-01.jpg" type="image/jpg" />
+                    <source srcset="img/hero-slide-obj-01.webp" type="image/webp">
+                    <source srcset="img/hero-slide-obj-01.jpg" type="image/jpg">
                     <img width="3552" height="1248" src="img/hero-slide-obj-01.jpg"
-                      alt="Forge Your Legendary Army Today!" />
+                      alt="Forge Your Legendary Army Today!">
                   </picture>
                 </div>
                 <h2>Forge Your Legendary Army Today!</h2>
@@ -472,9 +472,9 @@
               <div class="hero__content">
                 <div class="hero__content-img">
                   <picture>
-                    <source srcset="img/hero-slide-obj-02.webp" type="image/webp" />
-                    <source srcset="img/hero-slide-obj-02.jpg" type="image/jpg" />
-                    <img width="3552" height="1248" src="img/hero-slide-obj-02.jpg" alt="Head text slide 2" />
+                    <source srcset="img/hero-slide-obj-02.webp" type="image/webp">
+                    <source srcset="img/hero-slide-obj-02.jpg" type="image/jpg">
+                    <img width="3552" height="1248" src="img/hero-slide-obj-02.jpg" alt="Head text slide 2">
                   </picture>
                 </div>
                 <h2>Head text slide 2</h2>
@@ -490,10 +490,10 @@
               <div class="hero__content">
                 <div class="hero__content-img">
                   <picture>
-                    <source srcset="img/hero-slide-obj-03.webp" type="image/webp" />
-                    <source srcset="img/hero-slide-obj-03.jpg" type="image/jpg" />
+                    <source srcset="img/hero-slide-obj-03.webp" type="image/webp">
+                    <source srcset="img/hero-slide-obj-03.jpg" type="image/jpg">
                     <img width="3552" height="1248" src="img/hero-slide-obj-03.jpg"
-                      alt="Forge Your Legendary Army Today!" />
+                      alt="Forge Your Legendary Army Today!">
                   </picture>
                 </div>
                 <h2>Head text slide 3</h2>
@@ -520,7 +520,7 @@
   </section>
 
   <!-- Categories -->
-  <section class="categories">
+  <div class="categories">
     <div class="wrapper">
       <div class="categories__container">
         <article class="categories__card">
@@ -581,7 +581,7 @@
         </article>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Promotion Banner -->
   <section class="promotion-banner">
@@ -591,10 +591,9 @@
           <div class="promotion-banner__content">
             <div class="promotion-banner__content-img">
               <picture>
-                <source srcset="img/promotion-banner-obj1.webp" type="image/webp" />
-                <source srcset="img/promotion-banner-obj1.jpg" type="image/jpg" />
-                <img width="3840" height="752" src="img/promotion-banner-obj1.jpg"
-                  alt="INTRODUCING DAWN OF VALHALLA!" />
+                <source srcset="img/promotion-banner-obj1.webp" type="image/webp">
+                <source srcset="img/promotion-banner-obj1.jpg" type="image/jpg">
+                <img width="3840" height="752" src="img/promotion-banner-obj1.jpg" alt="INTRODUCING DAWN OF VALHALLA!">
               </picture>
             </div>
             <h2>INTRODUCING DAWN OF VALHALLA!</h2>
@@ -606,9 +605,9 @@
           <div class="promotion-banner__content">
             <div class="promotion-banner__content-img">
               <picture>
-                <source srcset="img/promotion-banner-obj2.webp" type="image/webp" />
-                <source srcset="img/promotion-banner-obj2.jpg" type="image/jpg" />
-                <img width="3840" height="752" src="img/promotion-banner-obj2.jpg" alt="Head text slide 2" />
+                <source srcset="img/promotion-banner-obj2.webp" type="image/webp">
+                <source srcset="img/promotion-banner-obj2.jpg" type="image/jpg">
+                <img width="3840" height="752" src="img/promotion-banner-obj2.jpg" alt="Head text slide 2">
               </picture>
             </div>
             <h2>Head text slide 2</h2>
@@ -623,9 +622,9 @@
           <div class="promotion-banner__content">
             <div class="promotion-banner__content-img">
               <picture>
-                <source srcset="img/promotion-banner-obj3.webp" type="image/webp" />
-                <source srcset="img/promotion-banner-obj3.jpg" type="image/jpg" />
-                <img width="3840" height="752" src="img/promotion-banner-obj3.jpg" alt="Head text slide 3" />
+                <source srcset="img/promotion-banner-obj3.webp" type="image/webp">
+                <source srcset="img/promotion-banner-obj3.jpg" type="image/jpg">
+                <img width="3840" height="752" src="img/promotion-banner-obj3.jpg" alt="Head text slide 3">
               </picture>
             </div>
             <h2>Head text slide 3</h2>
@@ -656,7 +655,7 @@
         <div class="gallery__container-header">
           <div class="gallery__container-header-title">
             <h2>
-              FIVE YEARS OF CRAFTSMANSHIP: <br />
+              FIVE YEARS OF CRAFTSMANSHIP: <br>
               SHOWCASING OUR FINEST CREATIONS IN THE CASES SECTION
             </h2>
             <a href="gallery.html" class="btn">GO TO THE GALLERY <span class="icon-NameArrow-right"></span></a>
@@ -684,9 +683,9 @@
                   <div class="gallery__content-chat">
                     <div class="gallery__content-chat-avatar">
                       <picture>
-                        <source srcset="img/avatar.webp" type="image/webp" />
-                        <source srcset="img/avatar.png" type="image/png" />
-                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!" />
+                        <source srcset="img/avatar.webp" type="image/webp">
+                        <source srcset="img/avatar.png" type="image/png">
+                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!">
                       </picture>
                       <span class="chat-status"></span>
                     </div>
@@ -694,10 +693,10 @@
                   </div>
                   <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
                     <picture>
-                      <source srcset="img/gallery-obj1.webp" type="image/webp" />
-                      <source srcset="img/gallery-obj1.jpg" type="image/jpg" />
+                      <source srcset="img/gallery-obj1.webp" type="image/webp">
+                      <source srcset="img/gallery-obj1.jpg" type="image/jpg">
                       <img width="640" height="552" src="img/gallery-obj1.jpg"
-                        alt="Adepta Sororitas - Battle Sister Squad" />
+                        alt="Adepta Sororitas - Battle Sister Squad">
                     </picture>
                   </a>
                   <div class="gallery__content-description">
@@ -717,9 +716,9 @@
                   <div class="gallery__content-chat">
                     <div class="gallery__content-chat-avatar">
                       <picture>
-                        <source srcset="img/avatar.webp" type="image/webp" />
-                        <source srcset="img/avatar.png" type="image/png" />
-                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!" />
+                        <source srcset="img/avatar.webp" type="image/webp">
+                        <source srcset="img/avatar.png" type="image/png">
+                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!">
                       </picture>
                       <span class="chat-status"></span>
                     </div>
@@ -727,10 +726,10 @@
                   </div>
                   <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
                     <picture>
-                      <source srcset="img/gallery-obj1.webp" type="image/webp" />
-                      <source srcset="img/gallery-obj1.jpg" type="image/jpg" />
+                      <source srcset="img/gallery-obj1.webp" type="image/webp">
+                      <source srcset="img/gallery-obj1.jpg" type="image/jpg">
                       <img width="640" height="552" src="img/gallery-obj1.jpg"
-                        alt="Adepta Sororitas - Battle Sister Squad" />
+                        alt="Adepta Sororitas - Battle Sister Squad">
                     </picture>
                   </a>
                   <div class="gallery__content-description">
@@ -750,9 +749,9 @@
                   <div class="gallery__content-chat">
                     <div class="gallery__content-chat-avatar">
                       <picture>
-                        <source srcset="img/avatar.webp" type="image/webp" />
-                        <source srcset="img/avatar.png" type="image/png" />
-                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!" />
+                        <source srcset="img/avatar.webp" type="image/webp">
+                        <source srcset="img/avatar.png" type="image/png">
+                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!">
                       </picture>
                       <span class="chat-status"></span>
                     </div>
@@ -760,10 +759,10 @@
                   </div>
                   <a href="img/gallery-obj1.jpg" class="gallery__content-img" data-fancybox="gallery">
                     <picture>
-                      <source srcset="img/gallery-obj1.webp" type="image/webp" />
-                      <source srcset="img/gallery-obj1.jpg" type="image/jpg" />
+                      <source srcset="img/gallery-obj1.webp" type="image/webp">
+                      <source srcset="img/gallery-obj1.jpg" type="image/jpg">
                       <img width="640" height="552" src="img/gallery-obj1.jpg"
-                        alt="Adepta Sororitas - Battle Sister Squad" />
+                        alt="Adepta Sororitas - Battle Sister Squad">
                     </picture>
                   </a>
                   <div class="gallery__content-description">
@@ -783,9 +782,9 @@
                   <div class="gallery__content-chat">
                     <div class="gallery__content-chat-avatar">
                       <picture>
-                        <source srcset="img/avatar.webp" type="image/webp" />
-                        <source srcset="img/avatar.png" type="image/png" />
-                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!" />
+                        <source srcset="img/avatar.webp" type="image/webp">
+                        <source srcset="img/avatar.png" type="image/png">
+                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!">
                       </picture>
                       <span class="chat-status"></span>
                     </div>
@@ -793,10 +792,10 @@
                   </div>
                   <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
                     <picture>
-                      <source srcset="img/gallery-obj1.webp" type="image/webp" />
-                      <source srcset="img/gallery-obj1.jpg" type="image/jpg" />
+                      <source srcset="img/gallery-obj1.webp" type="image/webp">
+                      <source srcset="img/gallery-obj1.jpg" type="image/jpg">
                       <img width="640" height="552" src="img/gallery-obj1.jpg"
-                        alt="Adepta Sororitas - Battle Sister Squad" />
+                        alt="Adepta Sororitas - Battle Sister Squad">
                     </picture>
                   </a>
                   <div class="gallery__content-description">
@@ -816,9 +815,9 @@
                   <div class="gallery__content-chat">
                     <div class="gallery__content-chat-avatar">
                       <picture>
-                        <source srcset="img/avatar.webp" type="image/webp" />
-                        <source srcset="img/avatar.png" type="image/png" />
-                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!" />
+                        <source srcset="img/avatar.webp" type="image/webp">
+                        <source srcset="img/avatar.png" type="image/png">
+                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!">
                       </picture>
                       <span class="chat-status"></span>
                     </div>
@@ -826,10 +825,10 @@
                   </div>
                   <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
                     <picture>
-                      <source srcset="img/gallery-obj1.webp" type="image/webp" />
-                      <source srcset="img/gallery-obj1.jpg" type="image/jpg" />
+                      <source srcset="img/gallery-obj1.webp" type="image/webp">
+                      <source srcset="img/gallery-obj1.jpg" type="image/jpg">
                       <img width="640" height="552" src="img/gallery-obj1.jpg"
-                        alt="Adepta Sororitas - Battle Sister Squad" />
+                        alt="Adepta Sororitas - Battle Sister Squad">
                     </picture>
                   </a>
                   <div class="gallery__content-description">
@@ -849,9 +848,9 @@
                   <div class="gallery__content-chat">
                     <div class="gallery__content-chat-avatar">
                       <picture>
-                        <source srcset="img/avatar.webp" type="image/webp" />
-                        <source srcset="img/avatar.png" type="image/png" />
-                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!" />
+                        <source srcset="img/avatar.webp" type="image/webp">
+                        <source srcset="img/avatar.png" type="image/png">
+                        <img width="80" height="80" src="img/avatar.png" alt="INTRODUCING DAWN OF VALHALLA!">
                       </picture>
                       <span class="chat-status"></span>
                     </div>
@@ -859,10 +858,10 @@
                   </div>
                   <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
                     <picture>
-                      <source srcset="img/gallery-obj1.webp" type="image/webp" />
-                      <source srcset="img/gallery-obj1.jpg" type="image/jpg" />
+                      <source srcset="img/gallery-obj1.webp" type="image/webp">
+                      <source srcset="img/gallery-obj1.jpg" type="image/jpg">
                       <img width="640" height="552" src="img/gallery-obj1.jpg"
-                        alt="Adepta Sororitas - Battle Sister Squad" />
+                        alt="Adepta Sororitas - Battle Sister Squad">
                     </picture>
                   </a>
                   <div class="gallery__content-description">
@@ -896,33 +895,33 @@
         <div class="about-us__gallery">
           <a href="img/about-us-obj1.jpg" data-fancybox="about-us" class="about-us__img">
             <picture>
-              <source srcset="img/about-us-obj1.webp" type="image/webp" />
-              <source srcset="img/about-us-obj1.jpg" type="image/jpg" />
-              <img width="802" height="752" src="img/about-us-obj1.jpg" alt="About Us image" />
+              <source srcset="img/about-us-obj1.webp" type="image/webp">
+              <source srcset="img/about-us-obj1.jpg" type="image/jpg">
+              <img width="802" height="752" src="img/about-us-obj1.jpg" alt="About Us image">
             </picture>
           </a>
 
           <a href="img/about-us-obj2.jpg" data-fancybox="about-us" class="about-us__img">
             <picture>
-              <source srcset="img/about-us-obj2.webp" type="image/webp" />
-              <source srcset="img/about-us-obj2.jpg" type="image/jpg" />
-              <img width="802" height="752" src="img/about-us-obj2.jpg" alt="About Us image" />
+              <source srcset="img/about-us-obj2.webp" type="image/webp">
+              <source srcset="img/about-us-obj2.jpg" type="image/jpg">
+              <img width="802" height="752" src="img/about-us-obj2.jpg" alt="About Us image">
             </picture>
           </a>
 
           <a href="img/about-us-obj3.jpg" data-fancybox="about-us" class="about-us__img">
             <picture>
-              <source srcset="img/about-us-obj3.webp" type="image/webp" />
-              <source srcset="img/about-us-obj3.jpg" type="image/jpg" />
-              <img width="802" height="752" src="img/about-us-obj3.jpg" alt="About Us image" />
+              <source srcset="img/about-us-obj3.webp" type="image/webp">
+              <source srcset="img/about-us-obj3.jpg" type="image/jpg">
+              <img width="802" height="752" src="img/about-us-obj3.jpg" alt="About Us image">
             </picture>
           </a>
 
           <a href="img/about-us-obj4.jpg" data-fancybox="about-us" class="about-us__img">
             <picture>
-              <source srcset="img/about-us-obj4.webp" type="image/webp" />
-              <source srcset="img/about-us-obj4.jpg" type="image/jpg" />
-              <img width="802" height="752" src="img/about-us-obj4.jpg" alt="About Us image" />
+              <source srcset="img/about-us-obj4.webp" type="image/webp">
+              <source srcset="img/about-us-obj4.jpg" type="image/jpg">
+              <img width="802" height="752" src="img/about-us-obj4.jpg" alt="About Us image">
             </picture>
           </a>
         </div>
@@ -946,7 +945,7 @@
           <div class="about-us__content-social">
             <div class="about-us__content-social-logo">
               <a href="index.html">
-                <img width="176" height="62" src="img/logo-white.svg" alt="Gart Tech logotype" />
+                <img width="176" height="62" src="img/logo-white.svg" alt="Gart Tech logotype">
               </a>
             </div>
             <div class="about-us__content-social-line"></div>
@@ -970,7 +969,7 @@
         <div class="gallery__container-header">
           <div class="gallery__container-header-title">
             <h2>
-              🔥 HOT <br />
+              🔥 HOT <br>
               OFFERS
             </h2>
           </div>
@@ -1005,14 +1004,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1026,14 +1025,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1047,14 +1046,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1068,14 +1067,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1089,14 +1088,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1110,14 +1109,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1142,14 +1141,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img2.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img2.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img2.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1163,14 +1162,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img2.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img2.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img2.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1184,14 +1183,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img2.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img2.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img2.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1205,14 +1204,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img2.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img2.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img2.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1226,14 +1225,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img2.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img2.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img2.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1247,14 +1246,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img2.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img2.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img2.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img2.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1279,14 +1278,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img3.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img3.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img3.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1300,14 +1299,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img3.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img3.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img3.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1321,14 +1320,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img3.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img3.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img3.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1342,14 +1341,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img3.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img3.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img3.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1363,14 +1362,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img3.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img3.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img3.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1384,14 +1383,14 @@
                     <div class="hot-offers-box-img">
                       <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
                         <picture>
-                          <source srcset="img/hot-offers-img3.webp" type="image/webp" />
-                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                          <source srcset="img/hot-offers-img3.webp" type="image/webp">
+                          <source srcset="img/hot-offers-img3.jpg" type="image/jpg">
                           <img width="736" height="752" src="img/hot-offers-img3.jpg"
-                            alt="Adepta Sororitas - Battle Sister Squad" />
+                            alt="Adepta Sororitas - Battle Sister Squad">
                         </picture>
                       </a>
                       <span class="hot-offers__status">
-                        <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        <img width="32" height="32" src="img/fire.svg" alt="icon">
                       </span>
                     </div>
                     <div class="hot-offers__description">
@@ -1413,7 +1412,7 @@
   </section>
 
   <!-- Feedback -->
-  <section class="feedback">
+  <div class="feedback">
     <div class="wrapper">
       <div class="feedback__slider swiper">
         <div class="feedback__wrapper swiper-wrapper">
@@ -1433,7 +1432,7 @@
                 ENTHUSIAST LOOKING FOR TOP-NOTCH MINIATURE PAINTING. CAN'T
                 WAIT TO ADD MORE PIECES TO MY COLLECTION!"
               </div>
-              <a href="#" class="btn" data-fancybox data-src="#feedback1" href="javascript:;">READ IN FULL <span
+              <a href="#" class="btn" data-fancybox data-src="#feedback1">READ IN FULL <span
                   class="icon-NameArrowSquareUpRight"></span></a>
             </div>
           </div>
@@ -1454,7 +1453,7 @@
                 ENTHUSIAST LOOKING FOR TOP-NOTCH MINIATURE PAINTING. CAN'T
                 WAIT TO ADD MORE PIECES TO MY COLLECTION!"
               </div>
-              <a href="#" class="btn" data-fancybox data-src="#feedback1" href="javascript:;">READ IN FULL <span
+              <a href="#" class="btn" data-fancybox data-src="#feedback1">READ IN FULL <span
                   class="icon-NameArrowSquareUpRight"></span></a>
             </div>
           </div>
@@ -1475,7 +1474,7 @@
                 ENTHUSIAST LOOKING FOR TOP-NOTCH MINIATURE PAINTING. CAN'T
                 WAIT TO ADD MORE PIECES TO MY COLLECTION!"
               </div>
-              <a href="#" class="btn" data-fancybox data-src="#feedback1" href="javascript:;">READ IN FULL <span
+              <a href="#" class="btn" data-fancybox data-src="#feedback1">READ IN FULL <span
                   class="icon-NameArrowSquareUpRight"></span></a>
             </div>
           </div>
@@ -1487,7 +1486,7 @@
       <div class="feedback-pagination slider-pagination"></div>
       <div class="feedback-next hero__arrow icon-myArrowright"></div>
     </div>
-  </section>
+  </div>
 
   <!-- Seo -->
   <section class="seo">
@@ -1613,9 +1612,9 @@
 
           <div class="seo__container-content-img">
             <picture>
-              <source srcset="img/se0-img.webp" type="image/webp" />
-              <source srcset="img/se0-img.jpg" type="image/jpg" />
-              <img width="2352" height="952" src="img/se0-img.jpg" alt="image" />
+              <source srcset="img/se0-img.webp" type="image/webp">
+              <source srcset="img/se0-img.jpg" type="image/jpg">
+              <img width="2352" height="952" src="img/se0-img.jpg" alt="image">
             </picture>
           </div>
         </div>
@@ -1637,7 +1636,7 @@
           </div>
           <div class="footer__logo">
             <a href="index.html">
-              <img width="175" height="62" src="img/logo-white.svg" alt="Gart Tech logotype" />
+              <img width="175" height="62" src="img/logo-white.svg" alt="Gart Tech logotype">
             </a>
           </div>
           <div class="footer__social">
@@ -1695,7 +1694,7 @@
             </p>
             <div class="label-company">
               <a href="#" target="_blank">
-                <img width="268" height="45" src="img/company-logo.svg" alt="Shapoval Agancy" />
+                <img width="268" height="45" src="img/company-logo.svg" alt="Shapoval Agancy">
               </a>
             </div>
           </div>
