@@ -261,6 +261,9 @@ var swiper = new Swiper(".gallery__swiper", {
         },
         1279: {
             spaceBetween: 16,
+        },
+        320: {
+            spaceBetween: 16,
         }
     }
 });
@@ -768,47 +771,108 @@ document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll('.button');
     const cards = document.querySelectorAll('.card.menu__link');
 
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-            const currentCategory = button.dataset.filter;
+    if (buttons.length > 0 && cards.length > 0) {
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const currentCategory = button.dataset.filter;
 
-            buttons.forEach((btn) => {
-                btn.classList.remove("active");
-            });
+                buttons.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
 
-            button.classList.add("active");
+                button.classList.add("active");
 
-            cards.forEach((card) => {
-                const isItemFiltered = !card.classList.contains(currentCategory);
-                const isShowAll = currentCategory.toLowerCase() === "all";
-                if (isItemFiltered && !isShowAll) {
-                    card.classList.add("hide");
-                } else {
-                    card.classList.remove("hide");
-                }
-            });
-
-            document.querySelectorAll('.gallery__content').forEach((card) => {
-                if (currentCategory === "all") {
-                    card.classList.remove("hide");
-                } else {
-                    if (!card.classList.contains(currentCategory)) {
+                cards.forEach((card) => {
+                    const isItemFiltered = !card.classList.contains(currentCategory);
+                    const isShowAll = currentCategory.toLowerCase() === "all";
+                    if (isItemFiltered && !isShowAll) {
                         card.classList.add("hide");
                     } else {
                         card.classList.remove("hide");
                     }
-                }
+                });
+
+                document.querySelectorAll('.gallery__content').forEach((card) => {
+                    if (currentCategory === "all") {
+                        card.classList.remove("hide");
+                    } else {
+                        if (!card.classList.contains(currentCategory)) {
+                            card.classList.add("hide");
+                        } else {
+                            card.classList.remove("hide");
+                        }
+                    }
+                });
             });
         });
-    });
 
-    // Устанавливаем класс 'active' для первой кнопки после полной загрузки DOM
-    const firstButton = document.querySelector('.button_all');
-    firstButton.classList.add('active');
+        // Устанавливаем класс 'active' для первой кнопки после полной загрузки DOM
+        const firstButton = document.querySelector('.button_all');
+        firstButton.classList.add('active');
+    }
 });
 
-  
 
  
 
 
+
+var galleryTop = new Swiper('.product__swiper', {
+    navigation: {
+      nextEl: '.product__swiper-next',
+      prevEl: '.product__swiper-prev',
+    },
+           loop: false,
+          loopedSlides: 4
+  });
+  var galleryThumbs = new Swiper('.product__swiper-thumb', {
+    spaceBetween: 8,
+    slidesPerView: 'auto',
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
+          loop: false,
+          loopedSlides: 1
+  });
+  galleryTop.controller.control = galleryThumbs;
+  galleryThumbs.controller.control = galleryTop;
+
+
+
+
+// Переключатель в форме на старнице отзывы
+  document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector('#darkbutton');
+    function toggleDark() {
+        if (document.body.classList.contains('dark')) {
+            localStorage.setItem("theme", "light");
+        } else { 
+            localStorage.setItem("theme", "dark");
+        }
+    }
+    if (button) {
+        if (localStorage.getItem("theme") === "dark") {
+            button.checked = true;
+        }
+        button.addEventListener('click', toggleDark);
+    }
+});
+
+  
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+
+    toggleButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const reviewText = this.parentElement;
+            if (reviewText.classList.contains('expanded')) {
+                reviewText.classList.remove('expanded');
+                this.innerHTML = 'OPEN FULLY <span class="icon-NameArrow-DOWN"></span>';
+            } else {
+                reviewText.classList.add('expanded');
+                this.innerHTML = 'CLOSE <span class="icon-NameArrow-UP"></span>';
+            }
+        });
+    });
+});

@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style/reset.css" />
     <link rel="stylesheet" href="style/icons.css" />
     <link rel="stylesheet" href="style/style.css" />
-    <title>About Us</title>
+    <title>Search on the site</title>
   </head>
 
   <body class="body">
@@ -62,90 +62,35 @@
             <div class="authorization__form-input">
               <label for="email">Email address</label>
               <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameEnvelopeSimple"
-                ></span>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="name@mail.com"
-                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                  required
-                />
+                <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
+                <input type="email" id="email" name="email" placeholder="name@mail.com" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required/>
               </div>
-              <div id="email-validation" class="validation-message"></div>
             </div>
 
             <div class="authorization__form-input">
               <label for="password">Password:</label>
               <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameKey"
-                ></span>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  pattern=".{8,}"
-                  placeholder="Enter your password"
-                  title="Password must be at least 8 characters long"
-                />
-                <span
-                  class="password-toggle"
-                  onclick="togglePasswordVisibility('password')"
-                >
-                  <img
-                    width="18"
-                    height="18"
-                    class="see-password"
-                    src="img/open-pasword.svg"
-                    alt="Toggle Password Visibility"
-                  />
+                <span class="authorization__form-input-icon icon-NameKey"></span>
+                <input type="password" id="password" name="password" pattern=".{8,}" placeholder="Enter your password" title="Password must be at least 8 characters long"/>
+                <span class="password-toggle" onclick="togglePasswordVisibility('password')">
+                  <img width="18" height="18" class="see-password" src="img/open-pasword.svg" alt="Toggle Password Visibility"/>
                   <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
                 </span>
               </div>
-              <span class="validation-message" id="password-validation"></span>
             </div>
 
             <div class="authorization__form-input">
               <label for="repeat-password">Repeat the password:</label>
               <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameKey"
-                ></span>
-                <input
-                  type="password"
-                  id="repeat-password"
-                  name="repeat-password"
-                  pattern=".{8,}"
-                  placeholder="Please re-enter your password"
-                  title="Password must be at least 8 characters long"
-                />
-                <span
-                  class="password-toggle"
-                  onclick="togglePasswordVisibility('repeat-password')"
-                >
-                  <img
-                    width="18"
-                    height="18"
-                    class="see-password"
-                    src="img/open-pasword.svg"
-                    alt="Toggle Password Visibility"
-                  />
+                <span class="authorization__form-input-icon icon-NameKey"></span>
+                <input type="password" id="repeat-password" name="repeat-password" pattern=".{8,}" placeholder="Please re-enter your password" title="Password must be at least 8 characters long"/>
+                <span class="password-toggle" onclick="togglePasswordVisibility('repeat-password')">
+                  <img width="18" height="18" class="see-password" src="img/open-pasword.svg" alt="Toggle Password Visibility"/>
                   <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
                 </span>
               </div>
-              <span
-                class="validation-message"
-                id="repeat-password-validation"
-              ></span>
             </div>
-            <button
-              type="button"
-              onclick="validateAndSubmit()"
-              class="submit btn"
-            >
+            <button type="button" onclick="validateAndSubmit()" class="submit btn">
               SIGN UP <span class="icon-NameLogin-2"></span>
             </button>
           </form>
@@ -155,28 +100,16 @@
             <span></span>
           </div>
           <div class="authorization__additional">
-            <a href="#"
-              >Sign up with Google
+            <a href="#">Sign up with Google
               <span>
-                <img
-                  width="18"
-                  height="18"
-                  src="img/google-icon.svg"
-                  alt="Sign up with Google"
-                />
+                <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google"/>
               </span>
             </a>
-            <a href="#"
-              >Sign up with Apple
+            <!-- <a href="#">Sign up with Apple
               <span>
-                <img
-                  width="16"
-                  height="18"
-                  src="img/apple.svg"
-                  alt="Sign up with Apple"
-                />
+                <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple"/>
               </span>
-            </a>
+            </a> -->
           </div>
           <div class="authorization__change">
             <p>Already have an account?</p>
@@ -551,7 +484,7 @@
     </header>
 
     <main>
-        <!-- Hero -->
+        <!-- Services hero -->
         <section class="sihn-up__hero">
             <div class="breadcrumbs">
                 <div class="wrapper">
@@ -563,250 +496,24 @@
                             <span class="brDevider">
                                 <img src="img/breadcrumbs-arrow.svg" width="16" height="16" alt="icon"/>
                             </span>
-                            <span class="breadcrumb_last" aria-current="page">About Us</span>
+                            <span class="breadcrumb_last" aria-current="page">404</span>
                         </span>
                     </div>
                 </div>
             </div>
 
-            <div class="about-us__banner">
+            <div class="hero__smoll search-hero hero-404">
                 <div class="wrapper">
-                    <div class="about-us__banner-box">
-                        <h1>YellowSM Studio</h1>
-                        <h2>MASTERS OF MINIATURE ART FROM UKRAINE</h2>
-                        <p>In the heart of Ukraine, a story of passion and precision began to unfold in 2008. YellowSM Studio emerged from the shared vision of two artists who initially devoted their craft to painting miniatures for a local hobby club. Their dedication to detail and an unyielding commitment to excellence set the foundation for what would soon become a significant venture in the world of miniature art and Warhammer collectibles.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seo -->
-        <section class="seo policy__seo">
-            <div class="wrapper">
-                <div class="seo__container">
-                <div class="seo__container-title">
-                    <h2>EXPANSION AND EVOLUTION: GROWING BEYOND BORDERS</h2>
-                </div>
-                <div class="seo__container-content">
-                    <div class="seo__container-content-text">
-                        <div class="seo__container-content-text2">
-                            <p>
-                                Over the years, YellowSM Studio has experienced a remarkable transformation, evolving from a duo of enthusiastic artists into a thriving team of 12 skilled professionals. This growth was not just in numbers but also in the scope of their expertise and reach. The studio forged partnerships with talented sculptors and innovative 3D designers, expanding their capabilities to include the creation of unique, custom-designed miniatures.
-                            </p>
-                            <p>
-                                This strategic expansion allowed YellowSM Studio to make its mark on the worldwide market, bringing the artistry of Ukrainian miniature painting to enthusiasts and collectors across the globe. Despite their global reach, the studio's roots remain firmly planted in Ukraine, with operations and the entire team based there, embodying a spirit of resilience and patriotism.
-                            </p>
+                    <div class="services-page__hero-title">
+                        <h1>404</h1>
+                        <h2>Oops! It looks like we've drifted off course...</h2>
+                        <div class="hero-404-box-text">
+                            <p>Suddenly and unexpectedly, just like an astronaut who has accidentally detached from their rocket, you've found yourself in an uncharted area of our digital cosmos. This page, unfortunately, is like a black hole - unfathomable and unreachable.</p>
+                            <p>Don't worry, our spaceship is equipped with all the necessary tools to get you back on the right track. Use our navigation instruments to return to a safe orbit:</p>
                         </div>
-                    </div>
-
-                    <div class="seo__container-content-text seo__container-content-text-style1">
-                        <h4>SUPPORTING UKRAINE: A COMMITMENT BEYOND ART</h4>
-                        <div class="seo__container-content-text2 policy-text2">
-                            <p>
-                                YellowSM Studio stands as a testament to Ukrainian creativity and perseverance. Amidst the challenges faced by their homeland, the studio has remained 100% Ukrainian-based, reflecting their unwavering support for Ukraine. This dedication goes beyond mere geographical location; it is woven into the fabric of their identity and mission. By thriving in their craft, YellowSM Studio contributes to the cultural and economic vitality of Ukraine, showcasing the talent and strength of its people to the world.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="seo__container-content-text seo__container-content-text-style2 policy-text3">
-                        <h4>CORE FOCUS: CRAFTING OUTSTANDING ARMIES FROM SCRATCH</h4>
-                        <p>The essence of YellowSM Studio's mission lies in their core focus: building outstanding armies for Warhammer enthusiasts and collectors. This is not a mere assembly line of figures; it's a detailed, thoughtful process that transforms raw miniatures into masterpieces of miniature art. Each project begins with an idea, a vision of the army's aesthetic and thematic elements, which is then brought to life through the skilled hands of their artists.</p>
-                        <p>The studio's comprehensive service covers every aspect of army creation, from conceptualization to the final touches of paint. This includes sculpting, 3D design, customization, and painting, ensuring that each army is not only visually stunning but also uniquely tailored to the client's preferences. With over a decade of experience, YellowSM Studio has mastered the art of creating miniature armies that are both battle-ready and display-worthy.</p>
-                    </div>
-
-                    <div class="seo__container-content-text">
-                        <h4>MEET THE TEAM: THE ARTISTS BEHIND THE MINIATURES</h4>
-                        <p>Behind every meticulously painted miniature and every army brought to life at YellowSM Studio is a team of dedicated artists, sculptors, and designers. Each member brings their unique skills and creative vision to the studio, contributing to the diverse and rich portfolio of work. Clients and enthusiasts can get a glimpse of the team's artistry through their work, which is showcased in various platforms and exhibitions. The collective talent of the YellowSM Studio team is not just about individual achievement; it's a synergy that elevates their work to the realm of art.</p>
-                        <p>In conclusion, YellowSM Studio is more than just a painting studio and distributor of Warhammer miniatures. It's a beacon of Ukrainian artistry, a symbol of growth and resilience, and a provider of world-class miniature armies. From its humble beginnings to its current status as a key player in the miniature art world, YellowSM Studio continues to inspire with its commitment to excellence, support for Ukraine, and the unparalleled beauty of its creations.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team -->
-        <section class="gallery about-us__team">
-            <div class="wrapper">
-                <div class="gallery__container">
-                    <div class="gallery__container-header">
-                        <div class="gallery__container-header-title">
-                            <h2>OUR TEAM IN THE ART OF MINIATURES</h2>
-                        </div>
-                        <div class="gallery__container-header-text">
-                            <h3>MEET THE MASTERS OF <span>YELLOW</span>SM STUDIO</h3>
-                            <p>Every miniature we create carries a piece of our artist's soul. Our works are not just gaming figures but true pieces of art that require not only exceptional artistic skills but also a deep understanding of history, culture, and the nuances of military affairs. In this section, you will find a gallery that allows you to familiarize yourself with the best works of our artists and learn a bit more about the people behind the creation of your favorite miniatures.</p>
-                        </div>
-                    </div>
-                    <div class="gallery__container-main">
-                        <div class="gallery__swiper swiper-container">
-                            <div class="gallery__wrapper swiper-wrapper">
-                            <article class="gallery__slide swiper-slide">
-                                <div class="gallery__content">
-                                    <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
-                                        <picture>
-                                            <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                                            <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                                            <img width="640" height="552" src="img/gallery-obj1.jpg" alt="ANDRE"/>
-                                        </picture>
-                                    </a>
-                                    <div class="gallery__content-description">
-                                        <h3>ANDRE</h3>
-                                        <div class="gallery__content-description-box">
-                                            <a href="#" class="link">See works <span class="icon-NameArrow-right"></span></a>
-                                            <p>Artist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="gallery__slide swiper-slide">
-                                <div class="gallery__content">
-                                    <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
-                                        <picture>
-                                            <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                                            <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                                            <img width="640" height="552" src="img/gallery-obj1.jpg" alt="ANDRE"/>
-                                        </picture>
-                                    </a>
-                                    <div class="gallery__content-description">
-                                        <h3>ANDRE</h3>
-                                        <div class="gallery__content-description-box">
-                                            <a href="#" class="link">See works <span class="icon-NameArrow-right"></span></a>
-                                            <p>Artist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="gallery__slide swiper-slide">
-                                <div class="gallery__content">
-                                    <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
-                                        <picture>
-                                            <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                                            <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                                            <img width="640" height="552" src="img/gallery-obj1.jpg" alt="ANDRE"/>
-                                        </picture>
-                                    </a>
-                                    <div class="gallery__content-description">
-                                        <h3>ANDRE</h3>
-                                        <div class="gallery__content-description-box">
-                                            <a href="#" class="link">See works <span class="icon-NameArrow-right"></span></a>
-                                            <p>Artist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="gallery__slide swiper-slide">
-                                <div class="gallery__content">
-                                    <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
-                                        <picture>
-                                            <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                                            <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                                            <img width="640" height="552" src="img/gallery-obj1.jpg" alt="ANDRE"/>
-                                        </picture>
-                                    </a>
-                                    <div class="gallery__content-description">
-                                        <h3>ANDRE</h3>
-                                        <div class="gallery__content-description-box">
-                                            <a href="#" class="link">See works <span class="icon-NameArrow-right"></span></a>
-                                            <p>Artist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="gallery__slide swiper-slide">
-                                <div class="gallery__content">
-                                    <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
-                                        <picture>
-                                            <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                                            <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                                            <img width="640" height="552" src="img/gallery-obj1.jpg" alt="ANDRE"/>
-                                        </picture>
-                                    </a>
-                                    <div class="gallery__content-description">
-                                        <h3>ANDRE</h3>
-                                        <div class="gallery__content-description-box">
-                                            <a href="#" class="link">See works <span class="icon-NameArrow-right"></span></a>
-                                            <p>Artist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="gallery__slide swiper-slide">
-                                <div class="gallery__content">
-                                    <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
-                                        <picture>
-                                            <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                                            <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                                            <img width="640" height="552" src="img/gallery-obj1.jpg" alt="ANDRE"/>
-                                        </picture>
-                                    </a>
-                                    <div class="gallery__content-description">
-                                        <h3>ANDRE</h3>
-                                        <div class="gallery__content-description-box">
-                                            <a href="#" class="link">See works <span class="icon-NameArrow-right"></span></a>
-                                            <p>Artist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="gallery__slide swiper-slide">
-                                <div class="gallery__content">
-                                    <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
-                                        <picture>
-                                            <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                                            <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                                            <img width="640" height="552" src="img/gallery-obj1.jpg" alt="ANDRE"/>
-                                        </picture>
-                                    </a>
-                                    <div class="gallery__content-description">
-                                        <h3>ANDRE</h3>
-                                        <div class="gallery__content-description-box">
-                                            <a href="#" class="link">See works <span class="icon-NameArrow-right"></span></a>
-                                            <p>Artist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="gallery__slide swiper-slide">
-                                <div class="gallery__content">
-                                    <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
-                                        <picture>
-                                            <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                                            <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                                            <img width="640" height="552" src="img/gallery-obj1.jpg" alt="ANDRE"/>
-                                        </picture>
-                                    </a>
-                                    <div class="gallery__content-description">
-                                        <h3>ANDRE</h3>
-                                        <div class="gallery__content-description-box">
-                                            <a href="#" class="link">See works <span class="icon-NameArrow-right"></span></a>
-                                            <p>Artist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="gallery__slide swiper-slide">
-                                <div class="gallery__content">
-                                    <a href="img/gallery-obj1.jpg" data-fancybox="gallery" class="gallery__content-img">
-                                        <picture>
-                                            <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                                            <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                                            <img width="640" height="552" src="img/gallery-obj1.jpg" alt="ANDRE"/>
-                                        </picture>
-                                    </a>
-                                    <div class="gallery__content-description">
-                                        <h3>ANDRE</h3>
-                                        <div class="gallery__content-description-box">
-                                            <a href="#" class="link">See works <span class="icon-NameArrow-right"></span></a>
-                                            <p>Artist</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            </div>
-                            <div class="gallery__navigation">
-                                <div class="gallery-prev hero__arrow icon-NameArrow-left"></div>
-                                <div class="gallery-pagination slider-pagination"></div>
-                                <div class="gallery-next hero__arrow icon-myArrowright"></div>
-                            </div>
+                        <div class="hero-404-box-btn">
+                            <a href="index.html" class="btn"><span class="icon-NameArrow-left"></span>GO BACK TO THE HOMEPAGE</a>
+                            <a href="#" class="link">CONTACT SUPPORT TEAM <span class="icon-NameChat-Round-Dots"></span></a>
                         </div>
                     </div>
                 </div>
