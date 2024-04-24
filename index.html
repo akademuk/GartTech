@@ -24,7 +24,7 @@
         </div>
         <div class="subheader__navigation">
           <div class="subheader__chat">
-            <button class="subheader__chat-btn link chat">
+            <button class="subheader__chat-btn link chat" aria-label="LIVE CHAT">
               LIVE CHAT
               <span class="icon-NameChat-Round-Dots"></span>
             </button>
@@ -36,7 +36,7 @@
             <div class="subheader__basket-quantity open-basket">02 ITEMS</div>
           </div>
           <div class="subheader__entrance">
-            <button class="subheader__entrance-btn link authorization-open">
+            <button class="subheader__entrance-btn link authorization-open" aria-label="LOGIN / SIGN UP">
               LOGIN / SIGN UP
               <span class="icon-NameLogin-2"></span>
             </button>
@@ -49,7 +49,7 @@
   <!-- LOGIN / SIGN UP -->
   <div class="authorization">
     <div class="authorization__container">
-      <button class="authorization__close icon-Nameclose-line"></button>
+      <button class="authorization__close icon-Nameclose-line" aria-label="button close modal LOGIN / SIGN UP"></button>
 
       <!-- SIGN UP -->
       <div class="authorization__sign-up authorization__content">
@@ -61,7 +61,7 @@
             <div class="form-group input-style">
               <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
               <input type="email" id="email" name="email" placeholder="name@mail.com"
-                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" title="Email" required>
             </div>
             <div class="validation-message"></div>
           </div>
@@ -95,7 +95,7 @@
             </div>
             <span class="validation-message" id="repeat-password-validation"></span>
           </div>
-          <button type="button" onclick="validateAndSubmit()" class="submit btn">
+          <button type="button" onclick="validateAndSubmit()" class="submit btn" aria-label="button send SIGN UP">
             SIGN UP <span class="icon-NameLogin-2"></span>
           </button>
         </form>
@@ -118,7 +118,7 @@
         </div>
         <div class="authorization__change">
           <p>Already have an account?</p>
-          <button class="authorization__sign-up-btn">LOG IN</button>
+          <button class="authorization__sign-up-btn" aria-label="button send LOG IN">LOG IN</button>
         </div>
       </div>
 
@@ -132,7 +132,7 @@
             <div class="form-group input-style">
               <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
               <input type="email" id="email2" name="email" placeholder="name@mail.com"
-                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" title="Email" required>
             </div>
             <div class="validation-message"></div>
           </div>
@@ -152,13 +152,13 @@
             <span class="validation-message"></span>
           </div>
 
-          <button type="button" onclick="validateAndSubmit()" class="submit btn">
+          <button type="button" onclick="validateAndSubmit()" class="submit btn" aria-label="button send LOG IN">
             LOG IN <span class="icon-NameLogin-2"></span>
           </button>
 
           <div class="authorization__form-checkbox">
             <label>
-              <input type="checkbox" name="сheckbox" value="checked">
+              <input type="checkbox" name="сheckbox" value="checked" title="Remember me">
               <span class="checkbox-custom"></span>
               <span class="checkbox-value">Remember me</span>
             </label>
@@ -193,7 +193,7 @@
   <!-- Basket -->
   <section class="basket">
     <div class="basket_wrapper">
-      <button class="basket__close">
+      <button class="basket__close" aria-label="button close modal basket">
         CLOSE <span class="icon-Nameclose-line"></span>
       </button>
       <div class="basket__content">
@@ -216,9 +216,9 @@
                 <div class="basket__card-description-price">
                   <p class="basket__content-value">10$</p>
                   <div class="quantity">
-                    <button class="btn minus-btn icon-NameMinus"></button>
-                    <input type="text" class="quantity-input" value="1" readonly>
-                    <button class="btn plus-btn icon-NamePlus"></button>
+                    <button class="btn minus-btn icon-NameMinus" aria-label="button minus"></button>
+                    <input type="text" class="quantity-input" value="1" readonly title="quantity">
+                    <button class="btn plus-btn icon-NamePlus" aria-label="button add"></button>
                   </div>
                 </div>
               </div>
@@ -250,9 +250,9 @@
                 <div class="basket__card-description-price">
                   <p class="basket__content-value">10$</p>
                   <div class="quantity">
-                    <button class="btn minus-btn">-</button>
-                    <input type="text" class="quantity-input" value="1">
-                    <button class="btn plus-btn">+</button>
+                    <button class="btn minus-btn" aria-label="button minus">-</button>
+                    <input type="text" class="quantity-input" value="1" title="quantity">
+                    <button class="btn plus-btn" aria-label="button add">+</button>
                   </div>
                 </div>
               </div>
@@ -284,9 +284,9 @@
                 <div class="basket__card-description-price">
                   <p class="basket__content-value">10$</p>
                   <div class="quantity">
-                    <button class="btn minus-btn">-</button>
-                    <input type="text" class="quantity-input" value="1">
-                    <button class="btn plus-btn">+</button>
+                    <button class="btn minus-btn" aria-label="button minus">-</button>
+                    <input type="text" class="quantity-input" value="1" title="quantity">
+                    <button class="btn plus-btn" aria-label="button add">+</button>
                   </div>
                 </div>
               </div>
@@ -317,7 +317,7 @@
   <!-- Menu -->
   <div class="menu">
     <div class="menu__overflow">
-      <button class="close-btn">
+      <button class="close-btn" aria-label="button close modal menu">
         CLOSE<span class="icon-Nameclose-line"></span>
       </button>
       <div class="menu__content">
@@ -339,7 +339,7 @@
               <a href="faq.html" class="link menu__link">FAQ</a>
             </li>
             <li class="menu__navigation-none">
-              <button class="link authorization-open" onclick="initializeModal()">
+              <button class="link authorization-open" onclick="initializeModal()" aria-label="open modal LOGIN / SIGN UP">
                 LOGIN / SIGN UP
                 <span class="icon-NameLogin-2"></span>
               </button>
@@ -394,7 +394,7 @@
         </div>
         <div class="menu__chat">
           <p>If you have any questions write us!</p>
-          <button class="chat menu__link">
+          <button class="chat menu__link" aria-label="open LIVE CHAT">
             LIVE CHAT
             <span class="icon-NameChat-Round-Dots"></span>
           </button>
@@ -415,11 +415,11 @@
         <div class="header__navigation">
           <div class="header__navigation-search">
             <div class="header__navigation-search-box icon-NameSearch">
-              <input type="text" id="searchInput" placeholder="Search here...">
+              <input type="text" id="searchInput" placeholder="Search here..." title="Search here...">
               <span class="icon-NameArrow-left header__submit"><input type="submit" value=""
-                  class="header__submit-btn"></span>
+                  class="header__submit-btn" title="submit"></span>
             </div>
-            <button class="search-open icon-NameSearch"></button>
+            <button class="search-open icon-NameSearch" aria-label="burger menu"></button>
             <div class="search-btn btn">
               <span></span>
               <span></span>
@@ -511,8 +511,8 @@
           </div>
           <div class="swiper-pagination slider-pagination"></div>
           <div class="hero__navigation">
-            <div class="swiper-button-prev hero__arrow icon-NameArrow-left"></div>
-            <div class="swiper-button-next hero__arrow icon-myArrowright"></div>
+            <div class="swiper-button-prev hero__arrow icon-NameArrow-left" aria-label="swiper button prev"></div>
+            <div class="swiper-button-next hero__arrow icon-myArrowright" aria-label="swiper button next"></div>
           </div>
         </div>
       </div>
@@ -937,7 +937,7 @@
             </p>
             <div class="about-us__box">
               <a href="about-us.html" class="btn">LEARN MORE ABOUT US <span class="icon-NameArrow-right"></span></a>
-              <button class="link chat">
+              <button class="link chat" aria-label="open LIVE CHAT">
                 LIVE CHAT <span class="icon-NameChat-Round-Dots"></span>
               </button>
             </div>
@@ -985,13 +985,13 @@
         </div>
         <div class="gallery__container-main tabs">
           <div class="hot-offers__tabs">
-            <button class="tablink active" onclick="openTab('category1')">
+            <button class="tablink active" onclick="openTab('category1')" aria-label="tab Name Category">
               Name Category
             </button>
-            <button class="tablink" onclick="openTab('category2')">
+            <button class="tablink" onclick="openTab('category2')" aria-label="tab Name Category">
               Name Category
             </button>
-            <button class="tablink" onclick="openTab('category3')">
+            <button class="tablink" onclick="openTab('category3')" aria-label="tab Name Category">
               Name Category
             </button>
           </div>
@@ -1629,7 +1629,7 @@
         <div class="footer__left">
           <div class="menu__chat footer__chat">
             <p>If you have any questions write us!</p>
-            <button class="chat menu__link">
+            <button class="chat menu__link" aria-label="open  LIVE CHAT">
               LIVE CHAT
               <span class="icon-NameChat-Round-Dots"></span>
             </button>
