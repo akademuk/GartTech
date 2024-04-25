@@ -1,1892 +1,1362 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      user-scalable="no"
-    />
-    <link rel="icon" type="image/png" href="img/Favicon.png" />
-    <link rel="stylesheet" href="style/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/icons.css" />
-    <link rel="stylesheet" href="style/style.css" />
-    <title>Gart Tech</title>
-  </head>
 
-  <body class="body">
-    <!-- Sub Header -->
-    <section class="subheader">
-      <div class="wrapper">
-        <div class="subheader__container">
-          <div class="subheader__promotion">
-            🔥 Subscribe to our newsletter and get a 10% discount
-            <a href="#" class="link2">GET NOW</a>
-          </div>
-          <div class="subheader__navigation">
-            <div class="subheader__chat">
-              <button class="subheader__chat-btn link chat">
-                LIVE CHAT
-                <span class="icon-NameChat-Round-Dots"></span>
-              </button>
-            </div>
-            <div class="subheader__basket">
-              <div class="subheader__basket-btn link">
-                CART<span class="icon-NameCart-4"></span>
-              </div>
-              <div class="subheader__basket-quantity open-basket">02 ITEMS</div>
-            </div>
-            <div class="subheader__entrance">
-              <button class="subheader__entrance-btn link authorization-open">
-                LOGIN / SIGN UP
-                <span class="icon-NameLogin-2"></span>
-              </button>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="no" />
+  <link rel="icon" type="image/png" href="img/Favicon.png" />
+  <link rel="stylesheet" href="style/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="style/reset.css" />
+  <link rel="stylesheet" href="style/icons.css" />
+  <link rel="stylesheet" href="style/style.css" />
+  <title>Gart Tech</title>
+</head>
+
+<body class="body">
+  <!-- Sub Header -->
+  <div class="subheader">
+    <div class="wrapper">
+      <div class="subheader__container">
+        <div class="subheader__promotion">
+          🔥 Subscribe to our newsletter and get a 10% discount
+          <a href="#" class="link2">GET NOW</a>
         </div>
-      </div>
-    </section>
-
-    <!-- LOGIN / SIGN UP -->
-    <section class="authorization">
-      <div class="authorization__container">
-        <button class="authorization__close icon-Nameclose-line"></button>
-
-        <!-- SIGN UP -->
-        <div class="authorization__sign-up authorization__content">
-          <p>Sign up</p>
-          <span>Enter your credentials to register on the site</span>
-          <form id="signUpForm" class="authorization__form">
-            <div class="authorization__form-input">
-              <label for="email">Email address</label>
-              <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameEnvelopeSimple"
-                ></span>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="name@mail.com"
-                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                  required
-                />
-              </div>
-              <div class="validation-message"></div>
-            </div>
-
-            <div class="authorization__form-input">
-              <label for="password">Password:</label>
-              <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameKey"
-                ></span>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  pattern=".{8,}"
-                  placeholder="Enter your password"
-                  title="Password must be at least 8 characters long"
-                />
-                <span
-                  class="password-toggle"
-                  onclick="togglePasswordVisibility('password')"
-                >
-                  <img
-                    width="18"
-                    height="18"
-                    class="see-password"
-                    src="img/open-pasword.svg"
-                    alt="Toggle Password Visibility"
-                  />
-                  <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
-                </span>
-              </div>
-              <span class="validation-message"></span>
-            </div>
-
-            <div class="authorization__form-input">
-              <label for="repeat-password">Repeat the password:</label>
-              <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameKey"
-                ></span>
-                <input
-                  type="password"
-                  id="repeat-password"
-                  name="repeat-password"
-                  pattern=".{8,}"
-                  placeholder="Please re-enter your password"
-                  title="Password must be at least 8 characters long"
-                />
-                <span
-                  class="password-toggle"
-                  onclick="togglePasswordVisibility('repeat-password')"
-                >
-                  <img
-                    width="18"
-                    height="18"
-                    class="see-password"
-                    src="img/open-pasword.svg"
-                    alt="Toggle Password Visibility"
-                  />
-                  <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
-                </span>
-              </div>
-              <span
-                class="validation-message"
-                id="repeat-password-validation"
-              ></span>
-            </div>
-            <button
-              type="button"
-              onclick="validateAndSubmit()"
-              class="submit btn"
-            >
-              SIGN UP <span class="icon-NameLogin-2"></span>
-            </button>
-          </form>
-          <div class="authorization__or">
-            <span></span>
-            <p>Or</p>
-            <span></span>
-          </div>
-          <div class="authorization__additional">
-            <a href="#"
-              >Sign up with Google
-              <span>
-                <img
-                  width="18"
-                  height="18"
-                  src="img/google-icon.svg"
-                  alt="Sign up with Google"
-                />
-              </span>
-            </a>
-            <a href="#"
-              >Sign up with Apple
-              <span>
-                <img
-                  width="16"
-                  height="18"
-                  src="img/apple.svg"
-                  alt="Sign up with Apple"
-                />
-              </span>
-            </a>
-          </div>
-          <div class="authorization__change">
-            <p>Already have an account?</p>
-            <button class="authorization__sign-up-btn">LOG IN</button>
-          </div>
-        </div>
-
-        <!-- LOGIN -->
-        <div class="authorization__login authorization__content">
-          <p>Log in</p>
-          <span>Enter your credentials to access your account</span>
-          <form id="loginForm" class="authorization__form">
-            <div class="authorization__form-input">
-              <label for="email">Email address</label>
-              <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameEnvelopeSimple"
-                ></span>
-                <input
-                  type="email"
-                  id="email2"
-                  name="email"
-                  placeholder="name@mail.com"
-                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                  required
-                />
-              </div>
-              <div class="validation-message"></div>
-            </div>
-
-            <div class="authorization__form-input">
-              <label for="password">Password:</label>
-              <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameKey"
-                ></span>
-                <input
-                  type="password"
-                  id="password2"
-                  name="password"
-                  pattern=".{8,}"
-                  placeholder="Enter your password"
-                  title="Password must be at least 8 characters long"
-                />
-                <span
-                  class="password-toggle"
-                  onclick="togglePasswordVisibility('password')"
-                >
-                  <img
-                    width="18"
-                    height="18"
-                    class="see-password"
-                    src="img/open-pasword.svg"
-                    alt="Toggle Password Visibility"
-                  />
-                  <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
-                </span>
-              </div>
-              <span class="validation-message"></span>
-            </div>
-
-            <button
-              type="button"
-              onclick="validateAndSubmit()"
-              class="submit btn"
-            >
-              LOG IN <span class="icon-NameLogin-2"></span>
-            </button>
-
-            <div class="authorization__form-checkbox">
-              <label>
-                <input type="checkbox" name="сheckbox" value="checked" />
-                <span class="checkbox-custom"></span>
-                <span class="checkbox-value">Remember me</span>
-              </label>
-              <a href="#" class="fargot-password" target="_blank"
-                >FORGOT PASSWORD?</a
-              >
-            </div>
-          </form>
-          <div class="authorization__or">
-            <span></span>
-            <p>Or</p>
-            <span></span>
-          </div>
-          <div class="authorization__additional">
-            <a href="#"
-              >Sign up with Google
-              <span>
-                <img
-                  width="18"
-                  height="18"
-                  src="img/google-icon.svg"
-                  alt="Sign up with Google"
-                />
-              </span>
-            </a>
-            <a href="#"
-              >Sign up with Apple
-              <span>
-                <img
-                  width="16"
-                  height="18"
-                  src="img/apple.svg"
-                  alt="Sign up with Apple"
-                />
-              </span>
-            </a>
-          </div>
-          <div class="authorization__change">
-            <p>Are you new here?</p>
-            <button class="authorization__login-btn">CREATE ACCOUNT</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Basket -->
-    <section class="basket">
-      <div class="basket_wrapper">
-        <button class="basket__close">
-          CLOSE <span class="icon-Nameclose-line"></span>
-        </button>
-        <div class="basket__content">
-          <h2>My Cart <span class="basket__value btn">3</span></h2>
-          <div class="basket__container">
-            <article class="basket__card">
-              <div class="basket__card-box">
-                <div class="basket__card-img">
-                  <picture>
-                    <source srcset="img/gallery-obj1.webp" type="image/webp" />
-                    <source srcset="img/gallery-obj1.jpg" type="image/jpg" />
-                    <img
-                      width="640"
-                      height="552"
-                      src="img/gallery-obj1.jpg"
-                      alt="Forge Your Legendary Army Today!"
-                    />
-                  </picture>
-                </div>
-                <div class="basket__card-description">
-                  <div class="basket__card-description-title">
-                    <p>Adepta Sororitas - Battle Sister Squad</p>
-                    <span class="card-delate icon-NameTrash"></span>
-                  </div>
-                  <div class="basket__card-description-price">
-                    <p class="basket__content-value">10$</p>
-                    <div class="quantity">
-                      <button class="btn minus-btn icon-NameMinus"></button>
-                      <input
-                        type="text"
-                        class="quantity-input"
-                        value="1"
-                        readonly
-                      />
-                      <button class="btn plus-btn icon-NamePlus"></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="basket__textarea additional-class">
-                <div class="toggle">
-                  Add a comment <span class="icon-NameArrow-DOWN"></span>
-                </div>
-                <form class="hidden">
-                  <textarea></textarea>
-                </form>
-              </div>
-            </article>
-
-            <article class="basket__card">
-              <div class="basket__card-box">
-                <div class="basket__card-img">
-                  <picture>
-                    <source
-                      srcset="img/hot-offers-img.webp"
-                      type="image/webp"
-                    />
-                    <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
-                    <img
-                      width="736"
-                      height="752"
-                      src="img/hot-offers-img.jpg"
-                      alt="Forge Your Legendary Army Today!"
-                    />
-                  </picture>
-                </div>
-                <div class="basket__card-description">
-                  <div class="basket__card-description-title">
-                    <p>Adepta Sororitas - Battle Sister Squad</p>
-                    <span class="card-delate icon-NameTrash"></span>
-                  </div>
-                  <div class="basket__card-description-price">
-                    <p class="basket__content-value">10$</p>
-                    <div class="quantity">
-                      <button class="btn minus-btn">-</button>
-                      <input type="text" class="quantity-input" value="1" />
-                      <button class="btn plus-btn">+</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="basket__textarea">
-                <div class="toggle">
-                  Add a comment <span class="icon-NameArrow-DOWN"></span>
-                </div>
-                <form class="hidden">
-                  <textarea></textarea>
-                </form>
-              </div>
-            </article>
-
-            <article class="basket__card">
-              <div class="basket__card-box">
-                <div class="basket__card-img">
-                  <picture>
-                    <source
-                      srcset="img/hot-offers-img2.webp"
-                      type="image/webp"
-                    />
-                    <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
-                    <img
-                      width="736"
-                      height="752"
-                      src="img/hot-offers-img2.jpg"
-                      alt="Forge Your Legendary Army Today!"
-                    />
-                  </picture>
-                </div>
-                <div class="basket__card-description">
-                  <div class="basket__card-description-title">
-                    <p>Adepta Sororitas - Battle Sister Squad</p>
-                    <span class="card-delate icon-NameTrash"></span>
-                  </div>
-                  <div class="basket__card-description-price">
-                    <p class="basket__content-value">10$</p>
-                    <div class="quantity">
-                      <button class="btn minus-btn">-</button>
-                      <input type="text" class="quantity-input" value="1" />
-                      <button class="btn plus-btn">+</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="basket__textarea">
-                <div class="toggle">
-                  Add a comment <span class="icon-NameArrow-DOWN"></span>
-                </div>
-                <form class="hidden">
-                  <textarea></textarea>
-                </form>
-              </div>
-            </article>
-          </div>
-          <div class="basket__footer">
-            <div class="basket__sumbal">
-              <p>SUBTOTAL:<span id="sum"></span></p>
-            </div>
-            <div class="basket__navigation">
-              <a href="#" class="continue__shopping"
-                ><span class="icon-NameArrow-left"></span>CONTINUE SHOPPING</a
-              >
-              <a href="#" class="continue__checkout btn"
-                >CHECKOUT<span class="icon-myArrowright"></span
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Menu -->
-    <div class="menu">
-      <div class="menu__overflow">
-        <button class="close-btn">
-          CLOSE<span class="icon-Nameclose-line"></span>
-        </button>
-        <div class="menu__content">
-          <nav class="menu__navigation">
-            <ul>
-              <li>
-                <a href="index.html" class="link menu__link">HOME</a>
-              </li>
-              <li>
-                <a href="gallery.html" class="link menu__link">GALLERY</a>
-              </li>
-              <li>
-                <a href="reviews.html" class="link menu__link">REVIEWS</a>
-              </li>
-              <li>
-                <a href="about-us.html" class="link menu__link">ABOUT US</a>
-              </li>
-              <li>
-                <a href="faq.html" class="link menu__link">FAQ</a>
-              </li>
-              <li class="menu__navigation-none">
-                <button
-                  class="link authorization-open"
-                  onclick="initializeModal()"
-                >
-                  LOGIN / SIGN UP
-                  <span class="icon-NameLogin-2"></span>
-                </button>
-              </li>
-              <li class="go-to-shop">
-                <a href="#" class="btn"
-                  >GO TO SHOP<span class="icon-NameSword"></span
-                ></a>
-              </li>
-            </ul>
-          </nav>
-          <div class="menu__services">
-            <h2>SERVICES</h2>
-            <div class="menu__services-box">
-              <article
-                onclick="window.open('#', '_blank')"
-                class="card menu__link"
-              >
-                <div class="menu__services-box-img">
-                  <picture>
-                    <source
-                      srcset="img/menu-services-obj1.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="img/menu-services-obj1.jpg"
-                      type="image/jpeg"
-                    />
-                    <img
-                      src="img/menu-services-obj1.jpg"
-                      alt="COMMISSION IMAGE"
-                    />
-                  </picture>
-                </div>
-                <div class="menu__services-box-text">
-                  <h3>COMMISSION</h3>
-                </div>
-              </article>
-
-              <article
-                onclick="window.open('#', '_blank')"
-                class="card menu__link"
-              >
-                <div class="menu__services-box-img">
-                  <picture>
-                    <source
-                      srcset="img/menu-services-obj2.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="img/menu-services-obj2.jpg"
-                      type="image/jpeg"
-                    />
-                    <img src="img/menu-services-obj2.jpg" alt="BUY NOW" />
-                  </picture>
-                </div>
-                <div class="menu__services-box-text">
-                  <h3>BUY NOW</h3>
-                </div>
-              </article>
-
-              <article
-                onclick="window.open('#', '_blank')"
-                class="card menu__link"
-              >
-                <div class="menu__services-box-img">
-                  <picture>
-                    <source
-                      srcset="img/menu-services-obj3.webp"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="img/menu-services-obj3.jpg"
-                      type="image/jpg"
-                    />
-                    <img
-                      src="img/menu-services-obj3.jpg"
-                      alt="CUSTOM SERVICES"
-                    />
-                  </picture>
-                </div>
-                <div class="menu__services-box-text">
-                  <h3>CUSTOM SERVICES</h3>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="menu__chat">
-            <p>If you have any questions write us!</p>
-            <button class="chat menu__link">
+        <div class="subheader__navigation">
+          <div class="subheader__chat">
+            <button class="subheader__chat-btn link chat" aria-label="LIVE CHAT">
               LIVE CHAT
               <span class="icon-NameChat-Round-Dots"></span>
             </button>
           </div>
+          <div class="subheader__basket">
+            <div class="subheader__basket-btn link">
+              CART<span class="icon-NameCart-4"></span>
+            </div>
+            <div class="subheader__basket-quantity open-basket">02 ITEMS</div>
+          </div>
+          <div class="subheader__entrance">
+            <button class="subheader__entrance-btn link authorization-open" aria-label="LOGIN / SIGN UP">
+              SIGN IN
+              <span class="icon-NameLogin-2"></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header">
-      <div class="wrapper">
-        <div class="header__container">
-          <div class="header__logo">
-            <a href="index.html">
-              <img
-                width="200"
-                height="71"
-                src="img/logo.svg"
-                alt="Gart Tech logotype"
-              />
+  <!-- LOGIN / SIGN UP -->
+  <div class="authorization">
+    <div class="authorization__container">
+      <button class="authorization__close icon-Nameclose-line" aria-label="button close modal LOGIN / SIGN UP"></button>
+
+      <!-- SIGN UP -->
+      <div class="authorization__sign-up authorization__content">
+        <p>Sign up</p>
+        <span>Enter your credentials to register on the site</span>
+        <form id="signUpForm" class="authorization__form">
+          <div class="authorization__form-input">
+            <label for="email">Email address</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
+              <input type="email" id="email" name="email" placeholder="name@mail.com"
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" title="Email" required>
+            </div>
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="authorization__form-input">
+            <label for="password">Password:</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameKey"></span>
+              <input type="password" id="password" name="password" pattern=".{8,}" placeholder="Enter your password"
+                title="Password must be at least 8 characters long">
+              <span class="password-toggle" onclick="togglePasswordVisibility('password')">
+                <img width="18" height="18" class="see-password" src="img/open-pasword.svg"
+                  alt="Toggle Password Visibility">
+                <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
+              </span>
+            </div>
+            <span class="validation-message"></span>
+          </div>
+
+          <div class="authorization__form-input">
+            <label for="repeat-password">Repeat the password:</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameKey"></span>
+              <input type="password" id="repeat-password" name="repeat-password" pattern=".{8,}"
+                placeholder="Please re-enter your password" title="Password must be at least 8 characters long">
+              <span class="password-toggle" onclick="togglePasswordVisibility('repeat-password')">
+                <img width="18" height="18" class="see-password" src="img/open-pasword.svg"
+                  alt="Toggle Password Visibility">
+                <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
+              </span>
+            </div>
+            <span class="validation-message" id="repeat-password-validation"></span>
+          </div>
+          <button type="button" onclick="validateAndSubmit()" class="submit btn" aria-label="button send SIGN UP">
+            SIGN UP <span class="icon-NameLogin-2"></span>
+          </button>
+        </form>
+        <div class="authorization__or">
+          <span></span>
+          <p>Or</p>
+          <span></span>
+        </div>
+        <div class="authorization__additional">
+          <a href="#">Sign up with Google
+            <span>
+              <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google">
+            </span>
+          </a>
+          <!-- <a href="#">Sign up with Apple
+            <span>
+              <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple">
+            </span>
+          </a> -->
+        </div>
+        <div class="authorization__change">
+          <p>Already have an account?</p>
+          <button class="authorization__sign-up-btn" aria-label="button send LOG IN">LOG IN</button>
+        </div>
+      </div>
+
+      <!-- LOGIN -->
+      <div class="authorization__login authorization__content">
+        <p>Log in</p>
+        <span>Enter your credentials to access your account</span>
+        <form id="loginForm" class="authorization__form">
+          <div class="authorization__form-input">
+            <label for="email">Email address</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
+              <input type="email" id="email2" name="email" placeholder="name@mail.com"
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" title="Email" required>
+            </div>
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="authorization__form-input">
+            <label for="password">Password:</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameKey"></span>
+              <input type="password" id="password2" name="password" pattern=".{8,}" placeholder="Enter your password"
+                title="Password must be at least 8 characters long">
+              <span class="password-toggle" onclick="togglePasswordVisibility('password')">
+                <img width="18" height="18" class="see-password" src="img/open-pasword.svg"
+                  alt="Toggle Password Visibility">
+                <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
+              </span>
+            </div>
+            <span class="validation-message"></span>
+          </div>
+
+          <button type="button" onclick="validateAndSubmit()" class="submit btn" aria-label="button send LOG IN">
+            LOG IN <span class="icon-NameLogin-2"></span>
+          </button>
+
+          <div class="authorization__form-checkbox">
+            <label>
+              <input type="checkbox" name="сheckbox" value="checked" title="Remember me">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-value">Remember me</span>
+            </label>
+            <a href="#" class="fargot-password" target="_blank">FORGOT PASSWORD?</a>
+          </div>
+        </form>
+        <div class="authorization__or">
+          <span></span>
+          <p>Or</p>
+          <span></span>
+        </div>
+        <div class="authorization__additional">
+          <a href="#">Sign up with Google
+            <span>
+              <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google">
+            </span>
+          </a>
+          <!-- <a href="#">Sign up with Apple
+            <span>
+              <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple">
+            </span>
+          </a> -->
+        </div>
+        <div class="authorization__change">
+          <p>Are you new here?</p>
+          <a href="sign-up.html" class="authorization__login-btn ">CREATE ACCOUNT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basket -->
+  <section class="basket">
+    <div class="basket_wrapper">
+      <button class="basket__close" aria-label="button close modal basket">
+        CLOSE <span class="icon-Nameclose-line"></span>
+      </button>
+      <div class="basket__content">
+        <h2>My Cart <span class="basket__value btn">3</span></h2>
+        <div class="basket__container">
+          <div class="basket__card">
+            <div class="basket__card-box">
+              <div class="basket__card-img">
+                <picture>
+                  <source srcset="img/gallery-obj1.webp" type="image/webp">
+                  <source srcset="img/gallery-obj1.jpg" type="image/jpg">
+                  <img width="640" height="552" src="img/gallery-obj1.jpg" alt="Forge Your Legendary Army Today!">
+                </picture>
+              </div>
+              <div class="basket__card-description">
+                <div class="basket__card-description-title">
+                  <p>Adepta Sororitas - Battle Sister Squad</p>
+                  <span class="card-delate icon-NameTrash"></span>
+                </div>
+                <div class="basket__card-description-price">
+                  <p class="basket__content-value">10$</p>
+                  <div class="quantity">
+                    <button class="btn minus-btn icon-NameMinus" aria-label="button minus"></button>
+                    <input type="text" class="quantity-input" value="1" readonly title="quantity">
+                    <button class="btn plus-btn icon-NamePlus" aria-label="button add"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__textarea additional-class">
+              <div class="toggle">
+                Add a comment <span class="icon-NameArrow-DOWN"></span>
+              </div>
+              <form class="hidden">
+                <textarea></textarea>
+              </form>
+            </div>
+          </div>
+
+          <div class="basket__card">
+            <div class="basket__card-box">
+              <div class="basket__card-img">
+                <picture>
+                  <source srcset="img/hot-offers-img.webp" type="image/webp">
+                  <source srcset="img/hot-offers-img.jpg" type="image/jpg">
+                  <img width="736" height="752" src="img/hot-offers-img.jpg" alt="Forge Your Legendary Army Today!">
+                </picture>
+              </div>
+              <div class="basket__card-description">
+                <div class="basket__card-description-title">
+                  <p>Adepta Sororitas - Battle Sister Squad</p>
+                  <span class="card-delate icon-NameTrash"></span>
+                </div>
+                <div class="basket__card-description-price">
+                  <p class="basket__content-value">10$</p>
+                  <div class="quantity">
+                    <button class="btn minus-btn" aria-label="button minus">-</button>
+                    <input type="text" class="quantity-input" value="1" title="quantity">
+                    <button class="btn plus-btn" aria-label="button add">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__textarea">
+              <div class="toggle">
+                Add a comment <span class="icon-NameArrow-DOWN"></span>
+              </div>
+              <form class="hidden">
+                <textarea></textarea>
+              </form>
+            </div>
+          </div>
+
+          <div class="basket__card">
+            <div class="basket__card-box">
+              <div class="basket__card-img">
+                <picture>
+                  <source srcset="img/hot-offers-img2.webp" type="image/webp">
+                  <source srcset="img/hot-offers-img2.jpg" type="image/jpg">
+                  <img width="736" height="752" src="img/hot-offers-img2.jpg" alt="Forge Your Legendary Army Today!">
+                </picture>
+              </div>
+              <div class="basket__card-description">
+                <div class="basket__card-description-title">
+                  <p>Adepta Sororitas - Battle Sister Squad</p>
+                  <span class="card-delate icon-NameTrash"></span>
+                </div>
+                <div class="basket__card-description-price">
+                  <p class="basket__content-value">10$</p>
+                  <div class="quantity">
+                    <button class="btn minus-btn" aria-label="button minus">-</button>
+                    <input type="text" class="quantity-input" value="1" title="quantity">
+                    <button class="btn plus-btn" aria-label="button add">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__textarea">
+              <div class="toggle">
+                Add a comment <span class="icon-NameArrow-DOWN"></span>
+              </div>
+              <form class="hidden">
+                <textarea></textarea>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="basket__footer">
+          <div class="basket__sumbal">
+            <p>SUBTOTAL:<span id="sum"></span></p>
+          </div>
+          <div class="basket__navigation">
+            <a href="index.html" class="continue__shopping"><span class="icon-NameArrow-left"></span>CONTINUE
+              SHOPPING</a>
+            <a href="checkout.html" class="continue__checkout btn">CHECKOUT<span class="icon-myArrowright"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <div class="menu">
+    <div class="menu__overflow">
+      <button class="close-btn" aria-label="button close modal menu">
+        CLOSE<span class="icon-Nameclose-line"></span>
+      </button>
+      <div class="menu__content">
+        <nav class="menu__navigation">
+          <ul>
+            <li>
+              <a href="index.html" class="link menu__link">HOME</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="link menu__link">GALLERY</a>
+            </li>
+            <li>
+              <a href="reviews.html" class="link menu__link">REVIEWS</a>
+            </li>
+            <li>
+              <a href="about-us.html" class="link menu__link">ABOUT US</a>
+            </li>
+            <li>
+              <a href="faq.html" class="link menu__link">FAQ</a>
+            </li>
+            <li class="menu__navigation-none">
+              <button class="link authorization-open" onclick="initializeModal()"
+                aria-label="open modal LOGIN / SIGN UP">
+                LOGIN / SIGN UP
+                <span class="icon-NameLogin-2"></span>
+              </button>
+            </li>
+            <li class="go-to-shop">
+              <a href="services.html" class="btn">GO TO SHOP<span class="icon-NameSword"></span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__services">
+          <h2>SERVICES</h2>
+          <div class="menu__services-box">
+            <article onclick="window.open('services.html', '_blank')" class="card menu__link">
+              <div class="menu__services-box-img">
+                <picture>
+                  <source srcset="img/menu-services-obj1.webp" type="image/webp">
+                  <source srcset="img/menu-services-obj1.jpg" type="image/jpeg">
+                  <img src="img/menu-services-obj1.jpg" alt="COMMISSION IMAGE">
+                </picture>
+              </div>
+              <div class="menu__services-box-text">
+                <h3>COMMISSION</h3>
+              </div>
+            </article>
+
+            <article onclick="window.open('services.html', '_blank')" class="card menu__link">
+              <div class="menu__services-box-img">
+                <picture>
+                  <source srcset="img/menu-services-obj2.webp" type="image/webp">
+                  <source srcset="img/menu-services-obj2.jpg" type="image/jpeg">
+                  <img src="img/menu-services-obj2.jpg" alt="BUY NOW">
+                </picture>
+              </div>
+              <div class="menu__services-box-text">
+                <h3>BUY NOW</h3>
+              </div>
+            </article>
+
+            <article onclick="window.open('services.html', '_blank')" class="card menu__link">
+              <div class="menu__services-box-img">
+                <picture>
+                  <source srcset="img/menu-services-obj3.webp" type="image/webp">
+                  <source srcset="img/menu-services-obj3.jpg" type="image/jpg">
+                  <img src="img/menu-services-obj3.jpg" alt="CUSTOM SERVICES">
+                </picture>
+              </div>
+              <div class="menu__services-box-text">
+                <h3>CUSTOM SERVICES</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="menu__chat">
+          <p>If you have any questions write us!</p>
+          <button class="chat menu__link" aria-label="open LIVE CHAT">
+            LIVE CHAT
+            <span class="icon-NameChat-Round-Dots"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__container">
+        <div class="header__logo">
+          <a href="index.html">
+            <img width="200" height="71" src="img/logo.svg" alt="Gart Tech logotype">
+          </a>
+        </div>
+        <div class="header__navigation">
+          <div class="header__navigation-search">
+            <div class="header__navigation-search-box icon-NameSearch">
+              <input type="text" id="searchInput" placeholder="Search here..." title="Search here...">
+              <span class="icon-NameArrow-left header__submit"><input type="submit" value="" class="header__submit-btn"
+                  title="submit"></span>
+            </div>
+            <button class="search-open icon-NameSearch" aria-label="burger menu"></button>
+            <div class="search-btn btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="header__navigation-btn-shop">
+            <a href="services.html" class="btn">
+              GO TO SHOP<span class="icon-NameSword"></span>
             </a>
           </div>
-          <div class="header__navigation">
-            <div class="header__navigation-search">
-              <div class="header__navigation-search-box icon-NameSearch">
-                <input
-                  type="text"
-                  id="searchInput"
-                  placeholder="Search here..."
-                />
-                <span class="icon-NameArrow-left header__submit"
-                  ><input type="submit" value="" class="header__submit-btn"
-                /></span>
-              </div>
-              <button class="search-open icon-NameSearch"></button>
-              <div class="search-btn btn">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="header__navigation-btn-shop">
-              <button class="btn">
-                GO TO SHOP<span class="icon-NameSword"></span>
-              </button>
-            </div>
-            <div class="header__navigation-menu">
-              <span>MENU</span>
-              <div class="menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+          <div class="header__navigation-menu">
+            <span>MENU</span>
+            <div class="menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-        <!-- Hero product -->
-        <section class="product">
-            <div class="breadcrumbs">
-                <div class="wrapper">
-                    <div class="breadcrumbs__container">
-                        <span class="breadcrumbs__container-box">
-                            <span>
-                                <a href="index.html" class="link">Main page</a>
-                            </span>
-                            <span class="brDevider">
-                                <img src="img/breadcrumbs-arrow.svg" width="16" height="16" alt="icon"/>
-                            </span>
-                            <span>
-                                <a href="services.html" class="link">Services</a>
-                            </span>
-                            <span class="brDevider">
-                                <img src="img/breadcrumbs-arrow.svg" width="16" height="16" alt="icon"/>
-                            </span>
-                            <span>
-                                <a href="services.html" class="link">COMMISSION</a>
-                            </span>
-                            <span class="brDevider">
-                                <img src="img/breadcrumbs-arrow.svg" width="16" height="16" alt="icon"/>
-                            </span>
-                            <span class="breadcrumb_last" aria-current="page">Adepta Sororitas - Battle Sister Squad</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product__hero">
-                <div class="wrapper">
-                    <div class="product__hero-box">
-                        <div class="product__hero-box-left">
-                            <div class="product__swiper swiper">
-                                <div class="product__swiper-wrapper swiper-wrapper">
-                                    <div class="swiper-slide">
-                                      <a href="img/prudct-slider.jpg" data-fancybox="productCard">
-                                        <picture>
-                                            <source srcset="img/prudct-slider.webp" type="image/webp" />
-                                            <source srcset="img/prudct-slider.jpg" type="image/jpg" />
-                                            <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image"/>
-                                        </picture>
-                                      </a>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                      <a href="img/prudct-slider.jpg" data-fancybox="productCard">
-                                        <picture>
-                                            <source srcset="img/prudct-slider.webp" type="image/webp" />
-                                            <source srcset="img/prudct-slider.jpg" type="image/jpg" />
-                                            <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image"/>
-                                        </picture>
-                                      </a>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                      <a href="img/prudct-slider.jpg" data-fancybox="productCard">
-                                        <picture>
-                                            <source srcset="img/prudct-slider.webp" type="image/webp" />
-                                            <source srcset="img/prudct-slider.jpg" type="image/jpg" />
-                                            <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image"/>
-                                        </picture>
-                                      </a>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                      <a href="img/prudct-slider.jpg" data-fancybox="productCard">
-                                        <picture>
-                                            <source srcset="img/prudct-slider.webp" type="image/webp" />
-                                            <source srcset="img/prudct-slider.jpg" type="image/jpg" />
-                                            <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image"/>
-                                        </picture>
-                                      </a>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                      <a href="img/prudct-slider.jpg" data-fancybox="productCard">
-                                        <picture>
-                                            <source srcset="img/prudct-slider.webp" type="image/webp" />
-                                            <source srcset="img/prudct-slider.jpg" type="image/jpg" />
-                                            <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image"/>
-                                        </picture>
-                                      </a>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                      <a href="img/prudct-slider.jpg" data-fancybox="productCard">
-                                        <picture>
-                                            <source srcset="img/prudct-slider.webp" type="image/webp" />
-                                            <source srcset="img/prudct-slider.jpg" type="image/jpg" />
-                                            <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image"/>
-                                        </picture>
-                                      </a>
-                                    </div>
-                                </div>
-                                <div class="product__swiper-prev hero__arrow icon-NameArrow-left"></div>
-                                <div class="product__swiper-wrapper-box">
-                                  <div thumbsSlider="" class="product__swiper-thumb">
-                                    <div class="swiper-wrapper">
-                                      <div class="swiper-slide">
-                                          <picture>
-                                            <source srcset="img/defoult.webp" type="image/webp" />
-                                            <source srcset="img/defoult.jpg" type="image/jpg" />
-                                            <img width="152" height="152" src="img/defoult.png" alt="image"/>
-                                          </picture>
-                                      </div>
-                                      <div class="swiper-slide">
-                                        <picture>
-                                          <source srcset="img/defoult.webp" type="image/webp" />
-                                          <source srcset="img/defoult.jpg" type="image/jpg" />
-                                          <img width="152" height="152" src="img/defoult.png" alt="image"/>
-                                        </picture>
-                                      </div>
-                                      <div class="swiper-slide">
-                                        <picture>
-                                          <source srcset="img/defoult.webp" type="image/webp" />
-                                          <source srcset="img/defoult.jpg" type="image/jpg" />
-                                          <img width="152" height="152" src="img/defoult.png" alt="image"/>
-                                        </picture>
-                                      </div>
-                                      <div class="swiper-slide">
-                                        <picture>
-                                          <source srcset="img/defoult.webp" type="image/webp" />
-                                          <source srcset="img/defoult.jpg" type="image/jpg" />
-                                          <img width="152" height="152" src="img/defoult.png" alt="image"/>
-                                        </picture>
-                                      </div>
-                                      <div class="swiper-slide">
-                                        <picture>
-                                          <source srcset="img/defoult.webp" type="image/webp" />
-                                          <source srcset="img/defoult.jpg" type="image/jpg" />
-                                          <img width="152" height="152" src="img/defoult.png" alt="image"/>
-                                        </picture>
-                                      </div>
-                                      <div class="swiper-slide">
-                                        <picture>
-                                          <source srcset="img/defoult.webp" type="image/webp" />
-                                          <source srcset="img/defoult.jpg" type="image/jpg" />
-                                          <img width="152" height="152" src="img/defoult.png" alt="image"/>
-                                        </picture>
-                                      </div>
-                                      <div class="swiper-slide">
-                                        <picture>
-                                          <source srcset="img/defoult.webp" type="image/webp" />
-                                          <source srcset="img/defoult.jpg" type="image/jpg" />
-                                          <img width="152" height="152" src="img/defoult.png" alt="image"/>
-                                        </picture>
-                                      </div>
-                                      <div class="swiper-slide">
-                                        <picture>
-                                          <source srcset="img/defoult.webp" type="image/webp" />
-                                          <source srcset="img/defoult.jpg" type="image/jpg" />
-                                          <img width="152" height="152" src="img/defoult.png" alt="image"/>
-                                        </picture>
-                                      </div>
-                                      <div class="swiper-slide">
-                                        <picture>
-                                          <source srcset="img/defoult.webp" type="image/webp" />
-                                          <source srcset="img/defoult.jpg" type="image/jpg" />
-                                          <img width="152" height="152" src="img/defoult.png" alt="image"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="product__swiper-next hero__arrow icon-myArrowright"></div>
-                            </div>
-                        </div>
-                        <div class="product__hero-box-right">
-                            <div class="product__hero-box-right-top">
-                                <h1>Adepta Sororitas - Battle Sister Squad</h1>
-                                <form action="">
-                                  <div class="custom-select">
-                                    <span class="icon-NameArrow-DOWN"></span>
-                                    <p>Type</p>
-                                    <select class="input-style">
-                                      <option value="1">Please select type</option>
-                                      <option value="2">Вариант 2</option>
-                                      <option value="3">Вариант 3</option>
-                                    </select>
-                                  </div>
-                                  
-                                  <div class="custom-select">
-                                    <span class="icon-NameArrow-DOWN"></span>
-                                    <p>Unit</p>
-                                    <select class="input-style">
-                                      <option value="a">Please select type</option>
-                                      <option value="b">Альтернатива B</option>
-                                      <option value="c">Альтернатива C</option>
-                                    </select>
-                                    <span>Please select type and unit</span>
-                                  </div>
-                                </form>
-                            </div>
-                            <div class="product__hero-box-right-center">
-                                <div class="product__hero-box-right-center-title">
-                                    <h2>SubTitle 1</h2>
-                                    <p>У безмежному просторі космосу, де зірки виграють свій власний симфонічний концерт, розкидаючи світлові краплини по чорному полотні Всесвіту, розгортається неймовірна сага космічних пригод.</p>
-                                </div>
-                                <div class="product__hero-box-right-center-title">
-                                    <h2>SubTitle 2</h2>
-                                    <p>Планети та галактики створюють унікальні космічні пейзажі, де кожен астрономічний об'єкт — це окрема історія великого Всесвіту.</p>
-                                </div>
-                                <div class="product__hero-box-right-center-title">
-                                    <h2>SubTitle 3</h2>
-                                    <p>В цьому величезному морі зірок кожна комета, кожна планета, кожна галактика є частиною великого таємничого танцю космосу.</p>
-                                </div>
-                            </div>
-                            <div class="product__hero-box-right-bottom">
-                                <div class="product__hero-box-right-bottom-value">
-                                    <p class="basket__content-value">$ 1999,99</p>
-                                    <div class="quantity">
-                                    <button class="btn minus-btn">-</button>
-                                    <input type="text" class="quantity-input" value="1" />
-                                    <button class="btn plus-btn">+</button>
-                                    </div>
-                                    <button class="add-to-card btn">ADD TO CART <span class="icon-NameCart-4"></span></button>
-                                </div>
-                                <div class="product__hero-box-right-bottom-card">
-                                  <div class="product__hero-box-right-bottom-card-item">
-                                    <div class="product__hero-box-right-bottom-card-item-icon">
-                                      <img src="img/emodji2.svg" alt="icon">
-                                    </div>
-                                    <div class="product__hero-box-right-bottom-card-text">
-                                      <h4>Quick purchase</h4>
-                                      <p>If you want to add a custom service  to your order - reach out for a custom quote</p>
-                                    </div>
-                                    <div class="product__hero-box-right-bottom-card-item-btn">
-                                      <button class="btn">BUY IN CHAT <span class="icon-NameChat-Round-Dots"></span></button>
-                                    </div>
-                                  </div>
-
-                                  <div class="product__hero-box-right-bottom-card-item">
-                                    <div class="product__hero-box-right-bottom-card-item-icon">
-                                      <img src="img/emodji1.svg" alt="icon">
-                                    </div>
-                                    <div class="product__hero-box-right-bottom-card-text">
-                                      <h4>The product is available</h4>
-                                      <p>We would like to offer you some of our stock - painted items from our collection. The item comes exactly as it looks and is ready to ship on the next business day. If you want something custom, please, reach out or look into Commission tab.</p>
-                                      <button class="link">LIVE CHAT<span class="icon-NameChat-Round-Dots"></span></button>
-                                    </div>
-                                    <div class="product__hero-box-right-bottom-card-item-btn">
-                                      <button class="btn">GO TO THIS ARMY<span class="icon-NameArrow-right"></span></button>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- We offer full-cycle services: -->
-        <div class="cycle-services">
-          <div class="wrapper">
-              <div class="cycle-services-title">
-                <h2>We offer full-cycle services:</h2>
-                <div class="cycle-services-line"></div>
-              </div>
-              <div class="cycle-services-box">
-                  <div class="cycle-services-card">
-                      <span class="icon-NameCart-4"></span>
-                      <p>Add to Cart the miniatures</p>
-                  </div>
-
-                  <div class="cycle-services-card">
-                    <span class="icon-NamePuzzlePiece"></span>
-                    <p>Assemble them</p>
-                  </div>
-
-                  <div class="cycle-services-card">
-                    <span class="icon-NameStrategy"></span>
-                    <p>Magnetize and add conversions as requested</p>
-                  </div>
-
-                  <div class="cycle-services-card">
-                    <span class="icon-NameCubeFocus"></span>
-                    <p>Add 3d printed parts/weapons as needed</p>
-                  </div>
-
-                  <div class="cycle-services-card">
-                    <span class="icon-NamePaintBrushHousehold"></span>
-                    <p>Paint the miniatures in any color scheme you desire</p>
-                  </div>
-              </div>
-          </div>
-        </div>
-
-        <!-- Promotion Banner -->
-        <section class="promotion-banner product__bunner">
-            <div class="product__bunner-box">
-                <div class="promotion-banner__content">
-                    <div class="promotion-banner__content-img">
-                        <picture>
-                            <source srcset="img/product__banner.webp" type="image/webp"/>
-                            <source srcset="img/product__banner.jpg" type="image/jpg"/>
-                            <img width="3840" height="752" src="img/product__banner.jpg" alt="REWARD PROGRAM"/>
-                        </picture>
-                    </div>
-                    <h2>REWARD PROGRAM</h2>
-                    <p>For every 100$ (before tax) that you spend in our shop, you receive a 10 credits towards any unit upgrades you wish - conversions, magnetization, custom bases, etc. See the full list of options below. You retain credits between orders, your total $ spent is accumulated and tallied for the purposes of receiving credits, and once you have spent a total of 2000$, any further credit gain is increased by 20% (12 credits per 100$)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seo -->
-        <section class="seo product__seo">
-            <div class="wrapper">
-            <div class="seo__container">
-                <div class="seo__container-title">
-                <h2>
-                    Notes about our service:
-                </h2>
-                </div>
-                <div class="seo__container-content">
-                    <div class="seo__container-content-text seo__container-content-text-style1">
-                       <ul>
-                            <li>All units come in the same compositions as their respective boxes. Do not hesitate to reach out if you need more information. For convenience, units have a number of models in them listed near their names (this includes small things like swarms, tokens, etc)</li>
-                            <li>Any units that are not currently available from GW will also be offered as unique sculpts or conversations using available miniatures. Such unique models will not cost extra, will look in the style of the rest of the army, be fully legal in competitions, and would be a great addition to your collection. You will be notified if such an upgrade is available for your order</li>
-                            <li>Most of the units can be magnetized to be able to have swappable weapons and we charge a flat 1 credit per magnet used. Reach out to learn more</li>
-                            <li>For any order with five or more miniatures, we will first complete one "test" figurine to get the color scheme right. We will re-do up to 3 times and continue for a fee until you like it.</li>
-                            <li>If there are any additional services that you would like to add to your order, such as unique basing decor, enemies for your models to slay, or custom 3d weapons or upgrades, please, reach out. We will be glad to discuss details and offer you options</li>
-                            <li>If there are any units or models that are not listed in the lot, do not hesitate to reach out. For models that are out of print or are too big to be listed at a fixed price we offer custom quotes.</li>
-                       </ul>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </section>
-
-         <!-- HOT OFFERS -->
-        <section class="hot-offers">
+  <main>
+    <!-- Hero product -->
+    <section class="product">
+      <div class="breadcrumbs">
         <div class="wrapper">
-          <div class="gallery__container">
-            <div class="gallery__container-header">
-              <div class="gallery__container-header-title">
-                <h2>
-                  🔥 HOT <br />
-                  OFFERS
-                </h2>
-              </div>
-              <div class="gallery__container-header-text">
-                <p>
-                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                  consectetur, adipisci velit, sed quNeque porro quisquam est, qui
-                  dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                  sed quNeque porro quisquam est, qui dolorem ipsum quia dolor sit
-                  amet, consectetur, adipisci velit, sed qu
-                </p>
-              </div>
-            </div>
-            <div class="gallery__container-main tabs">
-              <div class="hot-offers__tabs">
-                <button class="tablink active" onclick="openTab('category1')">
-                  Name Category
-                </button>
-                <button class="tablink" onclick="openTab('category2')">
-                  Name Category
-                </button>
-                <button class="tablink" onclick="openTab('category3')">
-                  Name Category
-                </button>
-              </div>
-  
-              <div id="category1" class="tabcontent" style="display: block">
-                <div class="hot-offers__swiper category1 swiper-container">
-                  <div class="gallery__wrapper swiper-wrapper">
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img.jpg"
-                            data-fancybox="hot-offers1"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img.jpg"
-                            data-fancybox="hot-offers1"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img.jpg"
-                            data-fancybox="hot-offers1"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - B</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img.jpg"
-                            data-fancybox="hot-offers1"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img.jpg"
-                            data-fancybox="hot-offers1"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img.jpg"
-                            data-fancybox="hot-offers1"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="gallery__navigation">
-                    <div
-                      class="hot-offers-prev1 hero__arrow icon-NameArrow-left"
-                    ></div>
-                    <div class="hot-offers-pagination1 slider-pagination"></div>
-                    <div
-                      class="hot-offers-next1 hero__arrow icon-myArrowright"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-  
-              <div id="category2" class="tabcontent">
-                <div class="hot-offers__swiper category2 swiper-container">
-                  <div class="gallery__wrapper swiper-wrapper">
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img2.jpg"
-                            data-fancybox="hot-offers2"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img2.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img2.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img2.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img2.jpg"
-                            data-fancybox="hot-offers2"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img2.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img2.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img2.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img2.jpg"
-                            data-fancybox="hot-offers2"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img2.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img2.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img2.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img2.jpg"
-                            data-fancybox="hot-offers2"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img2.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img2.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img2.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img2.jpg"
-                            data-fancybox="hot-offers2"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img2.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img2.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img2.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img2.jpg"
-                            data-fancybox="hot-offers2"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img2.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img2.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img2.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                  <div class="gallery__navigation">
-                    <div
-                      class="hot-offers-prev2 hero__arrow icon-NameArrow-left"
-                    ></div>
-                    <div class="hot-offers-pagination2 slider-pagination"></div>
-                    <div
-                      class="hot-offers-next2 hero__arrow icon-myArrowright"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-  
-              <div id="category3" class="tabcontent">
-                <div class="hot-offers__swiper category3 swiper-container">
-                  <div class="gallery__wrapper swiper-wrapper">
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img3.jpg"
-                            data-fancybox="hot-offers3"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img3.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img3.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img3.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img3.jpg"
-                            data-fancybox="hot-offers3"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img3.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img3.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img3.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img3.jpg"
-                            data-fancybox="hot-offers3"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img3.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img3.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img3.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img3.jpg"
-                            data-fancybox="hot-offers3"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img3.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img3.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img3.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img3.jpg"
-                            data-fancybox="hot-offers3"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img3.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img3.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img3.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-  
-                    <article class="gallery__slide swiper-slide">
-                      <div class="gallery__content hot-offers__content">
-                        <div class="hot-offers-box-img">
-                          <a
-                            href="img/hot-offers-img3.jpg"
-                            data-fancybox="hot-offers3"
-                            class="hot-offers-img"
-                          >
-                            <picture>
-                              <source
-                                srcset="img/hot-offers-img3.webp"
-                                type="image/webp"
-                              />
-                              <source
-                                srcset="img/hot-offers-img3.jpg"
-                                type="image/jpg"
-                              />
-                              <img
-                                width="736"
-                                height="752"
-                                src="img/hot-offers-img3.jpg"
-                                alt="Adepta Sororitas - Battle Sister Squad"
-                              />
-                            </picture>
-                          </a>
-                          <span class="hot-offers__status">
-                            <img
-                              width="32"
-                              height="32"
-                              src="img/fire.svg"
-                              alt="icon"
-                            />
-                          </span>
-                        </div>
-                        <div class="hot-offers__description">
-                          <h3>Adepta Sororitas - Battle Sister Squad</h3>
-                        </div>
-                      </div>
-                    </article>
-                  </div>
-                </div>
-                <div class="gallery__navigation">
-                  <div
-                    class="hot-offers-prev3 hero__arrow icon-NameArrow-left"
-                  ></div>
-                  <div class="hot-offers-pagination3 slider-pagination"></div>
-                  <div
-                    class="hot-offers-next3 hero__arrow icon-myArrowright"
-                  ></div>
-                </div>
-              </div>
-            </div>
+          <div class="breadcrumbs__container">
+            <span class="breadcrumbs__container-box">
+              <span>
+                <a href="index.html" class="link">Main page</a>
+              </span>
+              <span class="brDevider">
+                <img src="img/breadcrumbs-arrow.svg" width="16" height="16" alt="icon" />
+              </span>
+              <span>
+                <a href="services.html" class="link">Services</a>
+              </span>
+              <span class="brDevider">
+                <img src="img/breadcrumbs-arrow.svg" width="16" height="16" alt="icon" />
+              </span>
+              <span>
+                <a href="services.html" class="link">COMMISSION</a>
+              </span>
+              <span class="brDevider">
+                <img src="img/breadcrumbs-arrow.svg" width="16" height="16" alt="icon" />
+              </span>
+              <span class="breadcrumb_last" aria-current="page">Adepta Sororitas - Battle Sister Squad</span>
+            </span>
           </div>
         </div>
-        </section>
-    </main>
+      </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="wrapper">
-        <div class="footer__container">
-          <div class="footer__left">
-            <div class="menu__chat footer__chat">
-              <p>If you have any questions write us!</p>
-              <button class="chat menu__link">
-                LIVE CHAT
-                <span class="icon-NameChat-Round-Dots"></span>
-              </button>
-            </div>
-            <div class="footer__logo">
-              <a href="index.html">
-                <img
-                  width="175"
-                  height="62"
-                  src="img/logo-white.svg"
-                  alt="Gart Tech logotype"
-                />
-              </a>
-            </div>
-            <div class="footer__social">
-              <div class="about-us__content-social-box-link">
-                <a href="#"
-                  >instagram<span class="icon-NameInstagramLogo"></span
-                ></a>
-                <a href="#"
-                  >facebook<span class="icon-NameFacebookLogo"></span
-                ></a>
+      <div class="product__hero">
+        <div class="wrapper">
+          <div class="product__hero-box">
+            <div class="product__hero-box-left">
+              <div class="product__swiper swiper">
+                <div class="product__swiper-wrapper swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="img/prudct-slider.jpg" data-fancybox="productCard">
+                      <picture>
+                        <source srcset="img/prudct-slider.webp" type="image/webp" />
+                        <source srcset="img/prudct-slider.jpg" type="image/jpg" />
+                        <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image" />
+                      </picture>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="img/prudct-slider.jpg" data-fancybox="productCard">
+                      <picture>
+                        <source srcset="img/prudct-slider.webp" type="image/webp" />
+                        <source srcset="img/prudct-slider.jpg" type="image/jpg" />
+                        <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image" />
+                      </picture>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="img/prudct-slider.jpg" data-fancybox="productCard">
+                      <picture>
+                        <source srcset="img/prudct-slider.webp" type="image/webp" />
+                        <source srcset="img/prudct-slider.jpg" type="image/jpg" />
+                        <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image" />
+                      </picture>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="img/prudct-slider.jpg" data-fancybox="productCard">
+                      <picture>
+                        <source srcset="img/prudct-slider.webp" type="image/webp" />
+                        <source srcset="img/prudct-slider.jpg" type="image/jpg" />
+                        <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image" />
+                      </picture>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="img/prudct-slider.jpg" data-fancybox="productCard">
+                      <picture>
+                        <source srcset="img/prudct-slider.webp" type="image/webp" />
+                        <source srcset="img/prudct-slider.jpg" type="image/jpg" />
+                        <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image" />
+                      </picture>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="img/prudct-slider.jpg" data-fancybox="productCard">
+                      <picture>
+                        <source srcset="img/prudct-slider.webp" type="image/webp" />
+                        <source srcset="img/prudct-slider.jpg" type="image/jpg" />
+                        <img width="1352" height="1352" src="img/prudct-slider.jpg" alt="image" />
+                      </picture>
+                    </a>
+                  </div>
+                </div>
+                <div class="product__swiper-prev hero__arrow icon-NameArrow-left"></div>
+                <div class="product__swiper-wrapper-box">
+                  <div thumbsSlider="" class="product__swiper-thumb">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset="img/defoult.webp" type="image/webp" />
+                          <source srcset="img/defoult.jpg" type="image/jpg" />
+                          <img width="152" height="152" src="img/defoult.png" alt="image" />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset="img/defoult.webp" type="image/webp" />
+                          <source srcset="img/defoult.jpg" type="image/jpg" />
+                          <img width="152" height="152" src="img/defoult.png" alt="image" />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset="img/defoult.webp" type="image/webp" />
+                          <source srcset="img/defoult.jpg" type="image/jpg" />
+                          <img width="152" height="152" src="img/defoult.png" alt="image" />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset="img/defoult.webp" type="image/webp" />
+                          <source srcset="img/defoult.jpg" type="image/jpg" />
+                          <img width="152" height="152" src="img/defoult.png" alt="image" />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset="img/defoult.webp" type="image/webp" />
+                          <source srcset="img/defoult.jpg" type="image/jpg" />
+                          <img width="152" height="152" src="img/defoult.png" alt="image" />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset="img/defoult.webp" type="image/webp" />
+                          <source srcset="img/defoult.jpg" type="image/jpg" />
+                          <img width="152" height="152" src="img/defoult.png" alt="image" />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset="img/defoult.webp" type="image/webp" />
+                          <source srcset="img/defoult.jpg" type="image/jpg" />
+                          <img width="152" height="152" src="img/defoult.png" alt="image" />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset="img/defoult.webp" type="image/webp" />
+                          <source srcset="img/defoult.jpg" type="image/jpg" />
+                          <img width="152" height="152" src="img/defoult.png" alt="image" />
+                        </picture>
+                      </div>
+                      <div class="swiper-slide">
+                        <picture>
+                          <source srcset="img/defoult.webp" type="image/webp" />
+                          <source srcset="img/defoult.jpg" type="image/jpg" />
+                          <img width="152" height="152" src="img/defoult.png" alt="image" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product__swiper-next hero__arrow icon-myArrowright"></div>
               </div>
             </div>
-            <div class="footer__email">
-              <a href="mailto:yellowsmstudio@gmail.com" class="link"
-                ><span class="icon-Namemail-send-line"></span
-                >yellowsmstudio@gmail.com</a
-              >
-            </div>
-          </div>
-          <div class="footer__right">
-            <div class="footer__right-box">
-              <nav class="footer__right-navigation">
-                <ul>
-                  <li>
-                    <a href="index.html" class="link">HOME</a>
-                  </li>
-                  <li>
-                    <a href="#" class="link">GALLERY</a>
-                  </li>
-                  <li>
-                    <a href="services.html" class="link">SERVICES</a>
-                  </li>
-                  <li>
-                    <a href="#" class="link">REVIEWS</a>
-                  </li>
-                  <li>
-                    <a href="#" class="link">ABOUT US</a>
-                  </li>
-                  <li>
-                    <a href="faq.html" class="link">FAQ</a>
-                  </li>
-                </ul>
-              </nav>
-              <div class="footer__right-btn">
-                <button class="btn">
-                  GO TO SHOP<span class="icon-NameSword"></span>
-                </button>
+            <div class="product__hero-box-right">
+              <div class="product__hero-box-right-top">
+                <h1>Adepta Sororitas - Battle Sister Squad</h1>
+                <form action="">
+                  <div class="custom-select">
+                    <span class="icon-NameArrow-DOWN"></span>
+                    <p>Type</p>
+                    <select class="input-style">
+                      <option value="1">Please select type</option>
+                      <option value="2">Вариант 2</option>
+                      <option value="3">Вариант 3</option>
+                    </select>
+                  </div>
+
+                  <div class="custom-select">
+                    <span class="icon-NameArrow-DOWN"></span>
+                    <p>Unit</p>
+                    <select class="input-style">
+                      <option value="a">Please select type</option>
+                      <option value="b">Альтернатива B</option>
+                      <option value="c">Альтернатива C</option>
+                    </select>
+                    <span>Please select type and unit</span>
+                  </div>
+                </form>
               </div>
-            </div>
-            <div class="footer__right-privecy">
-              <p class="footer__right-privecy-text">
-                Our website uses cookies to optimize the website and provide
-                personalized services and advertising. By continuing to use the
-                site, you agree to our terms of use of <a href="#">cookies</a>.
-                More information about our privacy policy and cookie settings
-                can be found in the <a href="#">Privacy Policy</a> section.
-              </p>
-              <p class="footer__right-privecy-copright">
-                © 2024 Yellow SM Studio - yellowsmstudio.com | All Rights
-                Reserved
-              </p>
-              <div class="label-company">
-                <a href="#" target="_blank">
-                  <img
-                    width="268"
-                    height="45"
-                    src="img/company-logo.svg"
-                    alt="Shapoval Agancy"
-                  />
-                </a>
+              <div class="product__hero-box-right-center">
+                <div class="product__hero-box-right-center-title">
+                  <h2>SubTitle 1</h2>
+                  <p>У безмежному просторі космосу, де зірки виграють свій власний симфонічний концерт, розкидаючи
+                    світлові краплини по чорному полотні Всесвіту, розгортається неймовірна сага космічних пригод.</p>
+                </div>
+                <div class="product__hero-box-right-center-title">
+                  <h2>SubTitle 2</h2>
+                  <p>Планети та галактики створюють унікальні космічні пейзажі, де кожен астрономічний об'єкт — це
+                    окрема історія великого Всесвіту.</p>
+                </div>
+                <div class="product__hero-box-right-center-title">
+                  <h2>SubTitle 3</h2>
+                  <p>В цьому величезному морі зірок кожна комета, кожна планета, кожна галактика є частиною великого
+                    таємничого танцю космосу.</p>
+                </div>
+              </div>
+              <div class="product__hero-box-right-bottom">
+                <div class="product__hero-box-right-bottom-value">
+                  <p class="basket__content-value">$ 1999,99</p>
+                  <div class="quantity">
+                    <button class="btn minus-btn">-</button>
+                    <input type="text" class="quantity-input" value="1" />
+                    <button class="btn plus-btn">+</button>
+                  </div>
+                  <button class="add-to-card btn">ADD TO CART <span class="icon-NameCart-4"></span></button>
+                </div>
+                <div class="product__hero-box-right-bottom-card">
+                  <div class="product__hero-box-right-bottom-card-item">
+                    <div class="product__hero-box-right-bottom-card-item-icon">
+                      <img src="img/emodji2.svg" alt="icon">
+                    </div>
+                    <div class="product__hero-box-right-bottom-card-text">
+                      <h4>Quick purchase</h4>
+                      <p>If you want to add a custom service to your order - reach out for a custom quote</p>
+                    </div>
+                    <div class="product__hero-box-right-bottom-card-item-btn">
+                      <button class="btn">BUY IN CHAT <span class="icon-NameChat-Round-Dots"></span></button>
+                    </div>
+                  </div>
+
+                  <div class="product__hero-box-right-bottom-card-item">
+                    <div class="product__hero-box-right-bottom-card-item-icon">
+                      <img src="img/emodji1.svg" alt="icon">
+                    </div>
+                    <div class="product__hero-box-right-bottom-card-text">
+                      <h4>The product is available</h4>
+                      <p>We would like to offer you some of our stock - painted items from our collection. The item
+                        comes exactly as it looks and is ready to ship on the next business day. If you want something
+                        custom, please, reach out or look into Commission tab.</p>
+                      <button class="link">LIVE CHAT<span class="icon-NameChat-Round-Dots"></span></button>
+                    </div>
+                    <div class="product__hero-box-right-bottom-card-item-btn">
+                      <button class="btn">GO TO THIS ARMY<span class="icon-NameArrow-right"></span></button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
 
-
-    <!-- <button onclick="openModal('order')">id 1</button>  -->
-
-    <!-- The product has been added to the cart  -->
-    <div id="order" class="modalMessage">
-      <div class="modalMessage_content">
-        <span class="close icon-Nameclose-line"></span>
-        <div class="modalMessage_content-box">
-          <div class="modalMessage_content-box-left btn">
+    <!-- We offer full-cycle services: -->
+    <div class="cycle-services">
+      <div class="wrapper">
+        <div class="cycle-services-title">
+          <h2>We offer full-cycle services:</h2>
+          <div class="cycle-services-line"></div>
+        </div>
+        <div class="cycle-services-box">
+          <div class="cycle-services-card">
             <span class="icon-NameCart-4"></span>
+            <p>Add to Cart the miniatures</p>
           </div>
-          <div class="modalMessage_content-box-rigth">
-            <h3>The product has been added to the cart</h3>
-            <button class="btn">ORDER NOW</button>
-            <p class="link">
-              CONTINUE SHOPPING
-            </p>
+
+          <div class="cycle-services-card">
+            <span class="icon-NamePuzzlePiece"></span>
+            <p>Assemble them</p>
+          </div>
+
+          <div class="cycle-services-card">
+            <span class="icon-NameStrategy"></span>
+            <p>Magnetize and add conversions as requested</p>
+          </div>
+
+          <div class="cycle-services-card">
+            <span class="icon-NameCubeFocus"></span>
+            <p>Add 3d printed parts/weapons as needed</p>
+          </div>
+
+          <div class="cycle-services-card">
+            <span class="icon-NamePaintBrushHousehold"></span>
+            <p>Paint the miniatures in any color scheme you desire</p>
           </div>
         </div>
       </div>
     </div>
 
-    <script src="script/jquery-3.7.0.min.js"></script>
-    <script src="script/swiper-bundle.min.js"></script>
-    <script src="script/jquery.fancybox.min.js"></script>
-    <script src="script/script.js"></script>
-  </body>
+    <!-- Promotion Banner -->
+    <section class="promotion-banner product__bunner">
+      <div class="product__bunner-box">
+        <div class="promotion-banner__content">
+          <div class="promotion-banner__content-img">
+            <picture>
+              <source srcset="img/product__banner.webp" type="image/webp" />
+              <source srcset="img/product__banner.jpg" type="image/jpg" />
+              <img width="3840" height="752" src="img/product__banner.jpg" alt="REWARD PROGRAM" />
+            </picture>
+          </div>
+          <h2>REWARD PROGRAM</h2>
+          <p>For every 100$ (before tax) that you spend in our shop, you receive a 10 credits towards any unit upgrades
+            you wish - conversions, magnetization, custom bases, etc. See the full list of options below. You retain
+            credits between orders, your total $ spent is accumulated and tallied for the purposes of receiving credits,
+            and once you have spent a total of 2000$, any further credit gain is increased by 20% (12 credits per 100$)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seo -->
+    <section class="seo product__seo">
+      <div class="wrapper">
+        <div class="seo__container">
+          <div class="seo__container-title">
+            <h2>
+              Notes about our service:
+            </h2>
+          </div>
+          <div class="seo__container-content">
+            <div class="seo__container-content-text seo__container-content-text-style1">
+              <ul>
+                <li>All units come in the same compositions as their respective boxes. Do not hesitate to reach out if
+                  you need more information. For convenience, units have a number of models in them listed near their
+                  names (this includes small things like swarms, tokens, etc)</li>
+                <li>Any units that are not currently available from GW will also be offered as unique sculpts or
+                  conversations using available miniatures. Such unique models will not cost extra, will look in the
+                  style of the rest of the army, be fully legal in competitions, and would be a great addition to your
+                  collection. You will be notified if such an upgrade is available for your order</li>
+                <li>Most of the units can be magnetized to be able to have swappable weapons and we charge a flat 1
+                  credit per magnet used. Reach out to learn more</li>
+                <li>For any order with five or more miniatures, we will first complete one "test" figurine to get the
+                  color scheme right. We will re-do up to 3 times and continue for a fee until you like it.</li>
+                <li>If there are any additional services that you would like to add to your order, such as unique basing
+                  decor, enemies for your models to slay, or custom 3d weapons or upgrades, please, reach out. We will
+                  be glad to discuss details and offer you options</li>
+                <li>If there are any units or models that are not listed in the lot, do not hesitate to reach out. For
+                  models that are out of print or are too big to be listed at a fixed price we offer custom quotes.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOT OFFERS -->
+    <section class="hot-offers">
+      <div class="wrapper">
+        <div class="gallery__container">
+          <div class="gallery__container-header">
+            <div class="gallery__container-header-title">
+              <h2>
+                🔥 HOT <br />
+                OFFERS
+              </h2>
+            </div>
+            <div class="gallery__container-header-text">
+              <p>
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur, adipisci velit, sed quNeque porro quisquam est, qui
+                dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+                sed quNeque porro quisquam est, qui dolorem ipsum quia dolor sit
+                amet, consectetur, adipisci velit, sed qu
+              </p>
+            </div>
+          </div>
+          <div class="gallery__container-main tabs">
+            <div class="hot-offers__tabs">
+              <button class="tablink active" onclick="openTab('category1')">
+                Name Category
+              </button>
+              <button class="tablink" onclick="openTab('category2')">
+                Name Category
+              </button>
+              <button class="tablink" onclick="openTab('category3')">
+                Name Category
+              </button>
+            </div>
+
+            <div id="category1" class="tabcontent" style="display: block">
+              <div class="hot-offers__swiper category1 swiper-container">
+                <div class="gallery__wrapper swiper-wrapper">
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - B</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img.jpg" data-fancybox="hot-offers1" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="gallery__navigation">
+                  <div class="hot-offers-prev1 hero__arrow icon-NameArrow-left"></div>
+                  <div class="hot-offers-pagination1 slider-pagination"></div>
+                  <div class="hot-offers-next1 hero__arrow icon-myArrowright"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="category2" class="tabcontent">
+              <div class="hot-offers__swiper category2 swiper-container">
+                <div class="gallery__wrapper swiper-wrapper">
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img2.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img2.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img2.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img2.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img2.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img2.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img2.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img2.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img2.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img2.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img2.jpg" data-fancybox="hot-offers2" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img2.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img2.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img2.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div class="gallery__navigation">
+                  <div class="hot-offers-prev2 hero__arrow icon-NameArrow-left"></div>
+                  <div class="hot-offers-pagination2 slider-pagination"></div>
+                  <div class="hot-offers-next2 hero__arrow icon-myArrowright"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="category3" class="tabcontent">
+              <div class="hot-offers__swiper category3 swiper-container">
+                <div class="gallery__wrapper swiper-wrapper">
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img3.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img3.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img3.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img3.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img3.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img3.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img3.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img3.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img3.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img3.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+
+                  <article class="gallery__slide swiper-slide">
+                    <div class="gallery__content hot-offers__content">
+                      <div class="hot-offers-box-img">
+                        <a href="img/hot-offers-img3.jpg" data-fancybox="hot-offers3" class="hot-offers-img">
+                          <picture>
+                            <source srcset="img/hot-offers-img3.webp" type="image/webp" />
+                            <source srcset="img/hot-offers-img3.jpg" type="image/jpg" />
+                            <img width="736" height="752" src="img/hot-offers-img3.jpg"
+                              alt="Adepta Sororitas - Battle Sister Squad" />
+                          </picture>
+                        </a>
+                        <span class="hot-offers__status">
+                          <img width="32" height="32" src="img/fire.svg" alt="icon" />
+                        </span>
+                      </div>
+                      <div class="hot-offers__description">
+                        <h3>Adepta Sororitas - Battle Sister Squad</h3>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="gallery__navigation">
+                <div class="hot-offers-prev3 hero__arrow icon-NameArrow-left"></div>
+                <div class="hot-offers-pagination3 slider-pagination"></div>
+                <div class="hot-offers-next3 hero__arrow icon-myArrowright"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__container">
+        <div class="footer__left">
+          <div class="menu__chat footer__chat">
+            <p>If you have any questions write us!</p>
+            <button class="chat menu__link" aria-label="open  LIVE CHAT">
+              LIVE CHAT
+              <span class="icon-NameChat-Round-Dots"></span>
+            </button>
+          </div>
+          <div class="footer__logo">
+            <a href="index.html">
+              <img width="175" height="62" src="img/logo-white.svg" alt="Gart Tech logotype">
+            </a>
+          </div>
+          <div class="footer__social">
+            <div class="about-us__content-social-box-link">
+              <a href="#">instagram<span class="icon-NameInstagramLogo"></span></a>
+              <a href="#">facebook<span class="icon-NameFacebookLogo"></span></a>
+            </div>
+          </div>
+          <div class="footer__email">
+            <a href="mailto:yellowsmstudio@gmail.com" class="link"><span
+                class="icon-Namemail-send-line"></span>yellowsmstudio@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__right-box">
+            <nav class="footer__right-navigation">
+              <ul>
+                <li>
+                  <a href="index.html" class="link">HOME</a>
+                </li>
+                <li>
+                  <a href="gallery.html" class="link">GALLERY</a>
+                </li>
+                <li>
+                  <a href="services.html" class="link">SERVICES</a>
+                </li>
+                <li>
+                  <a href="reviews.html" class="link">REVIEWS</a>
+                </li>
+                <li>
+                  <a href="about-us.html" class="link">ABOUT US</a>
+                </li>
+                <li>
+                  <a href="faq.html" class="link">FAQ</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer__right-btn">
+              <a href="services.html" class="btn">
+                GO TO SHOP<span class="icon-NameSword"></span>
+              </a>
+            </div>
+          </div>
+          <div class="footer__right-privecy">
+            <p class="footer__right-privecy-text">
+              Our website uses cookies to optimize the website and provide
+              personalized services and advertising. By continuing to use the
+              site, you agree to our terms of use of <a href="cookies.html" target="_blank">cookies</a>.
+              More information about our privacy policy and cookie settings
+              can be found in the <a href="policy.html" target="_blank">Privacy Policy</a> section.
+            </p>
+            <p class="footer__right-privecy-copright">
+              © 2024 Yellow SM Studio - yellowsmstudio.com | All Rights
+              Reserved
+            </p>
+            <div class="label-company">
+              <a href="#" target="_blank">
+                <img width="268" height="45" src="img/company-logo.svg" alt="Shapoval Agancy">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- <button onclick="openModal('order')">id 1</button>  -->
+
+  <!-- The product has been added to the cart  -->
+  <div id="order" class="modalMessage">
+    <div class="modalMessage_content">
+      <span class="close icon-Nameclose-line"></span>
+      <div class="modalMessage_content-box">
+        <div class="modalMessage_content-box-left btn">
+          <span class="icon-NameCart-4"></span>
+        </div>
+        <div class="modalMessage_content-box-rigth">
+          <h3>The product has been added to the cart</h3>
+          <button class="btn">ORDER NOW</button>
+          <p class="link">
+            CONTINUE SHOPPING
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script/jquery-3.7.0.min.js"></script>
+  <script src="script/swiper-bundle.min.js"></script>
+  <script src="script/jquery.fancybox.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+
 </html>

@@ -1,663 +1,647 @@
 <!DOCTYPE html>
-<html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      user-scalable="no"
-    />
-    <link rel="icon" type="image/png" href="img/Favicon.png" />
-    <link rel="stylesheet" href="style/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style/jquery.fancybox.min.css" />
-    <link rel="stylesheet" href="style/reset.css" />
-    <link rel="stylesheet" href="style/icons.css" />
-    <link rel="stylesheet" href="style/style.css" />
-    <title>Privacy Policy</title>
-  </head>
+<html lang="en">
 
-  <body class="body">
-    <!-- Sub Header -->
-    <section class="subheader">
-      <div class="wrapper">
-        <div class="subheader__container">
-          <div class="subheader__promotion">
-            🔥 Subscribe to our newsletter and get a 10% discount
-            <a href="#" class="link2">GET NOW</a>
-          </div>
-          <div class="subheader__navigation">
-            <div class="subheader__chat">
-              <button class="subheader__chat-btn link chat">
-                LIVE CHAT
-                <span class="icon-NameChat-Round-Dots"></span>
-              </button>
-            </div>
-            <div class="subheader__basket">
-              <div class="subheader__basket-btn link">
-                CART<span class="icon-NameCart-4"></span>
-              </div>
-              <div class="subheader__basket-quantity open-basket">02 ITEMS</div>
-            </div>
-            <div class="subheader__entrance">
-              <button class="subheader__entrance-btn link authorization-open">
-                SIGN UP
-                <span class="icon-NameLogin-2"></span>
-              </button>
-            </div>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/Favicon.png">
+  <link rel="stylesheet" href="style/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/icons.css">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Privacy Policy</title>
+</head>
+
+<body class="body">
+  <!-- Sub Header -->
+  <div class="subheader">
+    <div class="wrapper">
+      <div class="subheader__container">
+        <div class="subheader__promotion">
+          🔥 Subscribe to our newsletter and get a 10% discount
+          <a href="#" class="link2">GET NOW</a>
         </div>
-      </div>
-    </section>
-
-    <!-- LOGIN / SIGN UP -->
-    <section class="authorization">
-      <div class="authorization__container">
-        <button class="authorization__close icon-Nameclose-line"></button>
-
-        <!-- SIGN UP -->
-        <div class="authorization__sign-up authorization__content">
-          <p>Sign up</p>
-          <span>Enter your credentials to register on the site</span>
-          <form id="signUpForm" action="" class="authorization__form">
-            <div class="authorization__form-input">
-              <label for="email">Email address</label>
-              <div class="form-group input-style">
-                <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
-                <input type="email" id="email" name="email" placeholder="name@mail.com" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required/>
-              </div>
-            </div>
-
-            <div class="authorization__form-input">
-              <label for="password">Password:</label>
-              <div class="form-group input-style">
-                <span class="authorization__form-input-icon icon-NameKey"></span>
-                <input type="password" id="password" name="password" pattern=".{8,}" placeholder="Enter your password" title="Password must be at least 8 characters long"/>
-                <span class="password-toggle" onclick="togglePasswordVisibility('password')">
-                  <img width="18" height="18" class="see-password" src="img/open-pasword.svg" alt="Toggle Password Visibility"/>
-                  <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
-                </span>
-              </div>
-            </div>
-
-            <div class="authorization__form-input">
-              <label for="repeat-password">Repeat the password:</label>
-              <div class="form-group input-style">
-                <span class="authorization__form-input-icon icon-NameKey"></span>
-                <input type="password" id="repeat-password" name="repeat-password" pattern=".{8,}" placeholder="Please re-enter your password" title="Password must be at least 8 characters long"/>
-                <span class="password-toggle" onclick="togglePasswordVisibility('repeat-password')">
-                  <img width="18" height="18" class="see-password" src="img/open-pasword.svg" alt="Toggle Password Visibility"/>
-                  <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
-                </span>
-              </div>
-            </div>
-            <button type="button" onclick="validateAndSubmit()" class="submit btn">
-              SIGN UP <span class="icon-NameLogin-2"></span>
-            </button>
-          </form>
-          <div class="authorization__or">
-            <span></span>
-            <p>Or</p>
-            <span></span>
-          </div>
-          <div class="authorization__additional">
-            <a href="#">Sign up with Google
-              <span>
-                <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google"/>
-              </span>
-            </a>
-            <!-- <a href="#">Sign up with Apple
-              <span>
-                <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple"/>
-              </span>
-            </a> -->
-          </div>
-          <div class="authorization__change">
-            <p>Already have an account?</p>
-            <button class="authorization__sign-up-btn">LOG IN</button>
-          </div>
-        </div>
-
-        <!-- LOGIN -->
-        <div class="authorization__login authorization__content">
-          <p>Log in</p>
-          <span>Enter your credentials to access your account</span>
-          <form id="loginForm" action="" class="authorization__form">
-            <div class="authorization__form-input">
-              <label for="email">Email address</label>
-              <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameEnvelopeSimple"
-                ></span>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="name@mail.com"
-                  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                  required
-                />
-              </div>
-              <div id="email-validation" class="validation-message"></div>
-            </div>
-
-            <div class="authorization__form-input">
-              <label for="password">Password:</label>
-              <div class="form-group input-style">
-                <span
-                  class="authorization__form-input-icon icon-NameKey"
-                ></span>
-                <input
-                  type="password"
-                  id="password"
-                  name="password"
-                  pattern=".{8,}"
-                  placeholder="Enter your password"
-                  title="Password must be at least 8 characters long"
-                />
-                <span
-                  class="password-toggle"
-                  onclick="togglePasswordVisibility('password')"
-                >
-                  <img
-                    width="18"
-                    height="18"
-                    class="see-password"
-                    src="img/open-pasword.svg"
-                    alt="Toggle Password Visibility"
-                  />
-                  <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
-                </span>
-              </div>
-              <span class="validation-message" id="password-validation"></span>
-            </div>
-
-            <button
-              type="button"
-              onclick="validateAndSubmit()"
-              class="submit btn"
-            >
-              LOG IN <span class="icon-NameLogin-2"></span>
-            </button>
-
-            <div class="authorization__form-checkbox">
-              <label>
-                <input type="checkbox" name="сheckbox" value="checked" />
-                <span class="checkbox-custom"></span>
-                <span class="checkbox-value">Remember me</span>
-              </label>
-              <a href="#" class="fargot-password" target="_blank"
-                >FORGOT PASSWORD?</a
-              >
-            </div>
-          </form>
-          <div class="authorization__or">
-            <span></span>
-            <p>Or</p>
-            <span></span>
-          </div>
-          <div class="authorization__additional">
-            <a href="#"
-              >Sign up with Google
-              <span>
-                <img
-                  width="18"
-                  height="18"
-                  src="img/google-icon.svg"
-                  alt="Sign up with Google"
-                />
-              </span>
-            </a>
-            <a href="#"
-              >Sign up with Apple
-              <span>
-                <img
-                  width="16"
-                  height="18"
-                  src="img/apple.svg"
-                  alt="Sign up with Apple"
-                />
-              </span>
-            </a>
-          </div>
-          <div class="authorization__change">
-            <p>Are you new here?</p>
-            <button class="authorization__login-btn">CREATE ACCOUNT</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-     <!-- Basket -->
-     <section class="basket">
-       <div class="basket_wrapper">
-        <button class="basket__close">CLOSE <span class="icon-Nameclose-line"></span></button>
-        <div class="basket__content">
-            <h2>My Cart <span class="basket__value btn">3</span></h2>
-            <div class="basket__container">
-                <article class="basket__card">
-                    <div class="basket__card-box">
-                      <div class="basket__card-img">
-                        <picture>
-                          <source srcset="img/gallery-obj1.webp" type="image/webp"/>
-                          <source srcset="img/gallery-obj1.jpg" type="image/jpg"/>
-                          <img width="640" height="552" src="img/gallery-obj1.jpg" alt="Forge Your Legendary Army Today!"/>
-                        </picture>
-                      </div>
-                      <div class="basket__card-description">
-                          <div class="basket__card-description-title">
-                            <p>Adepta Sororitas - Battle Sister Squad</p>
-                            <span class="card-delate icon-NameTrash"></span>
-                          </div>
-                          <div class="basket__card-description-price">
-                            <p class="basket__content-value">10$</p>
-                            <div class="quantity">
-                              <button class="btn minus-btn icon-NameMinus"></button>
-                              <input type="text" class="quantity-input" value="1" readonly>
-                              <button class="btn plus-btn icon-NamePlus"></button>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class="basket__textarea  additional-class">
-                      <div class="toggle">Add a comment <span class="icon-NameArrow-DOWN"></span></div>
-                      <form action="" class="hidden">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                      </form>
-                    </div>          
-                </article>
-
-                <article class="basket__card">
-                  <div class="basket__card-box">
-                    <div class="basket__card-img">
-                      <picture>
-                        <source srcset="img/hot-offers-img.webp" type="image/webp"/>
-                        <source srcset="img/hot-offers-img.jpg" type="image/jpg"/>
-                        <img width="736" height="752" src="img/hot-offers-img.jpg" alt="Forge Your Legendary Army Today!"/>
-                      </picture>
-                    </div>
-                    <div class="basket__card-description">
-                        <div class="basket__card-description-title">
-                          <p>Adepta Sororitas - Battle Sister Squad</p>
-                          <span class="card-delate icon-NameTrash"></span>
-                        </div>
-                        <div class="basket__card-description-price">
-                          <p class="basket__content-value">10$</p>
-                          <div class="quantity">
-                            <button class="btn minus-btn">-</button>
-                            <input type="text" class="quantity-input" value="1">
-                            <button class="btn plus-btn">+</button>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="basket__textarea">
-                    <div class="toggle">Add a comment <span class="icon-NameArrow-DOWN"></span></div>
-                    <form action="" class="hidden">
-                      <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </form>
-                  </div>      
-                </article>
-
-              <article class="basket__card">
-                <div class="basket__card-box">
-                  <div class="basket__card-img">
-                    <picture>
-                      <source srcset="img/hot-offers-img2.webp" type="image/webp"/>
-                      <source srcset="img/hot-offers-img2.jpg" type="image/jpg"/>
-                      <img width="736" height="752" src="img/hot-offers-img2.jpg" alt="Forge Your Legendary Army Today!"/>
-                    </picture>
-                  </div>
-                  <div class="basket__card-description">
-                      <div class="basket__card-description-title">
-                        <p>Adepta Sororitas - Battle Sister Squad</p>
-                        <span class="card-delate icon-NameTrash"></span>
-                      </div>
-                      <div class="basket__card-description-price">
-                        <p class="basket__content-value">10$</p>
-                        <div class="quantity">
-                          <button class="btn minus-btn">-</button>
-                          <input type="text" class="quantity-input" value="1">
-                          <button class="btn plus-btn">+</button>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="basket__textarea">
-                  <div class="toggle">Add a comment <span class="icon-NameArrow-DOWN"></span></div>
-                  <form action="" class="hidden">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                  </form>
-                </div>      
-              </article>
-            </div>
-            <div class="basket__footer">
-              <div class="basket__sumbal">
-                <p>SUBTOTAL:<span id="sum"></span></p>
-              </div>
-              <div class="basket__navigation">
-                  <a href="#" class="continue__shopping"><span class="icon-NameArrow-left"></span>CONTINUE SHOPPING</a>
-                  <a href="#" class="continue__checkout btn">CHECKOUT<span class="icon-myArrowright"></span></a>
-              </div>
-            </div>
-        </div>
-       </div>
-     </section>
-
-    <!-- Menu -->
-    <div class="menu">
-      <div class="menu__overflow">
-        <button class="close-btn">
-          CLOSE<span class="icon-Nameclose-line"></span>
-        </button>
-        <div class="menu__content">
-          <nav class="menu__navigation">
-            <ul>
-              <li>
-                <a href="index.html" class="link menu__link">HOME</a>
-              </li>
-              <li>
-                <a href="gallery.html" class="link menu__link">GALLERY</a>
-              </li>
-              <li>
-                <a href="reviews.html" class="link menu__link">REVIEWS</a>
-              </li>
-              <li>
-                <a href="about-us.html" class="link menu__link">ABOUT US</a>
-              </li>
-              <li>
-                <a href="faq.html" class="link menu__link">FAQ</a>
-              </li>
-              <li class="menu__navigation-none">
-                <button class="link authorization-open" onclick="initializeModal()">
-                  LOGIN / SIGN UP
-                  <span class="icon-NameLogin-2"></span>
-                </button>
-              </li>
-              <li class="go-to-shop">
-                <a href="#" class="btn">GO TO SHOP<span class="icon-NameSword"></span></a>
-              </li>
-            </ul>
-          </nav>
-          <div class="menu__services">
-            <h2>SERVICES</h2>
-            <div class="menu__services-box">
-              <article onclick="window.open('services.html', '_blank')" class="card menu__link">
-                <div class="menu__services-box-img">
-                  <picture>
-                    <source srcset="img/menu-services-obj1.webp" type="image/webp"/>
-                    <source srcset="img/menu-services-obj1.jpg" type="image/jpeg"/>
-                    <img src="img/menu-services-obj1.jpg" alt="COMMISSION IMAGE"/>
-                  </picture>
-                </div>
-                <div class="menu__services-box-text">
-                  <h3>COMMISSION</h3>
-                </div>
-              </article>
-
-              <article onclick="window.open('services.html', '_blank')" class="card menu__link">
-                <div class="menu__services-box-img">
-                  <picture>
-                    <source srcset="img/menu-services-obj2.webp"type="image/webp"/>
-                    <source srcset="img/menu-services-obj2.jpg"type="image/jpeg"/>
-                    <img src="img/menu-services-obj2.jpg" alt="BUY NOW" />
-                  </picture>
-                </div>
-                <div class="menu__services-box-text">
-                  <h3>BUY NOW</h3>
-                </div>
-              </article>
-
-              <article onclick="window.open('services.html', '_blank')" class="card menu__link">
-                <div class="menu__services-box-img">
-                  <picture>
-                    <source srcset="img/menu-services-obj3.webp" type="image/webp"/>
-                    <source srcset="img/menu-services-obj3.jpg" type="image/jpg"/>
-                    <img src="img/menu-services-obj3.jpg" alt="CUSTOM SERVICES"/>
-                  </picture>
-                </div>
-                <div class="menu__services-box-text">
-                  <h3>CUSTOM SERVICES</h3>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="menu__chat">
-            <p>If you have any questions write us!</p>
-            <button class="chat menu__link">
+        <div class="subheader__navigation">
+          <div class="subheader__chat">
+            <button class="subheader__chat-btn link chat" aria-label="LIVE CHAT">
               LIVE CHAT
               <span class="icon-NameChat-Round-Dots"></span>
+            </button>
+          </div>
+          <div class="subheader__basket">
+            <div class="subheader__basket-btn link">
+              CART<span class="icon-NameCart-4"></span>
+            </div>
+            <div class="subheader__basket-quantity open-basket">02 ITEMS</div>
+          </div>
+          <div class="subheader__entrance">
+            <button class="subheader__entrance-btn link authorization-open" aria-label="LOGIN / SIGN UP">
+              LOGIN / SIGN UP
+              <span class="icon-NameLogin-2"></span>
             </button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header">
-      <div class="wrapper">
-        <div class="header__container">
-          <div class="header__logo">
-            <a href="index.html">
-              <img
-                width="200"
-                height="71"
-                src="img/logo.svg"
-                alt="Gart Tech logotype"
-              />
+  <!-- LOGIN / SIGN UP -->
+  <div class="authorization">
+    <div class="authorization__container">
+      <button class="authorization__close icon-Nameclose-line" aria-label="button close modal LOGIN / SIGN UP"></button>
+
+      <!-- SIGN UP -->
+      <div class="authorization__sign-up authorization__content">
+        <p>Sign up</p>
+        <span>Enter your credentials to register on the site</span>
+        <form id="signUpForm" class="authorization__form">
+          <div class="authorization__form-input">
+            <label for="email">Email address</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
+              <input type="email" id="email" name="email" placeholder="name@mail.com"
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" title="Email" required>
+            </div>
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="authorization__form-input">
+            <label for="password">Password:</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameKey"></span>
+              <input type="password" id="password" name="password" pattern=".{8,}" placeholder="Enter your password"
+                title="Password must be at least 8 characters long">
+              <span class="password-toggle" onclick="togglePasswordVisibility('password')">
+                <img width="18" height="18" class="see-password" src="img/open-pasword.svg"
+                  alt="Toggle Password Visibility">
+                <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
+              </span>
+            </div>
+            <span class="validation-message"></span>
+          </div>
+
+          <div class="authorization__form-input">
+            <label for="repeat-password">Repeat the password:</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameKey"></span>
+              <input type="password" id="repeat-password" name="repeat-password" pattern=".{8,}"
+                placeholder="Please re-enter your password" title="Password must be at least 8 characters long">
+              <span class="password-toggle" onclick="togglePasswordVisibility('repeat-password')">
+                <img width="18" height="18" class="see-password" src="img/open-pasword.svg"
+                  alt="Toggle Password Visibility">
+                <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
+              </span>
+            </div>
+            <span class="validation-message" id="repeat-password-validation"></span>
+          </div>
+          <button type="button" onclick="validateAndSubmit()" class="submit btn" aria-label="button send SIGN UP">
+            SIGN UP <span class="icon-NameLogin-2"></span>
+          </button>
+        </form>
+        <div class="authorization__or">
+          <span></span>
+          <p>Or</p>
+          <span></span>
+        </div>
+        <div class="authorization__additional">
+          <a href="#">Sign up with Google
+            <span>
+              <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google">
+            </span>
+          </a>
+          <!-- <a href="#">Sign up with Apple
+            <span>
+              <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple">
+            </span>
+          </a> -->
+        </div>
+        <div class="authorization__change">
+          <p>Already have an account?</p>
+          <button class="authorization__sign-up-btn" aria-label="button send LOG IN">LOG IN</button>
+        </div>
+      </div>
+
+      <!-- LOGIN -->
+      <div class="authorization__login authorization__content">
+        <p>Log in</p>
+        <span>Enter your credentials to access your account</span>
+        <form id="loginForm" class="authorization__form">
+          <div class="authorization__form-input">
+            <label for="email">Email address</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameEnvelopeSimple"></span>
+              <input type="email" id="email2" name="email" placeholder="name@mail.com"
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" title="Email" required>
+            </div>
+            <div class="validation-message"></div>
+          </div>
+
+          <div class="authorization__form-input">
+            <label for="password">Password:</label>
+            <div class="form-group input-style">
+              <span class="authorization__form-input-icon icon-NameKey"></span>
+              <input type="password" id="password2" name="password" pattern=".{8,}" placeholder="Enter your password"
+                title="Password must be at least 8 characters long">
+              <span class="password-toggle" onclick="togglePasswordVisibility('password')">
+                <img width="18" height="18" class="see-password" src="img/open-pasword.svg"
+                  alt="Toggle Password Visibility">
+                <!-- <img width="18" height="18" class="hide-password" src="img/open-pasword.svg" alt="Toggle Password Private"/> -->
+              </span>
+            </div>
+            <span class="validation-message"></span>
+          </div>
+
+          <button type="button" onclick="validateAndSubmit()" class="submit btn" aria-label="button send LOG IN">
+            LOG IN <span class="icon-NameLogin-2"></span>
+          </button>
+
+          <div class="authorization__form-checkbox">
+            <label>
+              <input type="checkbox" name="сheckbox" value="checked" title="Remember me">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-value">Remember me</span>
+            </label>
+            <a href="#" class="fargot-password" target="_blank">FORGOT PASSWORD?</a>
+          </div>
+        </form>
+        <div class="authorization__or">
+          <span></span>
+          <p>Or</p>
+          <span></span>
+        </div>
+        <div class="authorization__additional">
+          <a href="#">Sign up with Google
+            <span>
+              <img width="18" height="18" src="img/google-icon.svg" alt="Sign up with Google">
+            </span>
+          </a>
+          <!-- <a href="#">Sign up with Apple
+            <span>
+              <img width="16" height="18" src="img/apple.svg" alt="Sign up with Apple">
+            </span>
+          </a> -->
+        </div>
+        <div class="authorization__change">
+          <p>Are you new here?</p>
+          <a href="sign-up.html" class="authorization__login-btn ">CREATE ACCOUNT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basket -->
+  <section class="basket">
+    <div class="basket_wrapper">
+      <button class="basket__close" aria-label="button close modal basket">
+        CLOSE <span class="icon-Nameclose-line"></span>
+      </button>
+      <div class="basket__content">
+        <h2>My Cart <span class="basket__value btn">3</span></h2>
+        <div class="basket__container">
+          <div class="basket__card">
+            <div class="basket__card-box">
+              <div class="basket__card-img">
+                <picture>
+                  <source srcset="img/gallery-obj1.webp" type="image/webp">
+                  <source srcset="img/gallery-obj1.jpg" type="image/jpg">
+                  <img width="640" height="552" src="img/gallery-obj1.jpg" alt="Forge Your Legendary Army Today!">
+                </picture>
+              </div>
+              <div class="basket__card-description">
+                <div class="basket__card-description-title">
+                  <p>Adepta Sororitas - Battle Sister Squad</p>
+                  <span class="card-delate icon-NameTrash"></span>
+                </div>
+                <div class="basket__card-description-price">
+                  <p class="basket__content-value">10$</p>
+                  <div class="quantity">
+                    <button class="btn minus-btn icon-NameMinus" aria-label="button minus"></button>
+                    <input type="text" class="quantity-input" value="1" readonly title="quantity">
+                    <button class="btn plus-btn icon-NamePlus" aria-label="button add"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__textarea additional-class">
+              <div class="toggle">
+                Add a comment <span class="icon-NameArrow-DOWN"></span>
+              </div>
+              <form class="hidden">
+                <textarea></textarea>
+              </form>
+            </div>
+          </div>
+
+          <div class="basket__card">
+            <div class="basket__card-box">
+              <div class="basket__card-img">
+                <picture>
+                  <source srcset="img/hot-offers-img.webp" type="image/webp">
+                  <source srcset="img/hot-offers-img.jpg" type="image/jpg">
+                  <img width="736" height="752" src="img/hot-offers-img.jpg" alt="Forge Your Legendary Army Today!">
+                </picture>
+              </div>
+              <div class="basket__card-description">
+                <div class="basket__card-description-title">
+                  <p>Adepta Sororitas - Battle Sister Squad</p>
+                  <span class="card-delate icon-NameTrash"></span>
+                </div>
+                <div class="basket__card-description-price">
+                  <p class="basket__content-value">10$</p>
+                  <div class="quantity">
+                    <button class="btn minus-btn" aria-label="button minus">-</button>
+                    <input type="text" class="quantity-input" value="1" title="quantity">
+                    <button class="btn plus-btn" aria-label="button add">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__textarea">
+              <div class="toggle">
+                Add a comment <span class="icon-NameArrow-DOWN"></span>
+              </div>
+              <form class="hidden">
+                <textarea></textarea>
+              </form>
+            </div>
+          </div>
+
+          <div class="basket__card">
+            <div class="basket__card-box">
+              <div class="basket__card-img">
+                <picture>
+                  <source srcset="img/hot-offers-img2.webp" type="image/webp">
+                  <source srcset="img/hot-offers-img2.jpg" type="image/jpg">
+                  <img width="736" height="752" src="img/hot-offers-img2.jpg" alt="Forge Your Legendary Army Today!">
+                </picture>
+              </div>
+              <div class="basket__card-description">
+                <div class="basket__card-description-title">
+                  <p>Adepta Sororitas - Battle Sister Squad</p>
+                  <span class="card-delate icon-NameTrash"></span>
+                </div>
+                <div class="basket__card-description-price">
+                  <p class="basket__content-value">10$</p>
+                  <div class="quantity">
+                    <button class="btn minus-btn" aria-label="button minus">-</button>
+                    <input type="text" class="quantity-input" value="1" title="quantity">
+                    <button class="btn plus-btn" aria-label="button add">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__textarea">
+              <div class="toggle">
+                Add a comment <span class="icon-NameArrow-DOWN"></span>
+              </div>
+              <form class="hidden">
+                <textarea></textarea>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="basket__footer">
+          <div class="basket__sumbal">
+            <p>SUBTOTAL:<span id="sum"></span></p>
+          </div>
+          <div class="basket__navigation">
+            <a href="index.html" class="continue__shopping"><span class="icon-NameArrow-left"></span>CONTINUE
+              SHOPPING</a>
+            <a href="checkout.html" class="continue__checkout btn">CHECKOUT<span class="icon-myArrowright"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <div class="menu">
+    <div class="menu__overflow">
+      <button class="close-btn" aria-label="button close modal menu">
+        CLOSE<span class="icon-Nameclose-line"></span>
+      </button>
+      <div class="menu__content">
+        <nav class="menu__navigation">
+          <ul>
+            <li>
+              <a href="index.html" class="link menu__link">HOME</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="link menu__link">GALLERY</a>
+            </li>
+            <li>
+              <a href="reviews.html" class="link menu__link">REVIEWS</a>
+            </li>
+            <li>
+              <a href="about-us.html" class="link menu__link">ABOUT US</a>
+            </li>
+            <li>
+              <a href="faq.html" class="link menu__link">FAQ</a>
+            </li>
+            <li class="menu__navigation-none">
+              <button class="link authorization-open" onclick="initializeModal()"
+                aria-label="open modal LOGIN / SIGN UP">
+                LOGIN / SIGN UP
+                <span class="icon-NameLogin-2"></span>
+              </button>
+            </li>
+            <li class="go-to-shop">
+              <a href="services.html" class="btn">GO TO SHOP<span class="icon-NameSword"></span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__services">
+          <h2>SERVICES</h2>
+          <div class="menu__services-box">
+            <article onclick="window.open('services.html', '_blank')" class="card menu__link">
+              <div class="menu__services-box-img">
+                <picture>
+                  <source srcset="img/menu-services-obj1.webp" type="image/webp">
+                  <source srcset="img/menu-services-obj1.jpg" type="image/jpeg">
+                  <img src="img/menu-services-obj1.jpg" alt="COMMISSION IMAGE">
+                </picture>
+              </div>
+              <div class="menu__services-box-text">
+                <h3>COMMISSION</h3>
+              </div>
+            </article>
+
+            <article onclick="window.open('services.html', '_blank')" class="card menu__link">
+              <div class="menu__services-box-img">
+                <picture>
+                  <source srcset="img/menu-services-obj2.webp" type="image/webp">
+                  <source srcset="img/menu-services-obj2.jpg" type="image/jpeg">
+                  <img src="img/menu-services-obj2.jpg" alt="BUY NOW">
+                </picture>
+              </div>
+              <div class="menu__services-box-text">
+                <h3>BUY NOW</h3>
+              </div>
+            </article>
+
+            <article onclick="window.open('services.html', '_blank')" class="card menu__link">
+              <div class="menu__services-box-img">
+                <picture>
+                  <source srcset="img/menu-services-obj3.webp" type="image/webp">
+                  <source srcset="img/menu-services-obj3.jpg" type="image/jpg">
+                  <img src="img/menu-services-obj3.jpg" alt="CUSTOM SERVICES">
+                </picture>
+              </div>
+              <div class="menu__services-box-text">
+                <h3>CUSTOM SERVICES</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="menu__chat">
+          <p>If you have any questions write us!</p>
+          <button class="chat menu__link" aria-label="open LIVE CHAT">
+            LIVE CHAT
+            <span class="icon-NameChat-Round-Dots"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="wrapper">
+      <div class="header__container">
+        <div class="header__logo">
+          <a href="index.html">
+            <img width="200" height="71" src="img/logo.svg" alt="Gart Tech logotype">
+          </a>
+        </div>
+        <div class="header__navigation">
+          <div class="header__navigation-search">
+            <div class="header__navigation-search-box icon-NameSearch">
+              <input type="text" id="searchInput" placeholder="Search here..." title="Search here...">
+              <span class="icon-NameArrow-left header__submit"><input type="submit" value="" class="header__submit-btn"
+                  title="submit"></span>
+            </div>
+            <button class="search-open icon-NameSearch" aria-label="burger menu"></button>
+            <div class="search-btn btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="header__navigation-btn-shop">
+            <a href="services.html" class="btn">
+              GO TO SHOP<span class="icon-NameSword"></span>
             </a>
           </div>
-          <div class="header__navigation">
-            <div class="header__navigation-search">
-              <div class="header__navigation-search-box icon-NameSearch">
-                <input
-                  type="text"
-                  id="searchInput"
-                  placeholder="Search here..."
-                />
-                <span class="icon-NameArrow-left header__submit"
-                  ><input type="submit" value="" class="header__submit-btn"
-                /></span>
-              </div>
-              <button class="search-open icon-NameSearch"></button>
-              <div class="search-btn btn">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+          <div class="header__navigation-menu">
+            <span>MENU</span>
+            <div class="menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
-            <div class="header__navigation-btn-shop">
-              <button class="btn">
-                GO TO SHOP<span class="icon-NameSword"></span>
-              </button>
-            </div>
-            <div class="header__navigation-menu">
-              <span>MENU</span>
-              <div class="menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="sihn-up__hero">
+      <div class="breadcrumbs">
+        <div class="wrapper">
+          <div class="breadcrumbs__container">
+            <span class="breadcrumbs__container-box">
+              <span>
+                <a href="index.html" class="link">Main page</a>
+              </span>
+              <span class="brDevider">
+                <img src="img/breadcrumbs-arrow.svg" width="16" height="16" alt="icon" />
+              </span>
+              <span class="breadcrumb_last" aria-current="page">Privacy Policy</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sihn-up__hero-container hero__smoll police__banner">
+        <div class="tab-content tab-content2">
+          <div class="tab-pane active">
+            <div class="sihn-up__hero-content banner-title">
+              <div class="wrapper">
+                <h1>Privacy Policy</h1>
+                <h2>Last updated: [01/04/2024]</h2>
+                <p>[Your Company Name] ("we", "us", or "our") respects your privacy and is committed to protecting your
+                  personal data. This Privacy Policy explains how we collect, use, process, and disclose your
+                  information, including personal data, in connection with your use of [Your Website Name] (the
+                  "Service").</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-        <!-- Hero -->
-        <section class="sihn-up__hero">
-            <div class="breadcrumbs">
-                <div class="wrapper">
-                    <div class="breadcrumbs__container">
-                        <span class="breadcrumbs__container-box">
-                            <span>
-                                <a href="index.html" class="link">Main page</a>
-                            </span>
-                            <span class="brDevider">
-                                <img src="img/breadcrumbs-arrow.svg" width="16" height="16" alt="icon"/>
-                            </span>
-                            <span class="breadcrumb_last" aria-current="page">Privacy Policy</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sihn-up__hero-container hero__smoll police__banner">
-                <div class="tab-content tab-content2">
-                    <div class="tab-pane active">
-                        <div class="sihn-up__hero-content banner-title">
-                            <div class="wrapper">
-                                <h1>Privacy Policy</h1>
-                                <h2>Last updated: [01/04/2024]</h2>
-                                <p>[Your Company Name] ("we", "us", or "our") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, process, and disclose your information, including personal data, in connection with your use of [Your Website Name] (the "Service").</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seo -->
-        <section class="seo policy__seo">
-            <div class="wrapper">
-                <div class="seo__container">
-                <div class="seo__container-title">
-                    <h2>Information Collection and Use</h2>
-                </div>
-                <div class="seo__container-content">
-                    <div class="seo__container-content-text">
-                        <div class="seo__container-content-text2 seo__container-content-text-style1">
-                            <p>
-                                When you use our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to:
-                            </p>
-                            <ul>
-                                <li>Name</li>
-                                <li>Email address</li>
-                                <li>Phone number</li>
-                                <li>Address, State, Province, ZIP/Postal code</li>
-                                <li>Payment information</li>
-                                <li>Cookies and Usage Data</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="seo__container-content-text seo__container-content-text-style1">
-                        <h4>Use of Data</h4>
-                        <div class="seo__container-content-text2 policy-text2">
-                            <p>[Your Company Name] uses the collected data for various purposes:</p>
-                            <ul>
-                                <li>To provide and maintain our Service</li>
-                                <li>To notify you about changes to our Service</li>
-                                <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
-                                <li>To provide customer support</li>
-                                <li>To gather analysis or valuable information so that we can improve our Service</li>
-                                <li>To monitor the usage of our Service</li>
-                                <li>To detect, prevent, and address technical issues</li>
-                                <li>To process payments</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="seo__container-content-text seo__container-content-text-style2 policy-text3">
-                        <h4>Data Transfer</h4>
-                        <p>We may disclose your personal data in the good faith belief that such action is necessary to:</p>
-                        <ul>
-                            <li>Comply with a legal obligation</li>
-                            <li>Protect and defend the rights or property of [Your Company Name]</li>
-                            <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
-                            <li>Protect the personal safety of users of the Service or the public</li>
-                            <li>Protect against legal liability</li>
-                        </ul>
-                    </div>
-
-                    <div class="seo__container-content-text">
-                        <h4>Data Security</h4>
-                        <p>The security of your data is important to us, but please remember that no method of transmission over the Internet or method of electronic storage is 100% secure. Although we strive to use commercially acceptable means to protect your personal data, we cannot guarantee its absolute security.</p>
-                    </div>
-
-                    <div class="seo__container-content-text seo__container-content-text-style1 policy-text4">
-                        <h4>Changes to this privacy policy</h4>
-                        <p>We may update our privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page.</p>
-                        <p>We encourage you to periodically review this privacy policy for changes. Changes to this privacy policy are effective when they are posted on this page.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Seo -->
+    <section class="seo policy__seo">
       <div class="wrapper">
-        <div class="footer__container">
-          <div class="footer__left">
-            <div class="menu__chat footer__chat">
-              <p>If you have any questions write us!</p>
-              <button class="chat menu__link">
-                LIVE CHAT<span class="icon-NameChat-Round-Dots"></span>
-              </button>
+        <div class="seo__container">
+          <div class="seo__container-title">
+            <h2>Information Collection and Use</h2>
+          </div>
+          <div class="seo__container-content">
+            <div class="seo__container-content-text">
+              <div class="seo__container-content-text2 seo__container-content-text-style1">
+                <p>
+                  When you use our Service, we may ask you to provide us with certain personally identifiable
+                  information that can be used to contact or identify you. Personally identifiable information may
+                  include, but is not limited to:
+                </p>
+                <ul>
+                  <li>Name</li>
+                  <li>Email address</li>
+                  <li>Phone number</li>
+                  <li>Address, State, Province, ZIP/Postal code</li>
+                  <li>Payment information</li>
+                  <li>Cookies and Usage Data</li>
+                </ul>
+              </div>
             </div>
-            <div class="footer__logo">
-              <a href="index.html">
-                <img width="175" height="62" src="img/logo-white.svg" alt="Gart Tech logotype"/>
+
+            <div class="seo__container-content-text seo__container-content-text-style1">
+              <h4>Use of Data</h4>
+              <div class="seo__container-content-text2 policy-text2">
+                <p>[Your Company Name] uses the collected data for various purposes:</p>
+                <ul>
+                  <li>To provide and maintain our Service</li>
+                  <li>To notify you about changes to our Service</li>
+                  <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
+                  <li>To provide customer support</li>
+                  <li>To gather analysis or valuable information so that we can improve our Service</li>
+                  <li>To monitor the usage of our Service</li>
+                  <li>To detect, prevent, and address technical issues</li>
+                  <li>To process payments</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="seo__container-content-text seo__container-content-text-style2 policy-text3">
+              <h4>Data Transfer</h4>
+              <p>We may disclose your personal data in the good faith belief that such action is necessary to:</p>
+              <ul>
+                <li>Comply with a legal obligation</li>
+                <li>Protect and defend the rights or property of [Your Company Name]</li>
+                <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+                <li>Protect the personal safety of users of the Service or the public</li>
+                <li>Protect against legal liability</li>
+              </ul>
+            </div>
+
+            <div class="seo__container-content-text">
+              <h4>Data Security</h4>
+              <p>The security of your data is important to us, but please remember that no method of transmission over
+                the Internet or method of electronic storage is 100% secure. Although we strive to use commercially
+                acceptable means to protect your personal data, we cannot guarantee its absolute security.</p>
+            </div>
+
+            <div class="seo__container-content-text seo__container-content-text-style1 policy-text4">
+              <h4>Changes to this privacy policy</h4>
+              <p>We may update our privacy policy from time to time. We will notify you of any changes by posting the
+                new privacy policy on this page.</p>
+              <p>We encourage you to periodically review this privacy policy for changes. Changes to this privacy policy
+                are effective when they are posted on this page.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__container">
+        <div class="footer__left">
+          <div class="menu__chat footer__chat">
+            <p>If you have any questions write us!</p>
+            <button class="chat menu__link" aria-label="open  LIVE CHAT">
+              LIVE CHAT
+              <span class="icon-NameChat-Round-Dots"></span>
+            </button>
+          </div>
+          <div class="footer__logo">
+            <a href="index.html">
+              <img width="175" height="62" src="img/logo-white.svg" alt="Gart Tech logotype">
+            </a>
+          </div>
+          <div class="footer__social">
+            <div class="about-us__content-social-box-link">
+              <a href="#">instagram<span class="icon-NameInstagramLogo"></span></a>
+              <a href="#">facebook<span class="icon-NameFacebookLogo"></span></a>
+            </div>
+          </div>
+          <div class="footer__email">
+            <a href="mailto:yellowsmstudio@gmail.com" class="link"><span
+                class="icon-Namemail-send-line"></span>yellowsmstudio@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__right-box">
+            <nav class="footer__right-navigation">
+              <ul>
+                <li>
+                  <a href="index.html" class="link">HOME</a>
+                </li>
+                <li>
+                  <a href="gallery.html" class="link">GALLERY</a>
+                </li>
+                <li>
+                  <a href="services.html" class="link">SERVICES</a>
+                </li>
+                <li>
+                  <a href="reviews.html" class="link">REVIEWS</a>
+                </li>
+                <li>
+                  <a href="about-us.html" class="link">ABOUT US</a>
+                </li>
+                <li>
+                  <a href="faq.html" class="link">FAQ</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="footer__right-btn">
+              <a href="services.html" class="btn">
+                GO TO SHOP<span class="icon-NameSword"></span>
               </a>
             </div>
-            <div class="footer__social">
-              <div class="about-us__content-social-box-link">
-                <a href="#">instagram<span class="icon-NameInstagramLogo"></span></a>
-                <a href="#">facebook<span class="icon-NameFacebookLogo"></span></a>
-              </div>
-            </div>
-            <div class="footer__email">
-              <a href="mailto:yellowsmstudio@gmail.com" class="link"><span class="icon-Namemail-send-line"></span>yellowsmstudio@gmail.com</a>
-            </div>
           </div>
-          <div class="footer__right">
-            <div class="footer__right-box">
-              <nav class="footer__right-navigation">
-                <ul>
-                  <li>
-                    <a href="index.html" class="link">HOME</a>
-                  </li>
-                  <li>
-                    <a href="gallery.html" class="link">GALLERY</a>
-                  </li>
-                  <li>
-                    <a href="services.html" class="link">SERVICES</a>
-                  </li>
-                  <li>
-                    <a href="reviews.html" class="link">REVIEWS</a>
-                  </li>
-                  <li>
-                    <a href="about-us.html" class="link">ABOUT US</a>
-                  </li>
-                  <li>
-                    <a href="faq.html" class="link">FAQ</a>
-                  </li>
-                </ul>
-              </nav>
-              <div class="footer__right-btn">
-                <button class="btn">
-                  GO TO SHOP<span class="icon-NameSword"></span>
-                </button>
-              </div>
-            </div>
-            <div class="footer__right-privecy">
-                <p class="footer__right-privecy-text">Our website uses cookies to optimize the website and provide personalized services and advertising. By continuing to use the site, you agree to our terms of use of <a href="cookies.html" target="_blank">cookies</a>. More information about our privacy policy and cookie settings can be found in the <a href="policy.html" target="_blank">Privacy Policy</a> section.</p>
-                <p class="footer__right-privecy-copright">© 2024 Yellow SM Studio - yellowsmstudio.com | All Rights Reserved</p>
-                <div class="label-company">
-                  <a href="https://shapoval.agency/" target="_blank">
-                    <img width="268" height="45" src="img/company-logo.svg" alt="Shapoval Agancy">
-                  </a>
-                </div>
+          <div class="footer__right-privecy">
+            <p class="footer__right-privecy-text">
+              Our website uses cookies to optimize the website and provide
+              personalized services and advertising. By continuing to use the
+              site, you agree to our terms of use of <a href="cookies.html" target="_blank">cookies</a>.
+              More information about our privacy policy and cookie settings
+              can be found in the <a href="policy.html" target="_blank">Privacy Policy</a> section.
+            </p>
+            <p class="footer__right-privecy-copright">
+              © 2024 Yellow SM Studio - yellowsmstudio.com | All Rights
+              Reserved
+            </p>
+            <div class="label-company">
+              <a href="#" target="_blank">
+                <img width="268" height="45" src="img/company-logo.svg" alt="Shapoval Agancy">
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="script/jquery-3.7.0.min.js"></script>
-    <script src="script/swiper-bundle.min.js"></script>
-    <script src="script/jquery.fancybox.min.js"></script>
-    <script src="script/script.js"></script>
-  </body>
+  <script src="script/jquery-3.7.0.min.js"></script>
+  <script src="script/swiper-bundle.min.js"></script>
+  <script src="script/jquery.fancybox.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+
 </html>
